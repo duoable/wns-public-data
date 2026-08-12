@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/duoable/wns-public-data/schema/shard.schema.json",
+  "title": "Source shard",
+  "description": "One regional slice of the source catalog. Every file under catalog/sources/ matches this.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "shard", "sources"],
+  "properties": {
+    "schemaVersion": {
+      "description": "Bumped only for a breaking change. The app refuses a catalog it does not understand rather than guessing at the shape.",
+      "type": "integer",
+      "const": 1
+    },
+    "shard": {
+      "description": "Matches the shard id in catalog/index.json.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,31}$"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "url",
+        "kind",
+        "scope",
+        "languages",
+        "topics",
+        "weight",
+        "pollIntervalSecs",
+        "publisher",
+        "publisherLink"
+      ],
+      "properties": {
+        "id": {
+          "description": "Stable, permanent identifier. A user's saved selection refers to this, so renaming one silently deselects that source for everyone.",
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{1,63}$"
+        },
+        "name": {
+          "description": "Shown in the source picker. Include the section when the publisher has several feeds.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "url": {
+          "description": "The feed endpoint. https only — the app refuses any other scheme.",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 500
+        },
+        "kind": {
+          "description": "How the source is read. 'feed' covers RSS, Atom and JSON Feed, sniffed from the payload.",
+          "enum": ["feed", "jsonApi", "aiSearch"]
+        },
+        "scope": {
+          "description": "How wide the outlet's remit is. Drives where it sits in the picker and how the ranking treats it.",
+          "enum": ["global", "national", "regional", "local"]
+        },
+        "country": {
+          "description": "ISO 3166-1 alpha-2. Required for everything except a global source, and must exist in taxonomy.json.",
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "region": {
+          "description": "ISO 3166-2 subdivision code, e.g. 'US-CA'. Must exist under its country in taxonomy.json.",
+          "type": "string",
+          "pattern": "^[A-Z]{2}-[A-Z0-9]{1,3}$"
+        },
+        "city": {
+          "description": "Taxonomy city id, e.g. 'helsinki'. Must exist under its country in taxonomy.json.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,47}$"
+        },
+        "languages": {
+          "description": "BCP-47 tags of the output, most representative first. The app uses the first as the source's language.",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$" }
+        },
+        "topics": {
+          "description": "The app's ten editorial topics. Used when a feed's own categories are unusable.",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "world",
+              "politics",
+              "business",
+              "science",
+              "technology",
+              "health",
+              "sport",
+              "culture",
+              "environment",
+              "general"
+            ]
+          }
+        },
+        "weight": {
+          "description": "Editorial weight multiplied into the ranking score. Not an endorsement — it is how loudly this outlet argues for its own stories.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "pollIntervalSecs": {
+          "description": "How often to poll. The app clamps this to at least 60 anyway; a catalog should not ask for something impolite.",
+          "type": "integer",
+          "minimum": 60,
+          "maximum": 86400
+        },
+        "publisher": {
+          "description": "Publisher name as it should appear on screen. Attribution is displayed for every story.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "publisherLink": {
+          "description": "Publisher home page, shown as the link back.",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "rights": {
+          "description": "Rights notice, when the publisher states one.",
+          "type": ["string", "null"],
+          "maxLength": 300
+        },
+        "logo": { "$ref": "#/$defs/logo" },
+        "verifiedAt": {
+          "description": "Date the URL was last confirmed live. Set it when you add or fix an entry.",
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        }
+      },
+      "allOf": [
+        {
+          "description": "A global source has no home country; everything else must name one.",
+          "if": { "properties": { "scope": { "const": "global" } }, "required": ["scope"] },
+          "then": { "not": { "required": ["country"] } },
+          "else": { "required": ["country"] }
+        },
+        {
+          "description": "A subdivision or city only means something under a country.",
+          "if": { "anyOf": [{ "required": ["region"] }, { "required": ["city"] }] },
+          "then": { "required": ["country"] }
+        }
+      ]
+    },
+    "logo": {
+      "description": "A logo committed under assets/. The app renders text attribution only — this exists so the schema need not change when a logo tier is built.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^assets/logos/[a-z0-9][a-z0-9-]{0,63}\\.(svg|png)$"
+        },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "license": {
+          "description": "How the mark may be used. Almost always 'trademark': included as nominative use, not licensed to us.",
+          "type": ["string", "null"],
+          "maxLength": 120
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/duoable/wns-public-data/schema/index.schema.json",
+  "title": "Catalog manifest",
+  "description": "The only file the app fetches unconditionally. It carries a sha256 per shard so a refresh can download nothing but what actually changed, and verify what it does download.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "revision", "generatedAt", "sourceCount", "taxonomy", "shards"],
+  "properties": {
+    "schemaVersion": {
+      "description": "A catalog declaring a version newer than the app supports is refused, not guessed at.",
+      "type": "integer",
+      "const": 1
+    },
+    "revision": {
+      "description": "Identifies this publication. Shown in the app's refresh row and stored alongside the cache.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "generatedAt": {
+      "description": "When build-index.mjs ran. The app prefers its bundled snapshot over a cache older than it.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceCount": {
+      "description": "Total across every shard. Displayed before anything is downloaded.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "taxonomy": { "$ref": "#/$defs/artefact" },
+    "shards": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/shard" }
+    }
+  },
+  "$defs": {
+    "artefact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "bytes"],
+      "properties": {
+        "path": {
+          "description": "Repository-relative, appended to the app's base URL.",
+          "type": "string",
+          "pattern": "^catalog/[A-Za-z0-9./_-]+\\.json$"
+        },
+        "sha256": {
+          "description": "Over the exact committed bytes. .gitattributes pins these files to LF so a Windows checkout hashes identically.",
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "shard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "sha256", "bytes", "sourceCount"],
+      "properties": {
+        "id": {
+          "description": "Matches the 'shard' field inside the file. Splitting a region into europe-1 and europe-2 is a data change with no app change.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,31}$"
+        },
+        "path": { "type": "string", "pattern": "^catalog/sources/[a-z0-9-]+\\.json$" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "sourceCount": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

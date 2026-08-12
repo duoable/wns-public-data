@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-08-12T10:44:06Z",
+  "generatedAt": "2026-08-12T10:44:06Z",
+  "sourceCount": 188,
+  "taxonomy": {
+    "path": "catalog/taxonomy.json",
+    "sha256": "74f57cae0ec84be9b5a658b9b31df8082b964aa60c3177b7503595a7a639cd46",
+    "bytes": 10411
+  },
+  "shards": [
+    {
+      "id": "africa",
+      "path": "catalog/sources/africa.json",
+      "sha256": "bc03c740590bf630eb71d9e6a18948612a47e63271946e4d15b315e839da0061",
+      "bytes": 4377,
+      "sourceCount": 10
+    },
+    {
+      "id": "americas",
+      "path": "catalog/sources/americas.json",
+      "sha256": "5620fc92caa1f83a5c061163a727e40ef6417079c52fb52593e8237dd41bf8d8",
+      "bytes": 14650,
+      "sourceCount": 33
+    },
+    {
+      "id": "asia",
+      "path": "catalog/sources/asia.json",
+      "sha256": "c784e6865ec53deee9b3ff167d575e04f1f809dbdbcac7392ccf6a6b20e51d8d",
+      "bytes": 12939,
+      "sourceCount": 29
+    },
+    {
+      "id": "europe",
+      "path": "catalog/sources/europe.json",
+      "sha256": "9c2dc851fc72a8823d264c9483ee0ee0bd2f72055e8d0322e7e1f7f8f608ee83",
+      "bytes": 29167,
+      "sourceCount": 67
+    },
+    {
+      "id": "global",
+      "path": "catalog/sources/global.json",
+      "sha256": "e44d2a17b2059eb2c44135590fc296ae7268868fae23719349a5142d7b41671b",
+      "bytes": 13005,
+      "sourceCount": 31
+    },
+    {
+      "id": "middle-east",
+      "path": "catalog/sources/middle-east.json",
+      "sha256": "022e79d90293bb131b1193e0a51e99822fc035e4d37fd684701794b96e42f9fa",
+      "bytes": 4044,
+      "sourceCount": 9
+    },
+    {
+      "id": "oceania",
+      "path": "catalog/sources/oceania.json",
+      "sha256": "8a802eb08189cf72fbb03293812d2aa59b5f1f88a00b7926ab580786931153c6",
+      "bytes": 4076,
+      "sourceCount": 9
+    }
+  ]
+}

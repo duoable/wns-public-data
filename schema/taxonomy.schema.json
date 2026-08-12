@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/duoable/wns-public-data/schema/taxonomy.schema.json",
+  "title": "Catalog taxonomy",
+  "description": "The region → country → city hierarchy the source picker is built from. Owning membership here rather than repeating it on every source is what keeps thousands of shard entries readable.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "regions"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "regions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/region" }
+    }
+  },
+  "$defs": {
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "kind"],
+      "properties": {
+        "id": {
+          "description": "Node id. Country nodes are '<region>/<CC>', city nodes '<region>/<CC>/<city>', derived rather than written out.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,31}$"
+        },
+        "label": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "kind": {
+          "description": "'global' holds sources with no home country and has no children.",
+          "enum": ["global", "region"]
+        },
+        "countries": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/country" }
+        }
+      },
+      "allOf": [
+        {
+          "description": "The global node is a leaf; a region without countries would render as an empty branch.",
+          "if": { "properties": { "kind": { "const": "global" } }, "required": ["kind"] },
+          "then": { "not": { "required": ["countries"] } },
+          "else": { "required": ["countries"], "properties": { "countries": { "minItems": 1 } } }
+        }
+      ]
+    },
+    "country": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "label", "languages"],
+      "properties": {
+        "code": {
+          "description": "ISO 3166-1 alpha-2. Unique across every region — a country belongs to exactly one.",
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "label": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "languages": {
+          "description": "Languages published in this country, most widely used first. Feeds the picker's language filter.",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$" }
+        },
+        "cities": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/city" }
+        },
+        "subdivisions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/subdivision" }
+        }
+      }
+    },
+    "city": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label"],
+      "properties": {
+        "id": {
+          "description": "Unique within its country. ASCII and lowercase so it can sit in a node id.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,47}$"
+        },
+        "label": {
+          "description": "Displayed name, in the local form where that is what people call it.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        }
+      }
+    },
+    "subdivision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "label"],
+      "properties": {
+        "code": { "type": "string", "pattern": "^[A-Z]{2}-[A-Z0-9]{1,3}$" },
+        "label": { "type": "string", "minLength": 1, "maxLength": 60 }
+      }
+    }
+  }
+}

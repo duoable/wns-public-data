@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "regions": [
+    {
+      "id": "global",
+      "label": "Global",
+      "kind": "global"
+    },
+    {
+      "id": "europe",
+      "label": "Europe",
+      "kind": "region",
+      "countries": [
+        {
+          "code": "GB",
+          "label": "United Kingdom",
+          "languages": ["en"],
+          "cities": [
+            {
+              "id": "london",
+              "label": "London"
+            },
+            {
+              "id": "manchester",
+              "label": "Manchester"
+            }
+          ]
+        },
+        {
+          "code": "IE",
+          "label": "Ireland",
+          "languages": ["en", "ga"]
+        },
+        {
+          "code": "FR",
+          "label": "France",
+          "languages": ["fr"],
+          "cities": [
+            {
+              "id": "paris",
+              "label": "Paris"
+            }
+          ]
+        },
+        {
+          "code": "DE",
+          "label": "Germany",
+          "languages": ["de"],
+          "cities": [
+            {
+              "id": "berlin",
+              "label": "Berlin"
+            },
+            {
+              "id": "munich",
+              "label": "München"
+            }
+          ]
+        },
+        {
+          "code": "ES",
+          "label": "Spain",
+          "languages": ["es", "ca"],
+          "cities": [
+            {
+              "id": "barcelona",
+              "label": "Barcelona"
+            }
+          ]
+        },
+        {
+          "code": "IT",
+          "label": "Italy",
+          "languages": ["it"]
+        },
+        {
+          "code": "NL",
+          "label": "Netherlands",
+          "languages": ["nl"]
+        },
+        {
+          "code": "BE",
+          "label": "Belgium",
+          "languages": ["nl", "fr", "de"]
+        },
+        {
+          "code": "PT",
+          "label": "Portugal",
+          "languages": ["pt"]
+        },
+        {
+          "code": "CH",
+          "label": "Switzerland",
+          "languages": ["de", "fr", "it"]
+        },
+        {
+          "code": "AT",
+          "label": "Austria",
+          "languages": ["de"]
+        },
+        {
+          "code": "SE",
+          "label": "Sweden",
+          "languages": ["sv"],
+          "cities": [
+            {
+              "id": "stockholm",
+              "label": "Stockholm"
+            }
+          ]
+        },
+        {
+          "code": "NO",
+          "label": "Norway",
+          "languages": ["no"]
+        },
+        {
+          "code": "DK",
+          "label": "Denmark",
+          "languages": ["da"]
+        },
+        {
+          "code": "FI",
+          "label": "Finland",
+          "languages": ["fi", "sv", "en"],
+          "cities": [
+            {
+              "id": "helsinki",
+              "label": "Helsinki"
+            }
+          ]
+        },
+        {
+          "code": "IS",
+          "label": "Iceland",
+          "languages": ["is"]
+        },
+        {
+          "code": "PL",
+          "label": "Poland",
+          "languages": ["pl"]
+        },
+        {
+          "code": "CZ",
+          "label": "Czechia",
+          "languages": ["cs"]
+        },
+        {
+          "code": "HU",
+          "label": "Hungary",
+          "languages": ["hu"]
+        },
+        {
+          "code": "RO",
+          "label": "Romania",
+          "languages": ["ro"]
+        },
+        {
+          "code": "GR",
+          "label": "Greece",
+          "languages": ["el"]
+        },
+        {
+          "code": "RS",
+          "label": "Serbia",
+          "languages": ["sr"]
+        },
+        {
+          "code": "UA",
+          "label": "Ukraine",
+          "languages": ["uk", "en"]
+        },
+        {
+          "code": "EE",
+          "label": "Estonia",
+          "languages": ["et"]
+        },
+        {
+          "code": "RU",
+          "label": "Russia",
+          "languages": ["ru"]
+        }
+      ]
+    },
+    {
+      "id": "americas",
+      "label": "Americas",
+      "kind": "region",
+      "countries": [
+        {
+          "code": "US",
+          "label": "United States",
+          "languages": ["en", "es"],
+          "cities": [
+            {
+              "id": "new-york",
+              "label": "New York"
+            },
+            {
+              "id": "washington",
+              "label": "Washington, D.C."
+            },
+            {
+              "id": "los-angeles",
+              "label": "Los Angeles"
+            },
+            {
+              "id": "chicago",
+              "label": "Chicago"
+            },
+            {
+              "id": "san-francisco",
+              "label": "San Francisco"
+            }
+          ],
+          "subdivisions": [
+            {
+              "code": "US-CA",
+              "label": "California"
+            },
+            {
+              "code": "US-TX",
+              "label": "Texas"
+            }
+          ]
+        },
+        {
+          "code": "CA",
+          "label": "Canada",
+          "languages": ["en", "fr"],
+          "cities": [
+            {
+              "id": "toronto",
+              "label": "Toronto"
+            }
+          ]
+        },
+        {
+          "code": "MX",
+          "label": "Mexico",
+          "languages": ["es"]
+        },
+        {
+          "code": "BR",
+          "label": "Brazil",
+          "languages": ["pt"],
+          "cities": [
+            {
+              "id": "sao-paulo",
+              "label": "São Paulo"
+            }
+          ]
+        },
+        {
+          "code": "AR",
+          "label": "Argentina",
+          "languages": ["es"]
+        },
+        {
+          "code": "CL",
+          "label": "Chile",
+          "languages": ["es"]
+        },
+        {
+          "code": "CO",
+          "label": "Colombia",
+          "languages": ["es"]
+        },
+        {
+          "code": "PE",
+          "label": "Peru",
+          "languages": ["es"]
+        },
+        {
+          "code": "UY",
+          "label": "Uruguay",
+          "languages": ["es"]
+        }
+      ]
+    },
+    {
+      "id": "asia",
+      "label": "Asia",
+      "kind": "region",
+      "countries": [
+        {
+          "code": "JP",
+          "label": "Japan",
+          "languages": ["ja", "en"]
+        },
+        {
+          "code": "CN",
+          "label": "China",
+          "languages": ["zh", "en"]
+        },
+        {
+          "code": "HK",
+          "label": "Hong Kong",
+          "languages": ["zh", "en"]
+        },
+        {
+          "code": "TW",
+          "label": "Taiwan",
+          "languages": ["zh", "en"]
+        },
+        {
+          "code": "KR",
+          "label": "South Korea",
+          "languages": ["ko", "en"]
+        },
+        {
+          "code": "IN",
+          "label": "India",
+          "languages": ["en", "hi"],
+          "cities": [
+            {
+              "id": "delhi",
+              "label": "Delhi"
+            },
+            {
+              "id": "mumbai",
+              "label": "Mumbai"
+            }
+          ]
+        },
+        {
+          "code": "PK",
+          "label": "Pakistan",
+          "languages": ["en", "ur"]
+        },
+        {
+          "code": "BD",
+          "label": "Bangladesh",
+          "languages": ["en", "bn"]
+        },
+        {
+          "code": "NP",
+          "label": "Nepal",
+          "languages": ["en", "ne"]
+        },
+        {
+          "code": "SG",
+          "label": "Singapore",
+          "languages": ["en"]
+        },
+        {
+          "code": "MY",
+          "label": "Malaysia",
+          "languages": ["en", "ms"]
+        },
+        {
+          "code": "ID",
+          "label": "Indonesia",
+          "languages": ["id", "en"]
+        },
+        {
+          "code": "TH",
+          "label": "Thailand",
+          "languages": ["th", "en"]
+        },
+        {
+          "code": "VN",
+          "label": "Vietnam",
+          "languages": ["vi", "en"]
+        },
+        {
+          "code": "PH",
+          "label": "Philippines",
+          "languages": ["en", "tl"]
+        }
+      ]
+    },
+    {
+      "id": "middle-east",
+      "label": "Middle East",
+      "kind": "region",
+      "countries": [
+        {
+          "code": "AE",
+          "label": "United Arab Emirates",
+          "languages": ["en", "ar"]
+        },
+        {
+          "code": "SA",
+          "label": "Saudi Arabia",
+          "languages": ["ar", "en"]
+        },
+        {
+          "code": "IL",
+          "label": "Israel",
+          "languages": ["he", "en"]
+        },
+        {
+          "code": "JO",
+          "label": "Jordan",
+          "languages": ["ar", "en"]
+        },
+        {
+          "code": "IR",
+          "label": "Iran",
+          "languages": ["fa", "en"]
+        },
+        {
+          "code": "TR",
+          "label": "Türkiye",
+          "languages": ["tr", "en"]
+        }
+      ]
+    },
+    {
+      "id": "africa",
+      "label": "Africa",
+      "kind": "region",
+      "countries": [
+        {
+          "code": "ZA",
+          "label": "South Africa",
+          "languages": ["en", "af"]
+        },
+        {
+          "code": "NG",
+          "label": "Nigeria",
+          "languages": ["en"]
+        },
+        {
+          "code": "KE",
+          "label": "Kenya",
+          "languages": ["en", "sw"]
+        },
+        {
+          "code": "GH",
+          "label": "Ghana",
+          "languages": ["en"]
+        },
+        {
+          "code": "EG",
+          "label": "Egypt",
+          "languages": ["ar", "en"]
+        },
+        {
+          "code": "MA",
+          "label": "Morocco",
+          "languages": ["ar", "fr"]
+        },
+        {
+          "code": "ZW",
+          "label": "Zimbabwe",
+          "languages": ["en"]
+        }
+      ]
+    },
+    {
+      "id": "oceania",
+      "label": "Oceania",
+      "kind": "region",
+      "countries": [
+        {
+          "code": "AU",
+          "label": "Australia",
+          "languages": ["en"],
+          "cities": [
+            {
+              "id": "sydney",
+              "label": "Sydney"
+            },
+            {
+              "id": "melbourne",
+              "label": "Melbourne"
+            }
+          ]
+        },
+        {
+          "code": "NZ",
+          "label": "New Zealand",
+          "languages": ["en", "mi"]
+        },
+        {
+          "code": "FJ",
+          "label": "Fiji",
+          "languages": ["en"]
+        },
+        {
+          "code": "PG",
+          "label": "Papua New Guinea",
+          "languages": ["en"]
+        }
+      ]
+    }
+  ]
+}

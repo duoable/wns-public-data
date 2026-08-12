@@ -1,0 +1,15 @@
+# The manifest records a sha256 for every catalog file, computed over the exact
+# committed bytes. A CRLF checkout would change those bytes and every integrity
+# check would fail on Windows. Pin them to LF.
+catalog/**/*.json text eol=lf
+schema/**/*.json  text eol=lf
+scripts/**/*.mjs  text eol=lf
+*.md              text eol=lf
+*.yml             text eol=lf
+LICENSE*          text eol=lf
+.gitignore        text eol=lf
+.gitattributes    text eol=lf
+
+# Logos are compared by hash too, so git must not touch them at all.
+assets/logos/*.svg -text
+assets/logos/*.png binary

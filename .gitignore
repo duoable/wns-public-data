@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.DS_Store
+
+# Conditional-GET validators from scripts/link-check.mjs. Local only: a shared
+# cache would make the check skip feeds that changed on someone else's machine.
+.link-check-cache.json

@@ -1,0 +1,53 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Only the publish job writes, and it needs to move the v1 branch.
+permissions:
+  contents: write
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate the catalog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # No install step: the scripts use only the Node standard library, so CI
+      # never waits on a registry and never depends on a lockfile.
+      - name: Check formatting
+        run: node scripts/format.mjs --check
+
+      - name: Check the manifest is current
+        run: node scripts/build-index.mjs --check
+
+      - name: Validate
+        run: node scripts/validate.mjs
+
+  publish:
+    name: Publish to the v1 channel
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # The app reads the v1 branch, never main. Moving it only after
+      # validation passes means a released catalog is always one that built,
+      # and a bad merge can be contained by simply not moving it.
+      - name: Fast-forward v1
+        run: git push origin HEAD:refs/heads/v1
