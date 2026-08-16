@@ -21,6 +21,17 @@ import {
   shardPaths,
   TAXONOMY_PATH,
 } from './lib/catalog.mjs';
+import {
+  LOCALES_INDEX_PATH,
+  LOCALES_META_PATH,
+  localePath,
+  messageKeys,
+  placeholdersIn,
+  readLocale,
+  REFERENCE_TAG,
+  translationTags,
+  withoutPluralSuffix,
+} from './lib/locales.mjs';
 import { validate } from './lib/json-schema.mjs';
 
 const errors = [];
@@ -35,6 +46,8 @@ const schemas = {
   index: readJson('schema/index.schema.json'),
   taxonomy: readJson('schema/taxonomy.schema.json'),
   shard: readJson('schema/shard.schema.json'),
+  localesIndex: readJson('schema/locales-index.schema.json'),
+  locale: readJson('schema/locale.schema.json'),
 };
 
 function checkAgainstSchema(label, document, schema) {
@@ -221,6 +234,159 @@ if (!existsSync(absolute(INDEX_PATH))) {
   }
 }
 
+// ---------------------------------------------------------------- locales
+
+/**
+ * Holds every translation to the same messages as English.
+ *
+ * This is the check that cannot live in the app: the app compiles English in
+ * and knows its keys at build time, but it has never seen a translation until
+ * a viewer downloads one. A missing key is not an error at runtime — i18next
+ * quietly falls back to English — so without this a half-finished translation
+ * ships and looks finished to everyone who cannot read the missing rows.
+ */
+function validateLocales() {
+  const reference = readLocale(REFERENCE_TAG);
+  checkAgainstSchema(localePath(REFERENCE_TAG), reference, schemas.locale);
+
+  const meta = readJson(LOCALES_META_PATH);
+  const referenceKeys = new Set(messageKeys(reference).map(withoutPluralSuffix));
+
+  /**
+   * The placeholders each reference line declares, by its exact key.
+   *
+   * Exact, and not with the plural suffix stripped, because the forms of one
+   * key legitimately differ: English writes `orphaned_one` as "One source you
+   * chose…" and only `orphaned_other` interpolates `{{count}}`. Folding them
+   * together compares the singular against the plural's placeholders and
+   * reports every correctly written translation in the file.
+   */
+  const referenceLines = new Map();
+
+  /** Every placeholder any form of a key uses, for a form English lacks. */
+  const referenceByBase = new Map();
+
+  const collect = (node, prefix) => {
+    for (const [key, value] of Object.entries(node)) {
+      const path = prefix === '' ? key : `${prefix}.${key}`;
+      if (value !== null && typeof value === 'object') {
+        collect(value, path);
+      } else {
+        const names = placeholdersIn(value);
+        referenceLines.set(path, names);
+
+        const base = withoutPluralSuffix(path);
+        const union = referenceByBase.get(base) ?? new Set();
+        for (const name of names) {
+          union.add(name);
+        }
+        referenceByBase.set(base, union);
+      }
+    }
+  };
+  collect(reference, '');
+
+  for (const tag of translationTags()) {
+    const path = localePath(tag);
+    const catalogue = readLocale(tag);
+    checkAgainstSchema(path, catalogue, schemas.locale);
+
+    if (!meta.languages?.[tag]) {
+      fail(`${LOCALES_META_PATH}: no entry for "${tag}", so it has no endonym and no licence`);
+    }
+
+    const keys = messageKeys(catalogue);
+    const seen = new Set(keys.map(withoutPluralSuffix));
+
+    for (const key of referenceKeys) {
+      if (!seen.has(key)) {
+        fail(`${path}: does not translate "${key}"`);
+      }
+    }
+
+    for (const key of seen) {
+      if (!referenceKeys.has(key)) {
+        fail(`${path}: translates "${key}", which English does not carry`);
+      }
+    }
+
+    // A dropped placeholder renders a sentence with a fact missing from it; an
+    // invented one puts the braces themselves on a television. Neither fails
+    // anything at runtime, which is exactly why they are compared here.
+    for (const key of keys) {
+      const line = key.split('.').reduce((node, part) => node?.[part], catalogue);
+      if (typeof line !== 'string') {
+        continue;
+      }
+
+      const actual = placeholdersIn(line);
+      const exact = referenceLines.get(key);
+
+      if (exact) {
+        const missing = exact.filter((name) => !actual.includes(name));
+        if (missing.length > 0) {
+          fail(`${path}: "${key}" leaves out ${missing.map((n) => `{{${n}}}`).join(', ')}`);
+        }
+      }
+
+      // A plural form English does not have — Polish needs four where English
+      // has two — is checked in one direction only. What it may safely leave
+      // out is that language's grammar and not this repository's business;
+      // what it may not do is name a value the app never supplies.
+      const allowed = exact ?? [...(referenceByBase.get(withoutPluralSuffix(key)) ?? [])];
+      const invented = actual.filter((name) => !allowed.includes(name));
+
+      if (invented.length > 0) {
+        fail(
+          `${path}: "${key}" uses ${invented.map((n) => `{{${n}}}`).join(', ')}, which the app never supplies`,
+        );
+      }
+    }
+  }
+
+  // The manifest against the files it describes.
+  let index;
+  try {
+    index = readJson(LOCALES_INDEX_PATH);
+  } catch (error) {
+    fail(String(error.message ?? error));
+    return;
+  }
+
+  checkAgainstSchema(LOCALES_INDEX_PATH, index, schemas.localesIndex);
+
+  const described = new Map(index.languages.map((language) => [language.tag, language]));
+
+  for (const tag of translationTags()) {
+    const language = described.get(tag);
+    if (!language) {
+      fail(`${LOCALES_INDEX_PATH}: does not list "${tag}", but ${localePath(tag)} exists`);
+      continue;
+    }
+
+    const actual = digest(localePath(tag));
+    if (language.sha256 !== actual.sha256 || language.bytes !== actual.bytes) {
+      fail(
+        `${LOCALES_INDEX_PATH}: the hash for "${tag}" is stale. Run "node scripts/build-locales-index.mjs".`,
+      );
+    }
+    described.delete(tag);
+  }
+
+  for (const orphan of described.keys()) {
+    fail(`${LOCALES_INDEX_PATH}: lists "${orphan}", but no such catalogue exists`);
+  }
+
+  const referenceDigest = digest(localePath(REFERENCE_TAG));
+  if (index.reference.sha256 !== referenceDigest.sha256) {
+    fail(
+      `${LOCALES_INDEX_PATH}: the reference hash is stale. Run "node scripts/build-locales-index.mjs".`,
+    );
+  }
+}
+
+validateLocales();
+
 // ----------------------------------------------------------------- report
 
 const totalSources = byId.size;
@@ -245,7 +411,10 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
+const translationCount = translationTags().length;
+
 console.log(
   `Catalog is valid: ${totalSources} sources, ${shards.length} shards, ${countries.size} countries, ${languages.size} languages.` +
+    ` Interface translations: ${translationCount}.` +
     (warnings.length > 0 ? ` ${warnings.length} warning(s).` : ''),
 );

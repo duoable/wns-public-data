@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/duoable/wns-public-data/schema/locale.schema.json",
+  "title": "Interface catalogue",
+  "description": "One language's translation of the app's interface. A tree of message keys whose leaves are the sentences shown on screen.\n\nThe *keys* are not described here, on purpose: they belong to the app, they change with it, and a copy of them in this repository would be a copy that falls out of step. What this schema checks is the shape — an object of objects of strings — and validate.mjs is what holds every translation to the same keys as the reference.",
+  "type": "object",
+  "minProperties": 1,
+  "additionalProperties": { "$ref": "#/$defs/node" },
+  "$defs": {
+    "node": {
+      "description": "Either a sentence or a group of them.",
+      "anyOf": [
+        {
+          "description": "A sentence shown on screen. Empty is refused: a blank row looks like a bug to a viewer and like a finished translation to whoever wrote it.",
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "$ref": "#/$defs/node" }
+        }
+      ]
+    }
+  }
+}

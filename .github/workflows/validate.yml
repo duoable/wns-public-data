@@ -33,6 +33,15 @@ jobs:
       - name: Check the manifest is current
         run: node scripts/build-index.mjs --check
 
+      - name: Check the translations manifest is current
+        run: node scripts/build-locales-index.mjs --check
+
+      # Covers the catalog and the translations in one pass. The translation
+      # half is the check the app cannot perform: it compiles English in and
+      # knows those keys at build time, but has never seen a translation until
+      # somebody downloads one — and a missing key is not a runtime error,
+      # i18next quietly falls back to English. Without this a half-finished
+      # translation ships looking finished.
       - name: Validate
         run: node scripts/validate.mjs
 

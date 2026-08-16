@@ -1,12 +1,17 @@
 # World News Simulator — public data
 
-The news source catalog for [World News
-Simulator](https://github.com/duoable/World-News-Simulator), published as data so
-that adding an outlet is a pull request rather than an app release.
+Data for [World News
+Simulator](https://github.com/duoable/World-News-Simulator), published so that
+adding an outlet or a language is a pull request rather than an app release.
 
-The app ships with a snapshot of this catalog baked in, so it works offline and on
-first run. **Update source list** in the app's settings fetches the latest revision
-from this repository and caches it locally.
+Two things live here:
+
+- the **news source catalog**. The app ships with a snapshot baked in, so it works
+  offline and on first run; **Update source list** fetches the latest revision and
+  caches it locally.
+- the **interface translations**. These are *not* baked in — the app compiles only
+  English, and a viewer who wants another language downloads it from here on the
+  Language screen and can remove it again.
 
 There is no server involved. These are static files on a git host.
 
@@ -26,6 +31,11 @@ catalog/
     africa.json
     middle-east.json
     oceania.json
+locales/
+  index.json          Manifest: a sha256, a size and a licence per language.
+  meta.json           Endonym and licence per language. Not derivable from a catalogue.
+  en.json             The reference. Validated against, never downloaded.
+  fi.json             A translation.
 assets/
   logos/              Publisher logos, referenced by path + sha256.
 schema/               JSON Schema (draft 2020-12) for each file above.
@@ -137,6 +147,68 @@ discontinued their public RSS feeds.
 
 ---
 
+## Adding a translation
+
+The app's interface is English in this repository and in the app; every other
+language is a file here that a viewer downloads.
+
+1. Copy `locales/en.json` to `locales/<tag>.json`, where `<tag>` is the BCP-47
+   language tag — `de`, `pt-BR`. Translate the **values**. Leave every key exactly
+   as it is: the keys are the app's and are matched against `en.json` by name.
+2. Add a row to `locales/meta.json`:
+
+   ```json
+   "de": { "endonym": "Deutsch", "licence": "MIT", "credit": "Your Name" }
+   ```
+
+   `endonym` is the language's name **in that language** — Deutsch, not German.
+   Somebody opening the language list may be a person who cannot read whatever is
+   currently on their screen, which makes a list of English names useless to
+   exactly the people who need it. `credit` is optional and is shown beside the
+   language in the app.
+
+3. Regenerate and check:
+
+   ```sh
+   node scripts/format.mjs                    # one deterministic style
+   node scripts/build-locales-index.mjs       # refresh the hashes and sizes
+   node scripts/validate.mjs                  # check everything
+   ```
+
+4. Open a pull request. CI runs the same three.
+
+### Rules that are enforced
+
+- **Every key in `en.json` is translated, and no key is invented.** A missing key
+  is not an error at runtime — i18next silently falls back to English — so a
+  half-finished translation looks finished to everybody except the people reading
+  it. This is the check the app cannot perform and the main reason validation
+  lives here.
+- **`{{placeholders}}` match.** A line that drops one renders a sentence with a
+  fact missing from it; one that invents a name the app never supplies puts the
+  braces themselves on a television. Both are silent at runtime.
+- **Plurals are the language's own business.** A key is written `remembered` by
+  the app and stored as `remembered_one` and `remembered_other`; which categories
+  exist is decided by `Intl.PluralRules`, so Polish having four forms where
+  English has two is correct and is not reported. A form English does not have is
+  checked for invented placeholders only — what it may leave out is that
+  language's grammar, not this repository's business.
+- **No empty strings.** A blank line looks like a bug to a viewer and like a
+  finished translation to whoever wrote it.
+- **A licence is recorded** before a language can be published. See below.
+
+### What is deliberately not translated
+
+Some strings in `en.json` are passed through rather than worded — a publisher's
+name, a voice's name, an example JSON path like `data.articles`, key caps such as
+`Esc`. They still appear as keys and still need an entry; translating the *format*
+rather than the content is usually wrong. The app's `docs/i18n.md` has the list.
+
+Sizes, dates, relative times and lists are **not** in these files at all: they go
+through `Intl`, which already knows them for every language.
+
+---
+
 ## Logos
 
 `assets/logos/` holds publisher logos, and shard entries may reference one:
@@ -160,6 +232,7 @@ open an issue and it will be.
 | Path | Licence |
 | ---- | ------- |
 | `catalog/`, and this README | [CC0 1.0](LICENSE-DATA) — public domain dedication |
+| `locales/` | Per language, named in `locales/meta.json`. MIT unless a translator says otherwise. |
 | `scripts/`, `schema/` | [MIT](LICENSE) |
 | `assets/logos/` | Third-party trademarks. Neither licence applies. See above. |
 
@@ -167,3 +240,13 @@ The catalog is a table of facts — names, URLs, countries. CC0 waives the EU
 *sui generis* database right along with everything else, so anyone can reuse the
 list without asking. A share-alike licence would have propagated into every
 downstream consumer, which is the opposite of what a list like this is for.
+
+**Translations are not a table of facts.** A translation is somebody's writing and
+is theirs to licence, so `locales/` is not CC0 by default and the terms are
+recorded per language rather than assumed for the directory. MIT is the default
+because that is what the app it translates is, and because it is what a
+contribution to an MIT application ordinarily is — but a translator who wants
+different terms says so in `meta.json`, the app carries that licence with the file
+it downloads, and it is shown on the Language screen. `build-locales-index.mjs`
+refuses to publish a language with no licence recorded, so this cannot be
+forgotten.

@@ -1,0 +1,790 @@
+{
+  "boot": {
+    "pleaseWait": {
+      "title": "Odota hetki",
+      "subtitle": "Viritetään ja valmistellaan lähetystä",
+      "meterLabel": "Valmistellaan lähetystä"
+    },
+    "progress": {
+      "contacting": "Otetaan yhteyttä uutislähteisiin…",
+      "ready": "{{count}} valmiina",
+      "preparing": "{{count}} valmistelussa",
+      "skipped": "{{count}} ohitettu",
+      "separator": " · "
+    },
+    "noSignal": {
+      "title": "Ei signaalia",
+      "body": "Yhtään juttua ei voitu valmistella. Tarkista verkkoyhteys tai avaa asetuksista uutislähteet."
+    }
+  },
+  "menu": {
+    "title": "Valikko",
+    "hint": "Nuolinäppäimet · Enter · Esc",
+    "close": "Sulje valikko",
+    "sources": {
+      "label": "Uutislähteet",
+      "description": "Valitse mistä lähteistä lähetys kootaan"
+    },
+    "editorial": {
+      "label": "Juttujärjestys",
+      "description": "Miten jutut valitaan ja järjestetään"
+    },
+    "anchor": {
+      "label": "Uutisankkuri",
+      "description": "Kuka lukee uutiset"
+    },
+    "studio": {
+      "label": "Studio",
+      "description": "Lavastus josta lähetys tulee"
+    },
+    "packs": {
+      "label": "Sisältöpaketit",
+      "description": "Tämän asennuksen ankkurit ja studiot"
+    },
+    "picture": {
+      "label": "Kuva",
+      "description": "Minkä aikakauden television kuva"
+    },
+    "audio": {
+      "label": "Ääni",
+      "description": "Puheääni ja äänenvoimakkuus"
+    },
+    "ai": {
+      "label": "Tekoälyapu",
+      "description": "Valinnainen: oma API-avain parempaan tekstiin"
+    },
+    "signal": {
+      "label": "Signaaliloki",
+      "description": "Mitä simulaattori on tehnyt ja miksi"
+    },
+    "system": {
+      "label": "Järjestelmä",
+      "description": "Palauta oletukset ja tyhjennä lähetyshistoria"
+    },
+    "missing": {
+      "hint": "Ei vielä toteutettu",
+      "body": "Tälle näytölle ei ole rekisteröity piirtäjää. Katso ROADMAP.md."
+    }
+  },
+  "language": {
+    "title": "Kieli",
+    "description": "Millä kielellä valikot ovat",
+    "followSystem": "Seuraa järjestelmää",
+    "followingSystem": "Seuraa järjestelmää — {{language}}",
+    "reading": "● Luetaan",
+    "builtIn": "Sisäänrakennettu sovellukseen",
+    "licence": "{{licence}}",
+    "licenceAndCredit": "{{licence}} · kääntänyt {{credit}}",
+    "download": "Lataa {{size}}",
+    "downloading": "Ladataan…",
+    "remove": "Poista {{language}}",
+    "removeDescription": "Poistaa ladatun käännöksen. Englanti on aina saatavilla.",
+    "removeConfirm": "Poista painamalla uudelleen",
+    "check": "Hae kielet",
+    "checkDescription": "Vain englanti on sisäänrakennettu sovellukseen. Kaikki muut ladataan kun valitset ne.",
+    "checking": "Haetaan…",
+    "checkedNever": "Kieliluetteloa ei ole vielä ladattu.",
+    "checkedAt": "Luettelo tarkistettu {{when}}.",
+    "statusUnreachable": "Kieliluetteloa ei tavoitettu. Jo ladatut kielet toimivat edelleen.",
+    "statusUnsupported": "Julkaistu luettelo vaatii uudemman version sovelluksesta.",
+    "statusInvalid": "Julkaistua luetteloa ei voitu lukea.",
+    "checkAction": "Hae"
+  },
+  "legend": {
+    "navigate": "Siirry",
+    "select": "Valitse",
+    "back": "Takaisin / Sulje",
+    "jump": "Siirry näytölle",
+    "menu": "Valikko"
+  },
+  "common": {
+    "confirm": "Vahvista",
+    "save": "Tallenna",
+    "cancel": "Peruuta",
+    "delete": "Poista",
+    "open": "Avaa",
+    "on": "Päällä",
+    "off": "Pois",
+    "none": "Ei mitään",
+    "loading": "Ladataan…",
+    "text": "{{text}}",
+    "percent": "{{percent}} %",
+    "separator": " · ",
+    "never": "Ei koskaan"
+  },
+  "topic": {
+    "all": "Kaikki aiheet",
+    "world": "Ulkomaat",
+    "politics": "Politiikka",
+    "business": "Talous",
+    "science": "Tiede",
+    "technology": "Teknologia",
+    "health": "Terveys",
+    "sport": "Urheilu",
+    "culture": "Kulttuuri",
+    "environment": "Ympäristö",
+    "general": "Yleinen"
+  },
+  "system": {
+    "hint": "Asetukset tallentuvat automaattisesti",
+    "simulation": {
+      "title": "Simulaatiotila",
+      "description": "Tuottaa keksittyjä uutisia sen sijaan että hakisi syötteitä"
+    },
+    "simulationTopic": {
+      "title": "Simulaation aihe",
+      "description": "Valitse mitä aihetta simuloidaan (selaa vaihtoehtoja)"
+    },
+    "export": {
+      "title": "Vie asetukset",
+      "description": "Tallentaa asetuksesi tiedostoon, jonka voit säilyttää tai siirtää toiselle laitteelle",
+      "saved": "Tallennettu nimellä {{file}}",
+      "action": "Tallenna"
+    },
+    "import": {
+      "title": "Tuo asetukset",
+      "description": "Lukee tästä sovelluksesta viedyn tiedoston. Lähteesi ja valintasi korvataan",
+      "adopted": "Asetukset otettu käyttöön tiedostosta",
+      "action": "Avaa"
+    },
+    "restore": {
+      "title": "Palauta oletusasetukset",
+      "description": "Palauttaa kuvan, äänen, juttujärjestyksen ja lähdelistan alkuperäisiksi",
+      "confirm": "Valitse uudelleen vahvistaaksesi — itse lisäämäsi lähteet säilyvät",
+      "action": "Palauta"
+    },
+    "clearHistory": {
+      "title": "Tyhjennä lähetyshistoria",
+      "description": "Unohtaa mitkä jutut on jo luettu lähetyksessä",
+      "confirm": "Valitse uudelleen vahvistaaksesi — jokainen juttu tulee taas mahdolliseksi"
+    },
+    "history": {
+      "counting": "Lasketaan…",
+      "remembered_one": "{{count}} juttu",
+      "remembered_other": "{{count}} juttua"
+    },
+    "storageNotice": "Kaikki säilytetään tällä laitteella. Mitään ei lähetetä minnekään — eikä viety tiedosto sisällä hakutilaa tai välityspalvelimen osoitetta, joten sen voi jakaa turvallisesti."
+  },
+  "signalLog": {
+    "hint": "Mikään täältä ei lähde laitteelta",
+    "nonePolled": "Yhtään lähdettä ei ole vielä haettu. Ensimmäinen haku on tulossa.",
+    "reading": "Luetaan lokia…",
+    "quiet": "Tällä tasolla ei ole mitään. Hiljainen loki on toimiva loki — kokeile “{{level}}” nähdäksesi mitä putki puuhaa.",
+    "show": {
+      "title": "Näytä",
+      "description": "Kuinka paljon putken omaa selostusta näytetään"
+    },
+    "filter": {
+      "everything": "Kaikki",
+      "notices": "Ilmoitukset",
+      "warnings": "Varoitukset",
+      "faults": "Virheet"
+    },
+    "level": {
+      "debug": "Yksityiskohta",
+      "info": "Ilmoitus",
+      "warn": "Varoitus",
+      "error": "Virhe"
+    },
+    "health": {
+      "neverPolled": "Ei haettu kertaakaan",
+      "failing_one": "{{count}} epäonnistunut yritys",
+      "failing_other": "{{count}} epäonnistunutta yritystä",
+      "failingBecause_one": "{{count}} epäonnistunut yritys · {{reason}}",
+      "failingBecause_other": "{{count}} epäonnistunutta yritystä · {{reason}}",
+      "lastRead": "Luettu viimeksi klo {{time}}",
+      "lastReadWithStatus": "Luettu viimeksi klo {{time}} · HTTP {{status}}",
+      "nothingRead": "Haettu, mitään ei vielä luettu",
+      "nothingReadWithStatus": "Haettu, mitään ei vielä luettu · HTTP {{status}}"
+    }
+  },
+  "transport": {
+    "previous": "Edellinen juttu",
+    "play": "Toista",
+    "pause": "Tauko",
+    "next": "Seuraava juttu",
+    "volume": "Ankkurin äänenvoimakkuus",
+    "volumeValue": "{{percent}} %"
+  },
+  "relay": {
+    "title": "Syötteiden välityspalvelin",
+    "checking": "Tarkistetaan…",
+    "example": "Jokainen syöte haetaan osoitteesta {{request}}",
+    "empty": "Tyhjä — tämä selain voi lukea vain ne syötteet jotka sen sallivat, eli lähes ei mitään",
+    "notice": "Tämä on selain, joten julkaisijoiden syötteitä ei voi lukea suoraan — ne ovat toisilla sivustoilla eivätkä ne salli sitä. Kunnes annat välityspalvelimen, lähetys on mukana tuleva esittely: keksittyjä juttuja keksityiltä toimituksilta, jotta sovelluksella on jotain näytettävää. Välityspalvelin on kone joka hakee oikeat syötteet sovelluksen puolesta. Se siis näkee jokaisen pyydetyn syötteen, mikä on luettelo siitä mitä luet, joten käytä sellaista jonka itse ylläpidät tai jolle uskaltaisit sen kertoa. Välityspalvelinta ei toimiteta eikä mitään suositella. Työpöytäsovellus ei tarvitse tästä mitään."
+  },
+  "audio": {
+    "loading": "Ladataan ääniasetuksia…",
+    "noProvider": "Tässä koontiversiossa ei ole puhesyntetisaattoria.",
+    "noProviderHint": "Ei syntetisaattoria",
+    "noVoices": "Tämä syntetisaattori ei tarjoa ääniä tällä laitteella. Lähetys on äänetön kunnes jokin ääni on saatavilla.",
+    "selected": "● Valittu",
+    "starting": "Aloitetaan…",
+    "download": "Lataa {{size}}",
+    "downloadFailure": {
+      "offline": "Ääntä ei voitu ladata: laite ei ole verkossa tai yhteys katkesi. Lataamista yritettiin useita kertoja. Jo saapunut osa säilytetään, joten uusi yritys jatkaa siitä.",
+      "notPublished": "Tätä ääntä ei enää julkaista siellä, mistä tämä versio sitä etsii. Uudelleenyritys ei auta; valitse toinen ääni ja päivitä sovellus, jos päivitys on saatavilla.",
+      "refused": "Palvelin ei luovuttanut ääntä (virhe {{detail}}). Lataamista yritettiin useita kertoja. Jo saapunut osa säilytetään, joten uusi yritys jatkaa siitä.",
+      "endedEarly": "Lataus keskeytyi ennen kuin se valmistui. Jo saapunut osa säilytetään, joten uusi yritys jatkaa siitä mihin se jäi.",
+      "deviceFull": "Laitteessa ei ole tarpeeksi tilaa tälle äänelle. Vapauta tilaa tai poista ääni jota et enää käytä, ja aloita lataus uudelleen.",
+      "noStorage": "Tämä selain ei anna sovelluksen tallentaa mitään, joten ääntä ei voi säilyttää. Yksityinen ikkuna toimii yleensä näin; järjestelmän oma ääni ei vaadi latausta ja toimii silti.",
+      "wrongSize": "Saapunut tiedosto ei ollut odotettu ääni, joten se hylättiin eikä sitä otettu käyttöön. Aloita lataus uudelleen.",
+      "notInCatalog": "Tämä versio ei tarjoa kyseistä ääntä.",
+      "unknown": "Ääntä ei voitu ladata ({{detail}})."
+    },
+    "downloading": "Ladataan {{voice}}",
+    "received": "{{received}}",
+    "receivedOf": "{{received}} / {{total}}",
+    "engine": {
+      "title": "Puhesyntetisaattori"
+    },
+    "anchorVoice": {
+      "title": "Ankkurin oma ääni",
+      "named": "{{anchor}} lukee paketissaan nimetyllä äänellä",
+      "unnamed": "{{anchor}} ei nimeä ääntä, joten syntetisaattori valitsee"
+    },
+    "rate": {
+      "title": "Puhenopeus",
+      "description": "Kuinka nopeasti ankkuri lukee",
+      "value": "{{rate}}×",
+      "min": "Rauhallinen",
+      "max": "Reipas"
+    },
+    "studioBed": {
+      "title": "Studion äänet",
+      "description": "Tilaääni ankkurin alla ja aseman musiikki saumoissa",
+      "max": "Voimakas"
+    },
+    "remove": {
+      "title": "Poista {{voice}}",
+      "description": "Poistaa ladatun äänen tältä laitteelta",
+      "confirm": "Paina uudelleen poistaaksesi"
+    },
+    "provider": {
+      "noRuntime": "Tämä laite ei voi ajaa ladattuja ääniä.",
+      "nothingDownloaded": "Yhtään ääntä ei ole vielä ladattu. Valitse alta jokin asentaaksesi sen.",
+      "noSystemVoices": "Tämä laite ei ilmoita yhtään asennettua puheääntä.",
+      "webSpeech": {
+        "label": "Järjestelmän ääni",
+        "description": "Mitä laitteella jo on. Ei latausta, aina saatavilla.",
+        "absent": "Tässä laitteessa ei ole sisäänrakennettua puhesyntetisaattoria."
+      },
+      "native": {
+        "label": "Työpöydän ääni",
+        "description": "Käyttöjärjestelmän oma syntetisaattori, jota sovellus käyttää suoraan eikä ikkunansa kautta. Ei latausta, ja joissakin Linux-työpöydissä ainoa ääni.",
+        "desktopOnly": "Tämä ääni on saatavilla vain työpöytäsovelluksessa.",
+        "unavailable": "Tämän laitteen puhesyntetisaattoria ei saatu käynnistettyä: {{detail}}",
+        "stopped": "Tämän laitteen puhesyntetisaattori lakkasi vastaamasta.",
+        "unreachable": "Tämän laitteen puhesyntetisaattoriin ei saatu yhteyttä."
+      },
+      "piper": {
+        "label": "Piper (ladattava)",
+        "description": "Lähetyslaatuinen neuroverkkoääni joka toimii tällä laitteella. Yksi lataus, sen jälkeen ikuisesti verkotta."
+      },
+      "kokoro": {
+        "label": "Kokoro (ladattava)",
+        "description": "Paras tällä laitteella toimiva ääni, joka käyttää näytönohjainta jos sellainen on. Yksi malli, jaettu jokaisen lukijan kesken."
+      },
+      "absentFromBuild": "Tässä koontiversiossa ei ole puhesyntetisaattoria."
+    }
+  },
+  "packs": {
+    "hint": "Ankkurit ja studiot",
+    "webOnly": "Selainversio lukee vain siihen sisäänrakennetut paketit. Asenna työpöytäsovellus lisätäksesi omia ankkureita ja studioita.",
+    "none": "Mitään ei ole asennettu. Pöydän takana on sisäänrakennettu paikanpitäjä.",
+    "shipped": "Mukana",
+    "removed": "Poistettu {{pack}}.",
+    "moreDiagnostics_one": "…ja {{count}} muu.",
+    "moreDiagnostics_other": "…ja {{count}} muuta.",
+    "directory": "Paketit sijaitsevat hakemistossa {{directory}}.",
+    "directoryHelp": "Kansio jossa on .vrm- tai .glb-tiedosto on paketti; sen vieressä oleva pack.json kertoo lisenssin ja kaiken mitä tiedostonimi ei voi sanoa. Katso docs/content-packs.md.",
+    "install": {
+      "title": "Asenna paketti",
+      "description": "Lukee paketin sisältävän .zip-tiedoston. Voit myös kopioida kansion alla olevaan hakemistoon",
+      "done": "Asennettu hakemistoon {{directory}}"
+    },
+    "remove": {
+      "confirm": "Valitse uudelleen vahvistaaksesi — kansio ja kaikki sen sisältö poistetaan"
+    },
+    "by": "tekijä {{author}}",
+    "version": "v{{version}}",
+    "contents": {
+      "nothing": "Ei käyttökelpoista sisältöä",
+      "anchors_one": "{{count}} ankkuri",
+      "anchors_other": "{{count}} ankkuria",
+      "studios_one": "{{count}} studio",
+      "studios_other": "{{count}} studiota"
+    }
+  },
+  "picture": {
+    "hint": "Valitse vuosikymmen",
+    "onAir": "● Lähetyksessä",
+    "eraLabel": "{{year}} · {{name}}",
+    "detail": {
+      "title": "Yksityiskohdat",
+      "measured": "Mitataan lähetyksen aikana ja lasketaan jos kuva ei pysy mukana",
+      "fixed": "Kiinteä, oli kuvataajuus mikä tahansa",
+      "currently": "Nyt {{tier}} · {{fps}} fps",
+      "chosen": "{{tier}} · {{fps}} fps — itse valittu, ei mitattu"
+    },
+    "quality": {
+      "automatic": "Automaattinen",
+      "low": "Matala",
+      "medium": "Keskitaso",
+      "high": "Korkea",
+      "lowDescription": "Vähiten pikseleitä, ei varjoja, vain halvimmat kuvahäiriöt",
+      "mediumDescription": "Pehmeät varjot ja suurin osa aikakaudesta, kohtuullisella tarkkuudella",
+      "highDescription": "Kaikki aikakauden häiriöt näytön tarkkuudella"
+    },
+    "archive": {
+      "title": "Kirjaston kuvat",
+      "description": "Käytä sovelluksen mukana tulevia kuvia kun jutulla ei ole omaa",
+      "never": "Ei koskaan",
+      "whenMissing": "Kun puuttuu",
+      "always": "Aina"
+    },
+    "fontScale": {
+      "title": "Tekstin koko",
+      "description": "Säädä valikoiden ja television tekstityksen kokoa",
+      "small": "Pieni (75 %)",
+      "normal": "Normaali (100 %)",
+      "large": "Suuri (125 %)",
+      "extraLarge": "Erittäin suuri (150 %)"
+    },
+    "subtitles": {
+      "title": "Tekstitys",
+      "description": "Näytä tekstitys lähetyksen aikana"
+    },
+    "subtitleFont": {
+      "title": "Tekstityksen kirjasin",
+      "description": "Tekstityksen kirjasintyyppi",
+      "sans": "Pääteviivaton",
+      "serif": "Päätteellinen",
+      "mono": "Tasalevyinen"
+    },
+    "subtitleSize": {
+      "title": "Tekstityksen koko",
+      "description": "Tekstityksen tekstikoko",
+      "small": "Pieni",
+      "medium": "Keskikokoinen",
+      "large": "Suuri",
+      "extraLarge": "Erittäin suuri"
+    },
+    "subtitleColour": {
+      "title": "Tekstityksen väri",
+      "description": "Tekstityksen tekstin väri"
+    },
+    "subtitleBackground": {
+      "title": "Tekstityksen tausta",
+      "description": "Tekstityksen taustan tyyli"
+    },
+    "colour": {
+      "white": "Valkoinen",
+      "yellow": "Keltainen",
+      "cyan": "Syaani",
+      "green": "Vihreä"
+    },
+    "background": {
+      "translucent": "Läpikuultava musta",
+      "solid": "Peittävä musta",
+      "transparent": "Läpinäkyvä"
+    }
+  },
+  "era": {
+    "crt1968bw": {
+      "label": "Mustavalkoinen",
+      "description": "Mustavalkoinen kuvaputki, voimakkaat juovat, pehmeä tarkennus."
+    },
+    "crt1979pal": {
+      "label": "PAL-väri",
+      "description": "Varhainen väriputki: lämmin, vähäkylläinen, näkyvä juovarakenne."
+    },
+    "vhs1988": {
+      "label": "VHS",
+      "description": "Nauhan häiriöt, värin vuotaminen ja seurantakohina."
+    },
+    "sdi1998": {
+      "label": "Digitaalinen SD",
+      "description": "Puhdas vakiotarkkuus, teräväreunainen digitaalinen grafiikka."
+    },
+    "hd2008": {
+      "label": "HD",
+      "description": "Laajakuvainen teräväpiirto ja lasimainen grafiikka."
+    },
+    "uhd2020": {
+      "label": "UHD",
+      "description": "Nykyaikainen litteä muotoilu, laaja väriavaruus, vähän häiriöitä."
+    },
+    "clean": {
+      "label": "Puhdas",
+      "description": "Ei kuvankäsittelyä lainkaan — vertailukuva."
+    }
+  },
+  "editorial": {
+    "hint": "Astuu voimaan seuraavassa haussa",
+    "loading": "Ladataan juttuasetuksia…",
+    "format": {
+      "title": "Muoto",
+      "description": "Lähetys alkaa, kestää määrätyn ajan ja päättyy. Jatkuva lähetys lukee jutut sitä mukaa kun niitä tulee eikä lopu koskaan.",
+      "bulletin": "Lähetys",
+      "rolling": "Jatkuva"
+    },
+    "length": {
+      "title": "Lähetyksen pituus",
+      "description": "Kuinka kauan yksi lähetys kestää ennen kuin se päättyy ja alkaa alusta",
+      "minutes_one": "{{count}} min",
+      "minutes_other": "{{count}} min"
+    },
+    "tease": {
+      "title": "Aloita otsikoilla",
+      "description": "Pois päältä ohittaa otsikot ja siirtyy tervehdyksestä suoraan ensimmäiseen juttuun"
+    },
+    "sport": {
+      "title": "Urheilu",
+      "description": "Lukee uusimmat tulokset uutisten jälkeen palvelusta TheSportsDB. Tiliä ei tarvita",
+      "pickSome": "Valitse enintään {{max}} sarjaa — ankkuri lukee kunkin uusimman tuloksen",
+      "roomForMore_one": "Seurataan {{following}} — tilaa vielä {{count}}",
+      "roomForMore_other": "Seurataan {{following}} — tilaa vielä {{count}}",
+      "full": "Seurataan {{max}}, mikä on enimmäismäärä — poista jokin käytöstä lisätäksesi toisen"
+    },
+    "weather": {
+      "title": "Sää",
+      "description": "Lukee sään viimeisen jutun jälkeen palvelusta Open-Meteo. Tiliä ei tarvita",
+      "place": {
+        "title": "Sää paikkakunnalle",
+        "empty": "Kirjoita kaupunki tai kunta — asema selvittää missä se on",
+        "pending": "Selvitetään seuraavassa haussa",
+        "found": "Luetaan sää paikkakunnalle {{place}}",
+        "foundInRegion": "Luetaan sää paikkakunnalle {{place}}, {{region}}",
+        "example": "Helsinki"
+      }
+    },
+    "temperature": {
+      "title": "Lämpötila",
+      "description": "Tuuli luetaan siihen sopivissa yksiköissä — kilometreinä tai maileina tunnissa"
+    },
+    "idents": {
+      "title": "Aseman tunnukset",
+      "description": "Kuinka monta juttua peräkkäin ennen kuin asema kertoo nimensä",
+      "every_one": "Joka {{count}}.",
+      "every_other": "Joka {{count}}.",
+      "min": "Usein"
+    },
+    "balance": {
+      "title": "Juttujen painotus",
+      "description": "Aloittaako lähetys laajimmin uutisoidusta jutusta vai tuoreimmasta",
+      "mostReported": "Laajimmin uutisoitu",
+      "leansReported": "Painottaa uutisointia",
+      "balanced": "Tasapainossa",
+      "leansLatest": "Painottaa tuoreutta",
+      "breakingFirst": "Tuorein ensin",
+      "newest": "Tuorein"
+    },
+    "variety": {
+      "title": "Aiheiden vaihtelu",
+      "description": "Kuinka monta samaa aihetta käsittelevää juttua saa olla peräkkäin",
+      "inARow_one": "{{count}} peräkkäin",
+      "inARow_other": "{{count}} peräkkäin",
+      "min": "Sekoitettu",
+      "max": "Ryhmitelty"
+    },
+    "neverRepeat": {
+      "title": "Älä toista juttua",
+      "description": "Päällä juttu pudotetaan kun se on luettu loppuun"
+    },
+    "summaries": {
+      "title": "Lue juttujen tiivistelmät",
+      "description": "Pois päältä lukee vain otsikot, jolloin lähetys on nopeampi"
+    }
+  },
+  "sourceEditor": {
+    "add": "Lisää lähde",
+    "back": "Takaisin lähdelistaan",
+    "hint": {
+      "new": "Oma syötteesi",
+      "own": "Lisäämäsi syöte",
+      "catalog": "Muutoksia luettelon lähteeseen — itse lähdelistaa ei muuteta"
+    },
+    "name": {
+      "title": "Nimi",
+      "description": "Miksi tätä julkaisijaa kutsutaan ruudulla ja lähetyksessä",
+      "example": "Kuopion Sanomat"
+    },
+    "address": {
+      "title": "Osoite",
+      "feed": "RSS-, Atom- tai JSON-syöte",
+      "api": "Päätepiste joka vastaa jutuilla"
+    },
+    "kind": {
+      "title": "Luetaan muodossa",
+      "description": "Syöte kertoo itse muotonsa; rajapinta täytyy kuvata",
+      "feed": "Syöte",
+      "jsonApi": "JSON-rajapinta"
+    },
+    "language": {
+      "title": "Kieli",
+      "description": "BCP-47-tunnus, esimerkiksi en tai fi-FI"
+    },
+    "topics": {
+      "title": "Aiheet",
+      "description": "Mihin tämä julkaisija lasketaan kun juttujärjestystä tasapainotetaan"
+    },
+    "priority": {
+      "title": "Painoarvo",
+      "description": "Kuinka paljon painoarvoa tällä lähteellä on muihin nähden",
+      "min": "Harvoin",
+      "max": "Usein"
+    },
+    "save": {
+      "add": "Lisää tämä lähde",
+      "update": "Tallenna muutokset",
+      "incomplete": "Nimi ja syötteen osoite tarvitaan ennen tallennusta"
+    },
+    "delete": {
+      "title": "Poista tämä lähde",
+      "description": "Poistaa syötteen ja kaiken siitä muistetun",
+      "confirm": "Valitse uudelleen vahvistaaksesi — tätä ei voi perua"
+    },
+    "reset": {
+      "title": "Käytä luettelon arvoja",
+      "description": "Unohtaa yllä olevat muutokset ja seuraa taas julkaistua listaa",
+      "confirm": "Valitse uudelleen vahvistaaksesi"
+    },
+    "mapping": {
+      "items": {
+        "title": "Jutut",
+        "description": "Missä juttulista sijaitsee — jätä tyhjäksi jos vastaus on itse lista"
+      },
+      "title": {
+        "title": "Otsikko",
+        "description": "Pakollinen — ilman sitä ei ole mitään luettavaa"
+      },
+      "link": {
+        "title": "Artikkelin osoite",
+        "description": "Pakollinen — jutulle jolla ei ole linkkiä ei voi antaa lähdettä"
+      },
+      "summary": {
+        "title": "Tiivistelmä",
+        "description": "Rivi jonka ankkuri lukee otsikon jälkeen"
+      },
+      "content": {
+        "title": "Leipäteksti",
+        "description": "Koko teksti, kun rajapinta sen tarjoaa"
+      },
+      "published": {
+        "title": "Julkaistu",
+        "description": "Rajapinnan ilmoittama päiväys — päiväämättömät jutut käsitellään uusina"
+      },
+      "image": {
+        "title": "Kuva",
+        "description": "Kuva videoseinälle"
+      },
+      "categories": {
+        "title": "Kategoriat",
+        "description": "Mihin julkaisija jutun luokittelee"
+      },
+      "id": {
+        "title": "Tunniste",
+        "description": "Rajapinnan oma tunniste jutulle"
+      }
+    }
+  },
+  "sources": {
+    "loading": "Ladataan lähdeluetteloa…",
+    "onAir": "{{selected}} / {{total}} lähetyksessä",
+    "noMatches": "Mikään lähde ei vastaa näitä suodattimia.",
+    "empty": "Lähdeluettelo on tyhjä. Palauta oletukset aloittaaksesi lähetyksen.",
+    "showAll_one": "Näytä kaikki {{count}}",
+    "showAll_other": "Näytä kaikki {{count}}",
+    "orphaned_one": "Yksi valitsemasi lähde ei ole enää luettelossa. Valintasi säilytetään siltä varalta että se palaa.",
+    "orphaned_other": "{{count}} valitsemaasi lähdettä ei ole enää luettelossa. Valintasi säilytetään siltä varalta että ne palaavat.",
+    "add": {
+      "description": "Itse löytämäsi syöte, osoitteen perusteella"
+    },
+    "check": {
+      "title": "Tarkista uudet lähteet",
+      "action": "Tarkista",
+      "running": "Tarkistetaan…"
+    },
+    "filter": {
+      "any": "Mikä tahansa"
+    },
+    "scope": {
+      "title": "Kattavuus",
+      "description": "Kuinka laaja julkaisijan alue on",
+      "global": "Maailma",
+      "national": "Valtakunnallinen",
+      "regional": "Alueellinen",
+      "local": "Paikallinen"
+    },
+    "topic": {
+      "title": "Aihe"
+    },
+    "health": {
+      "idle": "Odottaa",
+      "failing": "Ei vastaa",
+      "live": "Toimii"
+    },
+    "catalog": {
+      "count_one": "{{count}} lähde",
+      "count_other": "{{count}} lähdettä",
+      "bundled": "sovelluksen mukana",
+      "downloaded": "ladattu",
+      "neverChecked": "ei tarkistettu kertaakaan",
+      "checkedUnknown": "viimeksi tarkistettu tuntemattomaan aikaan",
+      "checkedJustNow": "tarkistettu juuri äsken",
+      "checked": "tarkistettu {{when}}"
+    },
+    "source": {
+      "notPolled": "ei vielä haettu",
+      "failing": "ei vastaa ({{reason}})",
+      "failingWithStatus": "ei vastaa (HTTP {{status}})",
+      "neverRead": "ei luettu kertaakaan",
+      "readUnknown": "viimeksi luettu tuntemattomaan aikaan",
+      "readJustNow": "luettu juuri äsken",
+      "lastRead": "luettu {{when}}"
+    },
+    "refresh": {
+      "upToDate": "Lähdelista on jo ajan tasalla.",
+      "updated_one": "Päivitetty versioon {{revision}} — {{count}} lähde.",
+      "updated_other": "Päivitetty versioon {{revision}} — {{count}} lähdettä.",
+      "partial": "Osaa päivityksestä ei voitu varmentaa, joten sitä ei otettu käyttöön. Tallennettu lista on yhä käytössä, ja seuraava tarkistus yrittää uudelleen.",
+      "unreachable": "GitHubiin ei saatu yhteyttä, käytetään tallennettua listaa.",
+      "unsupported": "Julkaistu lista vaatii uudemman version tästä sovelluksesta. Tallennettu lista on yhä käytössä.",
+      "invalid": "Julkaistua listaa ei voitu lukea, joten tallennettu lista on yhä käytössä."
+    }
+  },
+  "keypad": {
+    "shift": "Vaihto",
+    "symbols": "Merkit",
+    "letters": "Kirjaimet",
+    "space": "Väli",
+    "caretLeft": "Siirrä kohdistinta vasemmalle",
+    "caretRight": "Siirrä kohdistinta oikealle",
+    "backspace": "Askelpalautin",
+    "clear": "Tyhjennä",
+    "done": "Valmis"
+  },
+  "anchor": {
+    "placeholder": {
+      "label": "Studion paikanpitäjä",
+      "description": "Sisäänrakennettu sijainen. Aina saatavilla, eikä vaadi mallia."
+    },
+    "fromPack": "Paketista {{pack}}."
+  },
+  "narration": {
+    "breaking": "Uutisvälähdys.",
+    "breakingBy": "Uutisvälähdys. Uutisoinut {{publishers}}.",
+    "developing": "Kehittyvä juttu.",
+    "developingBy": "Kehittyvä juttu. Uutisoinut {{publishers}}.",
+    "reportedBy": "Uutisoinut {{publishers}}.",
+    "kind": {
+      "coldOpen": "Aloitus",
+      "headlines": "Otsikot",
+      "signOff": "Lopetus",
+      "break": "Aseman tunnus",
+      "weather": "Sää",
+      "sport": "Urheilu",
+      "adBreak": "Mainoskatko"
+    }
+  },
+  "transcript": {
+    "label": "Uutislähetys tekstinä"
+  },
+  "chrome": {
+    "openMenu": "Avaa valikko"
+  },
+  "error": {
+    "unreachable": "Sovellus ei saanut yhteyttä omaan moottoriinsa ({{detail}})."
+  },
+  "core": {
+    "relayHasSpaces": "Verkko-osoitteessa ei ole välilyöntejä. Tarkista, jäikö liitettyyn tekstiin ylimääräinen merkki tai rivinvaihto.",
+    "relayPlaceholderMisspelled": "Ainoa paikkamerkki on {url}, pienin kirjaimin. Kirjoita se siihen kohtaan, johon syötteen oma osoite kuuluu.",
+    "relayNoPlaceholder": "Tästä ei käy ilmi, mihin syötteen osoite tulee. Lisää {url} oikeaan kohtaan tai päätä osoite merkkiin /, jolloin syötteen osoite liitetään perään.",
+    "relayNotAnAddress": "Tämä ei ole verkko-osoite. Välityspalvelimen osoite on muotoa https://my-relay.example/{url}",
+    "relayNoHost": "Osoite ei nimeä konetta, jolle pyyntö lähetettäisiin. Välityspalvelimen osoite on muotoa https://my-relay.example/{url}",
+    "relayInsecure": "Selain estää http-osoitteen sivulla, joka on tarjoiltu https-yhteydellä. Käytä https:ää, ellei välityspalvelin ole tällä koneella.",
+    "relayUnsupportedScheme": "Välityspalvelimen osoite alkaa https:// — muuta ei voi hakea.",
+    "packIdTaken": "Toinen paketti on jo nimeltään ”{{id}}” ({{owner}}); tämä ohitettiin. Anna toiselle niistä oma ”id” tiedostossa pack.json.",
+    "packAnchorIdTaken": "Toinen ankkuri on jo nimeltään ”{{id}}” (paketissa {{owner}}); tämä ohitettiin. Nimeä tiedosto uudelleen tai anna sille oma ”id” tiedostossa pack.json.",
+    "packStudioIdTaken": "Toinen studio on jo nimeltään ”{{id}}” (paketissa {{owner}}); tämä ohitettiin. Nimeä tiedosto uudelleen tai anna sille oma ”id” tiedostossa pack.json.",
+    "packHasNoModels": "Tässä paketissa ei ole ankkureita eikä studioita.",
+    "packFileHasNoLicence": "Mikään ei kerro, millä ehdoilla tätä tiedostoa saa levittää edelleen. Kaiken packs/-kansiossa toimitettavan on kerrottava se.",
+    "packListedAnchorMissing": "Manifesti luettelee tämän ankkurin, mutta tiedostoa ei ole paketissa.",
+    "packListedStudioMissing": "Manifesti luettelee tämän studion, mutta tiedostoa ei ole paketissa.",
+    "packManifestNotJson": "Tämä tiedosto ei ole kelvollista JSONia ({{detail}}); paketti ohitettiin.",
+    "packManifestNotAnObject": "Manifestin on oltava JSON-objekti; paketti ohitettiin.",
+    "packFormatTooNew": "Tämä paketti on kirjoitettu muodolle {{declared}}, ja tämä versio ymmärtää muotoa {{supported}}; paketti ohitettiin. Päivitä sovellus.",
+    "packFormatNotANumber": "Tämän pitäisi olla luku {{supported}}; se ohitettiin.",
+    "packFormatMissing": "Manifesti ei kerro, mille muodolle se on kirjoitettu; oletuksena käytettiin muotoa {{supported}}.",
+    "packFieldUnknown": "Tämä versio ei tunne tätä kenttää; se ohitettiin.",
+    "packListMustBeArray": "Kentän ”{{field}}” on oltava lista; siitä ei luettu mitään.",
+    "packFileListedTwice": "Manifesti luettelee tämän tiedoston kahdesti; jälkimmäinen ohitettiin.",
+    "packEntryNotAnObject": "Jokaisen kohdan on oltava objekti, jossa on ainakin ”file”; tämä ohitettiin.",
+    "packEntryHasNoFile": "Tämä kohta ei kerro, mikä ”file” se on; se ohitettiin.",
+    "packFileOutsidePack": "”{{file}}” ei ole polku paketin sisällä; se ohitettiin. Tiedosto on nimettävä suhteessa paketin kansioon.",
+    "packEntryNotAnAnchor": "”{{file}}” ei ole mallitiedosto, jonka tämä versio tunnistaa, mutta se on luetteloitu ankkuriksi — se ladataan sellaisena ja epäonnistuu todennäköisesti.",
+    "packEntryNotAStudio": "”{{file}}” ei ole mallitiedosto, jonka tämä versio tunnistaa, mutta se on luetteloitu studioksi — se ladataan sellaisena ja epäonnistuu todennäköisesti.",
+    "packSidecarNotJson": "Tämä tiedosto ei ole kelvollista JSONia ({{detail}}); se ohitettiin.",
+    "packSidecarNotAnObject": "Oheistiedoston on oltava JSON-objekti; se ohitettiin.",
+    "packVoiceNotAnObject": "Tämän pitäisi olla objekti, esimerkiksi { \"language\": \"en-GB\", \"rate\": 0.97 }; se ohitettiin.",
+    "packVoiceOnStudio": "Vain ankkuri lukee uutiset; studion ääni ohitettiin.",
+    "packVoiceIdWithoutEngine": "Äänen tunniste ei merkitse mitään ilman kenttää ”engineId”, jolle se kuuluu; se ohitettiin. Kirjoita sen sijaan ”language”, jos mikä tahansa ääni kelpaa.",
+    "packVoiceSaysNothing": "Tämä ei kerro mitään siitä, miltä ankkuri kuulostaa; se ohitettiin.",
+    "packDeliveryOutOfRange": "{{written}} on paketille sallitun välin {{minimum}}–{{maximum}} ulkopuolella; käytettiin arvoa {{used}}. Se on kerroin katsojan omalle asetukselle, ei sen korvaaja.",
+    "packFieldNotText": "Tämän pitäisi olla lainausmerkeissä tekstinä; se ohitettiin.",
+    "packFieldNotFinite": "Tämä ei ole luku, jota voisi käyttää; se ohitettiin.",
+    "packFieldNotANumber": "Tämän pitäisi olla luku ilman lainausmerkkejä; se ohitettiin.",
+    "packEntryOutsideFolder": "Tämä tiedosto on nimetty sen kansion ulkopuolelle, johon se asennettaisiin; sitä ei purettu.",
+    "packArchiveTooManyFiles": "Tässä arkistossa on {{count}} tiedostoa, mikä on enemmän kuin sisältöpaketissa pitäisi olla ({{maximum}}); mitään ei asennettu.",
+    "packArchiveTooLarge": "Tämä arkisto purkautuu {{gigabytes}} Gt:n kokoiseksi, mikä on enemmän kuin sisältöpaketissa pitäisi olla ({{maximumGigabytes}} Gt); mitään ei asennettu.",
+    "packArchiveHasNoModels": "Tässä arkistossa ei ole ankkuria eikä studiota, joten siinä ei ole mitään asennettavaa.",
+    "packArchiveNotAFile": "Arkisto ei saapunut tiedostona. Valitse se uudelleen.",
+    "packArchiveUnreadable": "Tätä tiedostoa ei voitu lukea arkistona ({{detail}}).",
+    "packArchiveFileUnreadable": "Arkiston tiedostoa ”{{file}}” ei voitu lukea ({{detail}}); mitään ei asennettu.",
+    "packAlreadyInstalled": "Kansioon ”{{folder}}” on jo asennettu paketti. Poista se ensin.",
+    "packFolderNotASingleName": "”{{folder}}” ei ole pakettikansion nimi.",
+    "packDirectoryUnavailableOnWeb": "Selainversiolla ei ole kansiota sisältöpaketteja varten. Asenna työpöytäsovellus, jos haluat lisätä omia ankkureita ja studioita.",
+    "sourceNeedsName": "Lähteellä on oltava nimi.",
+    "sourceUrlUnreadable": "Tämä ei näytä verkko-osoitteelta ({{detail}}).",
+    "sourceUrlNotHttp": "Syöte haetaan http- tai https-osoitteesta; muuta ei voi lukea.",
+    "sourceWeightOutOfRange": "Painoarvo on väliltä 0–1.",
+    "sourceMappingMissing": "JSON-rajapinnalle on kerrottava, missä sen jutut ovat.",
+    "sourceIdTaken": "Luettelossa on jo lähde ”{{id}}”.",
+    "sourceUrlTaken": "Tämä syöte on jo luettelossa.",
+    "mappingNeedsTitle": "Nimeä kenttä, jossa otsikko on.",
+    "mappingNeedsLink": "Nimeä kenttä, jossa jutun osoite on — jutulle, jolla ei ole linkkiä, ei voi merkitä lähdettä.",
+    "catalogEntryNeedsName": "Lähdeluettelossa on nimetön kohta, joten sitä ei voitu käyttää.",
+    "catalogEntryUrlUnreadable": "Lähdeluettelossa on kohta, jonka osoite ei ole verkko-osoite ({{detail}}), joten sitä ei voitu käyttää.",
+    "catalogEntryUrlNotHttp": "Lähdeluettelossa on kohta, jonka osoite ei ole http tai https, joten sitä ei voitu käyttää.",
+    "catalogEntryWeightOutOfRange": "Lähdeluettelossa on kohta, jonka painoarvo ei ole väliltä 0–1, joten sitä ei voitu käyttää.",
+    "catalogEntryNeedsLanguage": "Lähdeluettelossa on kohta, joka ei nimeä yhtään kieltä, joten sitä ei voitu käyttää.",
+    "catalogIdListedTwice": "Lähdeluettelossa on ”{{id}}” kahdesti, joten sitä ei voitu käyttää.",
+    "catalogUrlPolledTwice": "Lähdeluettelo hakee osoitetta {{url}} kahdesti, joten sitä ei voitu käyttää.",
+    "stockEntryNeedsId": "Kuvakirjaston hakemistossa on kohta ilman tunnusta.",
+    "stockPathOutsideArchive": "”{{path}}” ei ole kuvakirjaston sisäinen polku.",
+    "stockEntryHasNoSize": "Kohdalle ”{{id}}” ei ole merkitty kuvan kokoa.",
+    "stockIdListedTwice": "Kuvakirjastossa on ”{{id}}” kahdesti.",
+    "stockPathListedTwice": "Kaksi kuvakirjaston kohtaa osoittaa tiedostoon {{path}}.",
+    "settingsFileNotJson": "Tämä tiedosto ei ole kelvollista JSONia ({{detail}}).",
+    "settingsFileNotOurs": "Tämä ei ole World News Simulatorin asetustiedosto.",
+    "settingsFileTooNew": "Tämä tiedosto on kirjoitettu sovelluksen uudemmalla versiolla (muoto {{declared}}). Päivitä sovellus, jotta voit lukea sen.",
+    "settingsFileHasNoSettings": "Tässä tiedostossa ei ole asetuksia.",
+    "settingsFileUnreadable": "Tämän tiedoston asetuksia ei voitu lukea ({{detail}}).",
+    "errorNetwork": "Osoitteeseen {{url}} ei saatu yhteyttä ({{detail}}).",
+    "errorHttpStatus": "{{url}} vastasi HTTP-koodilla {{status}}.",
+    "errorFeedParse": "Osoitteesta {{url}} ei voitu lukea syötettä ({{detail}}).",
+    "errorStorage": "Laitteen tallennustilaa ei voitu lukea tai kirjoittaa ({{detail}}).",
+    "errorSchemaTooNew": "Tänne tallennettu tieto on kirjoitettu sovelluksen uudemmalla versiolla (muoto {{found}}; tämä lukee muotoa {{supported}}). Päivitä sovellus.",
+    "errorSerde": "Jotakin ei voitu lukea siinä muodossa kuin sen pitäisi olla ({{detail}}).",
+    "errorAiProvider": "{{provider}} kieltäytyi pyynnöstä tai se epäonnistui ({{detail}}); teksti kirjoitettiin valmiista malleista.",
+    "errorIntegrity": "{{artefact}} ei vastaa sitä, mitä siitä on julkaistu, joten sitä ei otettu käyttöön. Jo ladattu versio on yhä käytössä.",
+    "errorSourceNotFound": "Lähdettä ”{{id}}” ei ole.",
+    "errorPackNotFound": "Pakettia ”{{id}}” ei ole asennettu.",
+    "errorRequestNotBuilt": "Pyyntöä osoitteeseen {{endpoint}} ei voitu muodostaa ({{detail}}).",
+    "errorEngineUnavailable": "Simulaattorin moottori lakkasi vastaamasta. Käynnistä sovellus uudelleen.",
+    "localeListNotFetched": "Kieliluetteloa ei ole vielä ladattu. Hae kielet ensin.",
+    "localeNotOffered": "”{{tag}}” ei ole tarjolla olevien kielten joukossa.",
+    "localeReferenceKept": "Englantia ei voi poistaa. Se on sisäänrakennettu sovellukseen, ja siihen turvaudutaan kaikessa mitä käännös ei kata."
+  }
+}

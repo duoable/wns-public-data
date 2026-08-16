@@ -20,6 +20,12 @@ import { argv, exit } from 'node:process';
 import { pathToFileURL } from 'node:url';
 
 import { absolute, INDEX_PATH, readJson, shardPaths, TAXONOMY_PATH } from './lib/catalog.mjs';
+import {
+  LOCALES_INDEX_PATH,
+  LOCALES_META_PATH,
+  localePath,
+  localeTags,
+} from './lib/locales.mjs';
 
 const INLINE_ARRAY_LIMIT = 72;
 
@@ -62,7 +68,14 @@ export function format(value, indent = 0) {
 
 function main() {
   const checkOnly = argv.includes('--check');
-  const paths = [TAXONOMY_PATH, ...shardPaths(), INDEX_PATH];
+  const paths = [
+    TAXONOMY_PATH,
+    ...shardPaths(),
+    INDEX_PATH,
+    ...localeTags().map(localePath),
+    LOCALES_META_PATH,
+    LOCALES_INDEX_PATH,
+  ];
   const unformatted = [];
 
   for (const path of paths) {
@@ -85,7 +98,7 @@ function main() {
   }
 
   if (unformatted.length === 0) {
-    console.log(`All ${paths.length} catalog files are formatted.`);
+    console.log(`All ${paths.length} data files are formatted.`);
     return 0;
   }
 

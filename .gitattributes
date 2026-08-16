@@ -2,6 +2,7 @@
 # committed bytes. A CRLF checkout would change those bytes and every integrity
 # check would fail on Windows. Pin them to LF.
 catalog/**/*.json text eol=lf
+locales/**/*.json text eol=lf
 schema/**/*.json  text eol=lf
 scripts/**/*.mjs  text eol=lf
 *.md              text eol=lf

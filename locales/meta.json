@@ -1,0 +1,30 @@
+{
+  "$comment": [
+    "What is true of each translation rather than of any line inside it.",
+    "",
+    "Neither the endonym nor the licence can be derived from a catalogue, and",
+    "build-locales-index.mjs refuses to publish a language that has no entry",
+    "here — so a translation cannot reach the app with nobody having recorded",
+    "what it may be used under.",
+    "",
+    "`endonym` is the language's name for itself: Suomi, not Finnish. Somebody",
+    "opening the language list may be a person who cannot read the language",
+    "currently on their screen, which makes a list of English names useless to",
+    "exactly the people who need it.",
+    "",
+    "`licence` is MIT, matching the app it translates. Unlike catalog/, which",
+    "is CC0 because a list of feed URLs is a table of facts, a translation is",
+    "somebody's writing and is theirs to licence. MIT is what a contribution to",
+    "an MIT application is; a translator who wants different terms may say so",
+    "here, and `credit` names them if they want naming.",
+    "",
+    "English has no entry: it is the reference, the app compiles it in, and it",
+    "is never downloaded. See scripts/lib/locales.mjs."
+  ],
+  "languages": {
+    "fi": {
+      "endonym": "Suomi",
+      "licence": "MIT"
+    }
+  }
+}

@@ -1,0 +1,790 @@
+{
+  "boot": {
+    "pleaseWait": {
+      "title": "Please Wait",
+      "subtitle": "Tuning in and preparing the bulletin",
+      "meterLabel": "Preparing the bulletin"
+    },
+    "progress": {
+      "contacting": "Contacting news sources…",
+      "ready": "{{count}} ready",
+      "preparing": "{{count}} preparing",
+      "skipped": "{{count}} skipped",
+      "separator": " · "
+    },
+    "noSignal": {
+      "title": "No Signal",
+      "body": "No stories could be prepared. Check your connection, or open Settings to review your news sources."
+    }
+  },
+  "menu": {
+    "title": "Menu",
+    "hint": "Arrow keys · Enter · Esc",
+    "close": "Close menu",
+    "sources": {
+      "label": "News Sources",
+      "description": "Choose which outlets the bulletin is built from"
+    },
+    "editorial": {
+      "label": "Running Order",
+      "description": "How stories are chosen and ordered"
+    },
+    "anchor": {
+      "label": "Anchor",
+      "description": "Who reads the news"
+    },
+    "studio": {
+      "label": "Studio",
+      "description": "The set the bulletin is broadcast from"
+    },
+    "packs": {
+      "label": "Content Packs",
+      "description": "The anchors and studios this installation carries"
+    },
+    "picture": {
+      "label": "Picture",
+      "description": "Which era the television looks like"
+    },
+    "audio": {
+      "label": "Audio",
+      "description": "Voice and volume"
+    },
+    "ai": {
+      "label": "AI Assistance",
+      "description": "Optional: bring your own key for richer bulletins"
+    },
+    "signal": {
+      "label": "Signal Log",
+      "description": "What the simulator has been doing, and why"
+    },
+    "system": {
+      "label": "System",
+      "description": "Restore defaults and clear what has been broadcast"
+    },
+    "missing": {
+      "hint": "Not yet implemented",
+      "body": "This screen has no renderer registered. See ROADMAP.md."
+    }
+  },
+  "language": {
+    "title": "Language",
+    "description": "What language the menus are written in",
+    "followSystem": "Follow the system",
+    "followingSystem": "Following the system — {{language}}",
+    "reading": "● Reading",
+    "builtIn": "Built into the app",
+    "licence": "{{licence}}",
+    "licenceAndCredit": "{{licence}} · translated by {{credit}}",
+    "download": "Download {{size}}",
+    "downloading": "Downloading…",
+    "remove": "Remove {{language}}",
+    "removeDescription": "Deletes the downloaded translation. English is always available.",
+    "removeConfirm": "Press again to remove",
+    "check": "Check for languages",
+    "checkDescription": "Only English is built into the app. Everything else is downloaded when you pick it.",
+    "checking": "Checking…",
+    "checkedNever": "The list of languages has not been downloaded yet.",
+    "checkedAt": "List checked {{when}}.",
+    "statusUnreachable": "Could not reach the list of languages. Whatever is already here still works.",
+    "statusUnsupported": "The published list needs a newer version of the app.",
+    "statusInvalid": "The published list could not be read.",
+    "checkAction": "Check"
+  },
+  "legend": {
+    "navigate": "Navigate",
+    "select": "Select",
+    "back": "Back / Close",
+    "jump": "Jump to a screen",
+    "menu": "Menu"
+  },
+  "common": {
+    "confirm": "Confirm",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "open": "Open",
+    "on": "On",
+    "off": "Off",
+    "none": "None",
+    "loading": "Loading…",
+    "text": "{{text}}",
+    "percent": "{{percent}}%",
+    "separator": " · ",
+    "never": "Never"
+  },
+  "topic": {
+    "all": "All topics",
+    "world": "World",
+    "politics": "Politics",
+    "business": "Business",
+    "science": "Science",
+    "technology": "Technology",
+    "health": "Health",
+    "sport": "Sport",
+    "culture": "Culture",
+    "environment": "Environment",
+    "general": "General"
+  },
+  "system": {
+    "hint": "Settings are saved automatically",
+    "simulation": {
+      "title": "Simulation Mode",
+      "description": "Generates fake news procedurally instead of fetching feeds"
+    },
+    "simulationTopic": {
+      "title": "Simulation Topic",
+      "description": "Select which topic to simulate (cycles through options)"
+    },
+    "export": {
+      "title": "Export settings",
+      "description": "Saves your configuration to a file you can keep or copy to another device",
+      "saved": "Saved as {{file}}",
+      "action": "Save"
+    },
+    "import": {
+      "title": "Import settings",
+      "description": "Reads a file exported from this app. Your feeds and choices are replaced",
+      "adopted": "Settings adopted from the file",
+      "action": "Open"
+    },
+    "restore": {
+      "title": "Restore default settings",
+      "description": "Puts picture, audio, running order and the source list back as shipped",
+      "confirm": "Select again to confirm — sources you added yourself are kept",
+      "action": "Reset"
+    },
+    "clearHistory": {
+      "title": "Clear broadcast history",
+      "description": "Forgets which stories have already been read on air",
+      "confirm": "Select again to confirm — every story becomes eligible again"
+    },
+    "history": {
+      "counting": "Counting…",
+      "remembered_one": "{{count}} story",
+      "remembered_other": "{{count}} stories"
+    },
+    "storageNotice": "Everything is stored on this device. Nothing here is sent anywhere — and an exported file carries no polling state and no proxy address, so it is safe to share."
+  },
+  "signalLog": {
+    "hint": "Nothing here leaves this device",
+    "nonePolled": "No source has been polled yet. The first refresh is on its way.",
+    "reading": "Reading the log…",
+    "quiet": "Nothing at this level. A quiet log is a working one — try “{{level}}” to see what the pipeline is up to.",
+    "show": {
+      "title": "Show",
+      "description": "How much of the pipeline's own commentary to display"
+    },
+    "filter": {
+      "everything": "Everything",
+      "notices": "Notices",
+      "warnings": "Warnings",
+      "faults": "Faults"
+    },
+    "level": {
+      "debug": "Detail",
+      "info": "Notice",
+      "warn": "Warning",
+      "error": "Fault"
+    },
+    "health": {
+      "neverPolled": "Never polled",
+      "failing_one": "{{count}} failed attempt",
+      "failing_other": "{{count}} failed attempts",
+      "failingBecause_one": "{{count}} failed attempt · {{reason}}",
+      "failingBecause_other": "{{count}} failed attempts · {{reason}}",
+      "lastRead": "Last read at {{time}}",
+      "lastReadWithStatus": "Last read at {{time}} · HTTP {{status}}",
+      "nothingRead": "Polled, nothing read yet",
+      "nothingReadWithStatus": "Polled, nothing read yet · HTTP {{status}}"
+    }
+  },
+  "transport": {
+    "previous": "Previous story",
+    "play": "Play",
+    "pause": "Pause",
+    "next": "Next story",
+    "volume": "Anchor volume",
+    "volumeValue": "{{percent}}%"
+  },
+  "relay": {
+    "title": "Feed relay",
+    "checking": "Checking…",
+    "example": "Each feed will be fetched as {{request}}",
+    "empty": "Empty — this browser can read only the feeds that allow it, which is almost none",
+    "notice": "This is a browser, so publishers’ feeds cannot be read directly — they are on other sites and those sites do not allow it. Until you supply a relay, the bulletin is a bundled demonstration: made-up stories from made-up newsrooms, so that the app has something to show. A relay is a machine that fetches real feeds on the app’s behalf. It therefore sees every feed asked for, which is a record of what you read, so use one you run or one you would trust with that. No relay is supplied and none is recommended. The desktop app needs none of this."
+  },
+  "audio": {
+    "loading": "Loading audio settings…",
+    "noProvider": "This build has no speech provider.",
+    "noProviderHint": "No provider",
+    "noVoices": "This provider offers no voices on this device. The bulletin will run silently until one is available.",
+    "selected": "● Selected",
+    "starting": "Starting…",
+    "download": "Download {{size}}",
+    "downloadFailure": {
+      "offline": "That voice could not be downloaded: the device is not online, or the connection dropped. It was tried several times. What arrived is kept, so starting again carries on from there.",
+      "notPublished": "That voice is no longer published where this build expects it. Trying again will not help; pick another voice, and update the app if there is an update.",
+      "refused": "The server would not hand over that voice (error {{detail}}). It was tried several times. What arrived is kept, so starting again carries on from there.",
+      "endedEarly": "That download stopped before it finished. What arrived is kept, so starting again carries on from where it stopped.",
+      "deviceFull": "There is not enough room on this device for that voice. Free some space, or remove a voice you no longer use, and start it again.",
+      "noStorage": "This browser will not let the app store anything, so a voice cannot be kept. A private window usually does this; the system voice needs no download and still works.",
+      "wrongSize": "What arrived was not the voice that was expected, so it was discarded rather than used. Start it again.",
+      "notInCatalog": "This build does not offer that voice.",
+      "unknown": "That voice could not be downloaded ({{detail}})."
+    },
+    "downloading": "Downloading {{voice}}",
+    "received": "{{received}}",
+    "receivedOf": "{{received}} of {{total}}",
+    "engine": {
+      "title": "Voice engine"
+    },
+    "anchorVoice": {
+      "title": "The anchor's own voice",
+      "named": "{{anchor}} reads in the voice their pack names",
+      "unnamed": "{{anchor}} names no voice, so this provider chooses"
+    },
+    "rate": {
+      "title": "Speaking rate",
+      "description": "How quickly the anchor reads",
+      "value": "{{rate}}×",
+      "min": "Measured",
+      "max": "Brisk"
+    },
+    "studioBed": {
+      "title": "Studio sound",
+      "description": "Room tone under the anchor and the station's music at the seams",
+      "max": "Loud"
+    },
+    "remove": {
+      "title": "Remove {{voice}}",
+      "description": "Deletes the downloaded voice from this device",
+      "confirm": "Press again to remove"
+    },
+    "provider": {
+      "noRuntime": "This device cannot run downloaded voices.",
+      "nothingDownloaded": "No voice has been downloaded yet. Choose one below to install it.",
+      "noSystemVoices": "This device reports no installed speech voices.",
+      "webSpeech": {
+        "label": "System voice",
+        "description": "Whatever this device already has. No download, always available.",
+        "absent": "This device has no built-in speech."
+      },
+      "native": {
+        "label": "Desktop voice",
+        "description": "The operating system's own synthesiser, reached by the app rather than by its window. No download, and the only voice some Linux desktops have.",
+        "desktopOnly": "This voice is only available in the desktop app.",
+        "unavailable": "This device’s speech synthesiser could not be started: {{detail}}",
+        "stopped": "This device’s speech synthesiser stopped responding.",
+        "unreachable": "This device’s speech synthesiser could not be reached."
+      },
+      "piper": {
+        "label": "Piper (downloaded)",
+        "description": "A broadcast-quality neural voice that runs on this device. One download, then offline for good."
+      },
+      "kokoro": {
+        "label": "Kokoro (downloaded)",
+        "description": "The best voice that runs on this device, using the GPU where there is one. One model, shared by every reader."
+      },
+      "absentFromBuild": "This build has no speech provider."
+    }
+  },
+  "packs": {
+    "hint": "Anchors and studios",
+    "webOnly": "The web version reads only the packs built into it. Install the desktop app to add your own anchors and studios.",
+    "none": "Nothing installed. The anchor behind the desk is the built-in placeholder.",
+    "shipped": "Shipped",
+    "removed": "Removed {{pack}}.",
+    "moreDiagnostics_one": "…and {{count}} more.",
+    "moreDiagnostics_other": "…and {{count}} more.",
+    "directory": "Packs live in {{directory}}.",
+    "directoryHelp": "A folder holding a .vrm or a .glb is a pack; a pack.json beside it records the licence and anything a file name cannot say. See docs/content-packs.md.",
+    "install": {
+      "title": "Install a pack",
+      "description": "Reads a .zip holding a pack. You can also copy a folder into the directory below",
+      "done": "Installed into {{directory}}"
+    },
+    "remove": {
+      "confirm": "Select again to confirm — the folder and everything in it is deleted"
+    },
+    "by": "by {{author}}",
+    "version": "v{{version}}",
+    "contents": {
+      "nothing": "Nothing usable",
+      "anchors_one": "{{count}} anchor",
+      "anchors_other": "{{count}} anchors",
+      "studios_one": "{{count}} studio",
+      "studios_other": "{{count}} studios"
+    }
+  },
+  "picture": {
+    "hint": "Choose a decade",
+    "onAir": "● On air",
+    "eraLabel": "{{year}} · {{name}}",
+    "detail": {
+      "title": "Detail",
+      "measured": "Measured while the bulletin runs, and lowered if the picture cannot keep up",
+      "fixed": "Fixed, whatever the frame rate turns out to be",
+      "currently": "Currently {{tier}} · {{fps}} fps",
+      "chosen": "{{tier}} · {{fps}} fps — fixed by you, not measured"
+    },
+    "quality": {
+      "automatic": "Automatic",
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "lowDescription": "Fewest pixels, no shadows, only the cheapest picture artefacts",
+      "mediumDescription": "Soft shadows and most of the era, at a moderate resolution",
+      "highDescription": "Every artefact the era asks for, at the display resolution"
+    },
+    "archive": {
+      "title": "Library pictures",
+      "description": "Use the pictures that ship with the app when a story has none of its own",
+      "never": "Never",
+      "whenMissing": "When missing",
+      "always": "Always"
+    },
+    "fontScale": {
+      "title": "Text size",
+      "description": "Adjust the text size for menus and the television overlay",
+      "small": "Small (75%)",
+      "normal": "Normal (100%)",
+      "large": "Large (125%)",
+      "extraLarge": "Extra large (150%)"
+    },
+    "subtitles": {
+      "title": "Subtitles",
+      "description": "Show closed captions during the broadcast"
+    },
+    "subtitleFont": {
+      "title": "Subtitle font",
+      "description": "Typeface for closed captions",
+      "sans": "Sans-serif",
+      "serif": "Serif",
+      "mono": "Monospace"
+    },
+    "subtitleSize": {
+      "title": "Subtitle size",
+      "description": "Text size for closed captions",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "extraLarge": "Extra large"
+    },
+    "subtitleColour": {
+      "title": "Subtitle colour",
+      "description": "Text colour for closed captions"
+    },
+    "subtitleBackground": {
+      "title": "Subtitle background",
+      "description": "Background style for closed captions"
+    },
+    "colour": {
+      "white": "White",
+      "yellow": "Yellow",
+      "cyan": "Cyan",
+      "green": "Green"
+    },
+    "background": {
+      "translucent": "Translucent black",
+      "solid": "Solid black",
+      "transparent": "Transparent"
+    }
+  },
+  "era": {
+    "crt1968bw": {
+      "label": "Monochrome",
+      "description": "Black-and-white tube, heavy scanlines, soft focus."
+    },
+    "crt1979pal": {
+      "label": "PAL Colour",
+      "description": "Early colour tube: warm, low-saturation, visible line structure."
+    },
+    "vhs1988": {
+      "label": "VHS",
+      "description": "Tape artefacts, chroma bleed and tracking noise."
+    },
+    "sdi1998": {
+      "label": "Digital SD",
+      "description": "Clean standard definition, hard-edged digital graphics."
+    },
+    "hd2008": {
+      "label": "HD",
+      "description": "Widescreen high definition with glassy graphics."
+    },
+    "uhd2020": {
+      "label": "UHD",
+      "description": "Contemporary flat design, wide gamut, minimal artefacts."
+    },
+    "clean": {
+      "label": "Clean",
+      "description": "No picture processing at all — the reference image."
+    }
+  },
+  "editorial": {
+    "hint": "Takes effect at the next refresh",
+    "loading": "Loading editorial settings…",
+    "format": {
+      "title": "Format",
+      "description": "A bulletin opens, runs to length and signs off. Rolling coverage reads each story as it arrives and never ends.",
+      "bulletin": "Bulletin",
+      "rolling": "Rolling"
+    },
+    "length": {
+      "title": "Bulletin length",
+      "description": "How long one edition runs before it signs off and starts again",
+      "minutes_one": "{{count}} min",
+      "minutes_other": "{{count}} min"
+    },
+    "tease": {
+      "title": "Open with the headlines",
+      "description": "Off skips the tease and goes straight from the greeting to the first story"
+    },
+    "sport": {
+      "title": "Sport",
+      "description": "Reads the latest results after the news, from TheSportsDB. No account needed",
+      "pickSome": "Pick up to {{max}} competitions — the anchor reads the latest result from each",
+      "roomForMore_one": "Following {{following}} — room for {{count}} more",
+      "roomForMore_other": "Following {{following}} — room for {{count}} more",
+      "full": "Following {{max}}, which is the most — switch one off to add another"
+    },
+    "weather": {
+      "title": "Weather",
+      "description": "Reads a forecast after the last story, from Open-Meteo. No account needed",
+      "place": {
+        "title": "Forecast for",
+        "empty": "Type a town or city — the station looks up where it is",
+        "pending": "Looking this up at the next refresh",
+        "found": "Reading the forecast for {{place}}",
+        "foundInRegion": "Reading the forecast for {{place}}, {{region}}",
+        "example": "Helsinki"
+      }
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "The wind is read in the units that go with it — kilometres or miles an hour"
+    },
+    "idents": {
+      "title": "Station idents",
+      "description": "How many stories run back to back before the station names itself",
+      "every_one": "Every {{count}}",
+      "every_other": "Every {{count}}",
+      "min": "Often"
+    },
+    "balance": {
+      "title": "Story balance",
+      "description": "Whether the bulletin leads with the most-covered story or the newest one",
+      "mostReported": "Most reported",
+      "leansReported": "Leans reported",
+      "balanced": "Balanced",
+      "leansLatest": "Leans latest",
+      "breakingFirst": "Breaking first",
+      "newest": "Newest"
+    },
+    "variety": {
+      "title": "Topic variety",
+      "description": "How many stories on one subject may run back to back",
+      "inARow_one": "{{count}} in a row",
+      "inARow_other": "{{count}} in a row",
+      "min": "Mixed",
+      "max": "Grouped"
+    },
+    "neverRepeat": {
+      "title": "Never repeat a story",
+      "description": "On, a story is dropped once it has been read to the end"
+    },
+    "summaries": {
+      "title": "Read story summaries",
+      "description": "Off reads headlines only, for a faster bulletin"
+    }
+  },
+  "sourceEditor": {
+    "add": "Add a source",
+    "back": "Back to the source list",
+    "hint": {
+      "new": "A feed of your own",
+      "own": "A feed you added",
+      "catalog": "Adjustments to a catalog source — the source list itself is not changed"
+    },
+    "name": {
+      "title": "Name",
+      "description": "What this outlet is called, on screen and on air",
+      "example": "The Kuopio Herald"
+    },
+    "address": {
+      "title": "Address",
+      "feed": "An RSS, Atom or JSON feed",
+      "api": "The endpoint that answers with the stories"
+    },
+    "kind": {
+      "title": "Read as",
+      "description": "A feed says what format it is; an API has to be described",
+      "feed": "Feed",
+      "jsonApi": "JSON API"
+    },
+    "language": {
+      "title": "Language",
+      "description": "A BCP-47 tag, such as en or fi-FI"
+    },
+    "topics": {
+      "title": "Topics",
+      "description": "What this outlet counts as, when the running order is balanced"
+    },
+    "priority": {
+      "title": "Priority",
+      "description": "How much weight this source carries against the others",
+      "min": "Rarely",
+      "max": "Often"
+    },
+    "save": {
+      "add": "Add this source",
+      "update": "Save changes",
+      "incomplete": "A name and a feed address are needed before this can be saved"
+    },
+    "delete": {
+      "title": "Delete this source",
+      "description": "Removes the feed and everything remembered about it",
+      "confirm": "Select again to confirm — this cannot be undone"
+    },
+    "reset": {
+      "title": "Use the catalog's values",
+      "description": "Forgets the adjustments above and follows the published list again",
+      "confirm": "Select again to confirm"
+    },
+    "mapping": {
+      "items": {
+        "title": "Stories",
+        "description": "Where the list of stories sits — leave blank if the response is the list"
+      },
+      "title": {
+        "title": "Headline",
+        "description": "Required — there is nothing to read out without it"
+      },
+      "link": {
+        "title": "Article address",
+        "description": "Required — a story with no link cannot be credited"
+      },
+      "summary": {
+        "title": "Summary",
+        "description": "The line the anchor reads after the headline"
+      },
+      "content": {
+        "title": "Body",
+        "description": "The full text, when the API ships one"
+      },
+      "published": {
+        "title": "Published",
+        "description": "A date the API states — undated stories are treated as new"
+      },
+      "image": {
+        "title": "Picture",
+        "description": "A picture for the video wall"
+      },
+      "categories": {
+        "title": "Categories",
+        "description": "What the publisher files the story under"
+      },
+      "id": {
+        "title": "Identifier",
+        "description": "The API's own id for the story"
+      }
+    }
+  },
+  "sources": {
+    "loading": "Loading the source catalog…",
+    "onAir": "{{selected}} of {{total}} on air",
+    "noMatches": "No sources match those filters.",
+    "empty": "The source catalog is empty. Restore the defaults to start broadcasting.",
+    "showAll_one": "Show all {{count}}",
+    "showAll_other": "Show all {{count}}",
+    "orphaned_one": "One source you chose is no longer in the catalog. Your choice is kept in case it comes back.",
+    "orphaned_other": "{{count}} sources you chose are no longer in the catalog. Your choice is kept in case they come back.",
+    "add": {
+      "description": "A feed you found yourself, by its address"
+    },
+    "check": {
+      "title": "Check for new sources",
+      "action": "Check",
+      "running": "Checking…"
+    },
+    "filter": {
+      "any": "Any"
+    },
+    "scope": {
+      "title": "Coverage",
+      "description": "How wide an outlet's remit is",
+      "global": "World",
+      "national": "National",
+      "regional": "Regional",
+      "local": "Local"
+    },
+    "topic": {
+      "title": "Topic"
+    },
+    "health": {
+      "idle": "Idle",
+      "failing": "Failing",
+      "live": "Live"
+    },
+    "catalog": {
+      "count_one": "{{count}} source",
+      "count_other": "{{count}} sources",
+      "bundled": "shipped with the app",
+      "downloaded": "downloaded",
+      "neverChecked": "never checked",
+      "checkedUnknown": "last checked at an unreadable time",
+      "checkedJustNow": "checked just now",
+      "checked": "checked {{when}}"
+    },
+    "source": {
+      "notPolled": "not yet polled",
+      "failing": "failing ({{reason}})",
+      "failingWithStatus": "failing (HTTP {{status}})",
+      "neverRead": "never read",
+      "readUnknown": "last read at an unreadable time",
+      "readJustNow": "read just now",
+      "lastRead": "last read {{when}}"
+    },
+    "refresh": {
+      "upToDate": "The source list is already up to date.",
+      "updated_one": "Updated to {{revision}} — {{count}} source.",
+      "updated_other": "Updated to {{revision}} — {{count}} sources.",
+      "partial": "Part of the update could not be verified, so it was not adopted. The saved list is still in use, and the next check will try again.",
+      "unreachable": "Could not reach GitHub, using the saved list.",
+      "unsupported": "The published list needs a newer version of this app. The saved list is still in use.",
+      "invalid": "The published list could not be read, so the saved list is still in use."
+    }
+  },
+  "keypad": {
+    "shift": "Shift",
+    "symbols": "Symbols",
+    "letters": "Letters",
+    "space": "Space",
+    "caretLeft": "Move the caret left",
+    "caretRight": "Move the caret right",
+    "backspace": "Backspace",
+    "clear": "Clear",
+    "done": "Done"
+  },
+  "anchor": {
+    "placeholder": {
+      "label": "Studio placeholder",
+      "description": "The built-in stand-in. Always available, and needs no model."
+    },
+    "fromPack": "From {{pack}}."
+  },
+  "narration": {
+    "breaking": "Breaking news.",
+    "breakingBy": "Breaking news. Reported by {{publishers}}.",
+    "developing": "Developing story.",
+    "developingBy": "Developing story. Reported by {{publishers}}.",
+    "reportedBy": "Reported by {{publishers}}.",
+    "kind": {
+      "coldOpen": "Opening",
+      "headlines": "Headlines",
+      "signOff": "Sign-off",
+      "break": "Station ident",
+      "weather": "Weather",
+      "sport": "Sport",
+      "adBreak": "Commercial break"
+    }
+  },
+  "transcript": {
+    "label": "News bulletin, as text"
+  },
+  "chrome": {
+    "openMenu": "Open menu"
+  },
+  "error": {
+    "unreachable": "The app could not reach its own engine ({{detail}})."
+  },
+  "core": {
+    "relayHasSpaces": "A web address has no spaces in it. Check for a stray character or a line break in what was pasted.",
+    "relayPlaceholderMisspelled": "The only placeholder is {url}, in lower case. Write it where the feed’s own address should go.",
+    "relayNoPlaceholder": "Nothing here says where the feed’s address goes. Add {url} where it belongs, or end this with / so it is appended.",
+    "relayNotAnAddress": "That is not a web address. A relay is addressed like https://my-relay.example/{url}",
+    "relayNoHost": "That address names no machine to send the request to. A relay is addressed like https://my-relay.example/{url}",
+    "relayInsecure": "The browser will block an http address on a page served over https. Use https, unless the relay is running on this machine.",
+    "relayUnsupportedScheme": "A relay is addressed with https:// — nothing else can be fetched.",
+    "packIdTaken": "Another pack is already called “{{id}}” ({{owner}}); this one was skipped. Give one of them its own “id” in pack.json.",
+    "packAnchorIdTaken": "Another anchor is already called “{{id}}” (in {{owner}}); this one was skipped. Rename the file, or give it its own “id” in pack.json.",
+    "packStudioIdTaken": "Another studio is already called “{{id}}” (in {{owner}}); this one was skipped. Rename the file, or give it its own “id” in pack.json.",
+    "packHasNoModels": "This pack offers no anchors and no studios.",
+    "packFileHasNoLicence": "Nothing records what this file may be redistributed under. Anything shipped in packs/ must say.",
+    "packListedAnchorMissing": "The manifest lists this anchor but the file is not in the pack.",
+    "packListedStudioMissing": "The manifest lists this studio but the file is not in the pack.",
+    "packManifestNotJson": "This file is not valid JSON ({{detail}}); the pack was skipped.",
+    "packManifestNotAnObject": "A manifest must be a JSON object; the pack was skipped.",
+    "packFormatTooNew": "This pack is written for format {{declared}} and this build understands {{supported}}; the pack was skipped. Update the app.",
+    "packFormatNotANumber": "This should be the number {{supported}}; it was ignored.",
+    "packFormatMissing": "The manifest does not say which format it is written for; {{supported}} was assumed.",
+    "packFieldUnknown": "This build does not understand this field; it was ignored.",
+    "packListMustBeArray": "“{{field}}” must be a list; nothing was read from it.",
+    "packFileListedTwice": "The manifest lists this file twice; the second one was ignored.",
+    "packEntryNotAnObject": "Every entry must be an object with at least a “file”; it was skipped.",
+    "packEntryHasNoFile": "This entry does not say which “file” it is; it was skipped.",
+    "packFileOutsidePack": "“{{file}}” is not a path inside the pack; it was skipped. A file must be named relative to the pack folder.",
+    "packEntryNotAnAnchor": "“{{file}}” is not a model file this build recognises, but it is listed as an anchor — it will be loaded as one and will probably fail.",
+    "packEntryNotAStudio": "“{{file}}” is not a model file this build recognises, but it is listed as a studio — it will be loaded as one and will probably fail.",
+    "packSidecarNotJson": "This file is not valid JSON ({{detail}}); it was ignored.",
+    "packSidecarNotAnObject": "A sidecar must be a JSON object; it was ignored.",
+    "packVoiceNotAnObject": "This should be an object, for example { \"language\": \"en-GB\", \"rate\": 0.97 }; it was ignored.",
+    "packVoiceOnStudio": "Only an anchor reads the news; a studio’s voice was ignored.",
+    "packVoiceIdWithoutEngine": "A voice identifier means nothing without the “engineId” it belongs to; it was ignored. Write “language” instead if any voice will do.",
+    "packVoiceSaysNothing": "This says nothing about how the anchor sounds; it was ignored.",
+    "packDeliveryOutOfRange": "{{written}} is outside the {{minimum}} to {{maximum}} a pack may ask for; {{used}} was used. It multiplies the viewer’s own setting rather than replacing it.",
+    "packFieldNotText": "This should be written in quotes as text; it was ignored.",
+    "packFieldNotFinite": "This is not a number that can be used; it was ignored.",
+    "packFieldNotANumber": "This should be a number written without quotes; it was ignored.",
+    "packEntryOutsideFolder": "This file is named outside the folder it would be installed into; it was not extracted.",
+    "packArchiveTooManyFiles": "This archive holds {{count}} files, which is more than a content pack should ({{maximum}}); nothing was installed.",
+    "packArchiveTooLarge": "This archive unpacks to {{gigabytes}} GB, which is more than a content pack should ({{maximumGigabytes}} GB); nothing was installed.",
+    "packArchiveHasNoModels": "There is no anchor and no studio in this archive, so there is nothing in it to install.",
+    "packArchiveNotAFile": "The archive did not arrive as a file. Pick it again.",
+    "packArchiveUnreadable": "This file could not be read as an archive ({{detail}}).",
+    "packArchiveFileUnreadable": "“{{file}}” inside the archive could not be read ({{detail}}); nothing was installed.",
+    "packAlreadyInstalled": "A pack is already installed in “{{folder}}”. Remove that one first.",
+    "packFolderNotASingleName": "“{{folder}}” is not the name of a pack folder.",
+    "packDirectoryUnavailableOnWeb": "The web version has no folder to keep content packs in. Install the desktop app to add your own anchors and studios.",
+    "sourceNeedsName": "A source needs a name.",
+    "sourceUrlUnreadable": "That does not look like a web address ({{detail}}).",
+    "sourceUrlNotHttp": "A feed is fetched over http or https; nothing else can be read.",
+    "sourceWeightOutOfRange": "Weight runs from 0 to 1.",
+    "sourceMappingMissing": "A JSON API has to be told where its stories are.",
+    "sourceIdTaken": "A source called “{{id}}” is already in the list.",
+    "sourceUrlTaken": "That feed is already in the list.",
+    "mappingNeedsTitle": "Name the field holding the headline.",
+    "mappingNeedsLink": "Name the field holding the article’s address — a story with no link cannot be credited.",
+    "catalogEntryNeedsName": "The source list carries an entry with no name, so it could not be used.",
+    "catalogEntryUrlUnreadable": "The source list carries an entry whose address is not a web address ({{detail}}), so it could not be used.",
+    "catalogEntryUrlNotHttp": "The source list carries an entry addressed over something other than http or https, so it could not be used.",
+    "catalogEntryWeightOutOfRange": "The source list carries an entry weighted outside 0 to 1, so it could not be used.",
+    "catalogEntryNeedsLanguage": "The source list carries an entry naming no language, so it could not be used.",
+    "catalogIdListedTwice": "The source list carries “{{id}}” twice, so it could not be used.",
+    "catalogUrlPolledTwice": "The source list polls {{url}} twice, so it could not be used.",
+    "stockEntryNeedsId": "The picture library’s index carries an entry with no id.",
+    "stockPathOutsideArchive": "“{{path}}” is not a path inside the picture library.",
+    "stockEntryHasNoSize": "“{{id}}” records no picture size.",
+    "stockIdListedTwice": "The picture library carries “{{id}}” twice.",
+    "stockPathListedTwice": "Two entries in the picture library point at {{path}}.",
+    "settingsFileNotJson": "This file is not valid JSON ({{detail}}).",
+    "settingsFileNotOurs": "This is not a World News Simulator settings file.",
+    "settingsFileTooNew": "This file was written by a newer version of the app (format {{declared}}). Update the app to read it.",
+    "settingsFileHasNoSettings": "This file carries no settings.",
+    "settingsFileUnreadable": "The settings in this file could not be read ({{detail}}).",
+    "errorNetwork": "{{url}} could not be reached ({{detail}}).",
+    "errorHttpStatus": "{{url}} answered with HTTP {{status}}.",
+    "errorFeedParse": "Nothing could be read as a feed from {{url}} ({{detail}}).",
+    "errorStorage": "This device’s storage could not be read or written ({{detail}}).",
+    "errorSchemaTooNew": "What is stored here was written by a newer version of the app (format {{found}}; this one reads {{supported}}). Update the app.",
+    "errorSerde": "Something could not be read as the shape it should be ({{detail}}).",
+    "errorAiProvider": "{{provider}} refused or failed the request ({{detail}}); the copy was written from templates instead.",
+    "errorIntegrity": "{{artefact}} does not match what was published for it, so it was not adopted. What is already here is still in use.",
+    "errorSourceNotFound": "There is no source called “{{id}}”.",
+    "errorPackNotFound": "No pack called “{{id}}” is installed.",
+    "errorRequestNotBuilt": "A request to {{endpoint}} could not be built ({{detail}}).",
+    "errorEngineUnavailable": "The simulation engine stopped responding. Restart the application.",
+    "localeListNotFetched": "The list of languages has not been downloaded yet. Check for languages first.",
+    "localeNotOffered": "“{{tag}}” is not one of the languages on offer.",
+    "localeReferenceKept": "English cannot be removed. It is built into the app, and it is what anything a translation has not covered falls back to."
+  }
+}

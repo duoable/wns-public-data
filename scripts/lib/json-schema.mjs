@@ -36,6 +36,7 @@ const KNOWN_KEYWORDS = new Set([
   'maxLength',
   'minItems',
   'maxItems',
+  'minProperties',
   'uniqueItems',
   'required',
   'properties',
@@ -193,6 +194,12 @@ export function validate(value, schema, { root = schema, path = '' } = {}) {
   }
 
   if (typeOf(value) === 'object') {
+    if (schema.minProperties !== undefined && Object.keys(value).length < schema.minProperties) {
+      errors.push(
+        `${at}: needs at least ${schema.minProperties} propert${schema.minProperties === 1 ? 'y' : 'ies'}, has ${Object.keys(value).length}`,
+      );
+    }
+
     for (const key of schema.required ?? []) {
       if (!Object.hasOwn(value, key)) {
         errors.push(`${at}: missing required property "${key}"`);
@@ -214,9 +221,24 @@ export function validate(value, schema, { root = schema, path = '' } = {}) {
           errors.push(`${at}: unexpected property "${key}"`);
         }
       }
-    } else if (schema.additionalProperties !== undefined) {
+    } else if (typeOf(schema.additionalProperties) === 'object') {
+      // A schema rather than `false`: the object is an open map and every value
+      // in it has the same shape. That is what a translation catalogue is —
+      // the *keys* belong to the app and change with it, so they cannot be
+      // enumerated here, but every leaf still has to be a sentence.
+      for (const key of Object.keys(value)) {
+        if (!Object.hasOwn(properties, key)) {
+          errors.push(
+            ...validate(value[key], schema.additionalProperties, {
+              root,
+              path: path ? `${path}.${key}` : key,
+            }),
+          );
+        }
+      }
+    } else if (schema.additionalProperties !== undefined && schema.additionalProperties !== true) {
       throw new UnsupportedSchemaError(
-        `schema at ${at}: only "additionalProperties": false is supported`,
+        `schema at ${at}: "additionalProperties" must be false, true, or a schema`,
       );
     }
   }

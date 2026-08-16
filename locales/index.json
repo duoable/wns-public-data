@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-08-16T18:38:16Z",
+  "generatedAt": "2026-08-16T18:38:16Z",
+  "reference": {
+    "path": "locales/en.json",
+    "sha256": "b6dbbd1ca712d824b5b6bdb2172cb708496e8df5e8337e9da4f35b14607e97d8",
+    "bytes": 35517,
+    "keyCount": 540
+  },
+  "languages": [
+    {
+      "tag": "fi",
+      "endonym": "Suomi",
+      "path": "locales/fi.json",
+      "sha256": "09b539c0c618ca5018b7cd4f0b426079df7a773bcdb505b85c1d9ac53a360465",
+      "bytes": 37714,
+      "keyCount": 540,
+      "licence": "MIT"
+    }
+  ]
+}

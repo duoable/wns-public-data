@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/duoable/wns-public-data/schema/locales-index.schema.json",
+  "title": "Translations manifest",
+  "description": "What languages the app's interface can be downloaded in. The only translations file the app fetches unconditionally; it carries a sha256 per language so a download can be verified before it is adopted.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "revision", "generatedAt", "reference", "languages"],
+  "properties": {
+    "schemaVersion": {
+      "description": "A manifest declaring a version newer than the app supports is refused, not guessed at.",
+      "type": "integer",
+      "const": 1
+    },
+    "revision": {
+      "description": "Identifies this publication. Shown in the app's language screen and stored alongside the cache.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "generatedAt": {
+      "description": "When build-locales-index.mjs ran.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "reference": {
+      "description": "English, which every translation is validated against. Listed so the file can be found and diffed, and deliberately absent from `languages`: the app compiles English in, because a fallback fetched over the network is a fallback that can fail.",
+      "$ref": "#/$defs/artefact"
+    },
+    "languages": {
+      "description": "Every language the app can download. English is not here; see `reference`.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/language" }
+    }
+  },
+  "$defs": {
+    "artefact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "keyCount"],
+      "properties": {
+        "path": {
+          "description": "Repository-relative, appended to the app's base URL.",
+          "type": "string",
+          "pattern": "^locales/[a-z]{2,3}(-[A-Za-z0-9]+)*\\.json$"
+        },
+        "sha256": {
+          "description": "Over the exact committed bytes. .gitattributes pins these files to LF so a Windows checkout hashes identically.",
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "description": "Shown before the viewer commits to the download.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "keyCount": {
+          "description": "How many messages the catalogue carries. A translation is published with the same count as the reference; validate.mjs is what enforces that.",
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "language": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "endonym", "path", "sha256", "bytes", "keyCount", "licence"],
+      "properties": {
+        "tag": {
+          "description": "BCP-47, and the name of the file. What the app stores in Settings.locale.language.",
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]+)*$"
+        },
+        "endonym": {
+          "description": "The language's name for itself — Suomi, not Finnish. A viewer opening the language list may be someone who cannot read the language currently on screen, so a list of English names is a list they cannot use.",
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^locales/[a-z]{2,3}(-[A-Za-z0-9]+)*\\.json$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "keyCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "licence": {
+          "description": "What the translation may be redistributed and used under. A translation is somebody's writing rather than a table of facts, so unlike the source catalog it is not CC0 by default — the terms travel with the file the app downloads and keeps.",
+          "type": "string",
+          "minLength": 1
+        },
+        "credit": {
+          "description": "Who translated it, if they want naming. Optional, and shown by the app beside the language.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
