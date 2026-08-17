@@ -288,6 +288,79 @@
       "absentFromBuild": "Tässä koontiversiossa ei ole puhesyntetisaattoria."
     }
   },
+  "ai": {
+    "hint": "Valinnainen · oma tilisi",
+    "loading": "Ladataan tekoälyasetuksia…",
+    "notice": "Tekoälyapu on valinnainen eikä koskaan kanna lähetystä. Kun se on pois päältä — tai kun palveluntarjoaja ei vastaa — lähetyksen kirjoittavat aseman omat mallipohjat täsmälleen kuten nytkin. Tallentamasi avain säilyy tällä laitteella: työpöydällä käyttöjärjestelmän omassa avainsäilössä, selaimessa salatussa tallennustilassa. Se lähetetään vain valitsemallesi palveluntarjoajalle eikä kenellekään muulle. Palveluntarjoajan veloitukset menevät sinun tilillesi.",
+    "enabled": {
+      "title": "Tekoälyapu",
+      "description": "Pois päältä kunnes kytket sen. Mitään ei lähde tältä laitteelta sen ollessa pois päältä."
+    },
+    "provider": {
+      "title": "Palveluntarjoaja",
+      "description": "Kenen malli kirjoittaa asemalle",
+      "unknown": "Tässä versiossa ei ole palvelua ”{{provider}}”, joten siltä ei voi kysyä mitään. Valitse palveluntarjoaja luettelosta.",
+      "noneInBuild": "Tässä versiossa ei ole yhtään tekoälypalvelua."
+    },
+    "model": {
+      "title": "Malli",
+      "description": "Mitä palvelun {{provider}} malleista kysytään. Jätä tyhjäksi, niin käytetään mallia {{model}}.",
+      "listDescription": "Mitä palvelun {{provider}} malleista kysytään",
+      "noDefault": "Mitä mallia palvelulta {{provider}} pyydetään. Sitä, jonka olet hakenut koneellesi."
+    },
+    "endpoint": {
+      "title": "Päätepiste",
+      "description": "Vain jos käytät omaa yhdyskäytävää. Tyhjä tarkoittaa osoitetta {{url}}."
+    },
+    "key": {
+      "title": "API-avain",
+      "checking": "Tarkistetaan…",
+      "entryDescription": "Kirjoitetaan tähän ja säilytetään tällä laitteella. Sitä ei koskaan kirjoiteta asetusten vientitiedostoon.",
+      "stored": "Tallennettu",
+      "storedDescription": "Palvelun {{provider}} avain on tallennettu tälle laitteelle.",
+      "save": "Tallenna avain",
+      "saving": "Tallennetaan…",
+      "replace": "Korvaa tallennettu avain",
+      "replaceDescription": "Kirjoita uusi sen päälle. Vanha avain korvataan kun tallennat.",
+      "cancelReplace": "Säilytä tallennettu avain",
+      "remove": "Poista tallennettu avain",
+      "removeConfirm": "Poista painamalla uudelleen"
+    },
+    "capability": {
+      "scriptWriting": {
+        "title": "Kirjoita ankkurin repliikit uudelleen",
+        "description": "Palveluntarjoaja kirjoittaa jokaisen jutun luonnolliseksi luettavaksi tekstiksi. Epäonnistuneen pyynnön tilalla luetaan mallipohja."
+      },
+      "editorialRanking": {
+        "title": "Arvioi mikä on pääuutinen",
+        "description": "Palveluntarjoaja arvioi kunkin jutun merkittävyyden. Ilman sitä juoksujärjestyksen päättävät aseman omat säännöt."
+      },
+      "webSearch": {
+        "title": "Hae syötteiden ulkopuolelta",
+        "description": "Palveluntarjoaja etsii kehittyviä uutisia, joita valitut lähteet eivät ole kertoneet."
+      },
+      "unsupported": "{{provider}} ei osaa tätä."
+    },
+    "translate": {
+      "title": "Käännä vieraskieliset jutut",
+      "description": "Toisella kielellä kirjoitettu juttu luetaan sinun kielelläsi, julkaisija edelleen mainiten",
+      "needsRewrite": "Vaikuttaa vain kun tekoäly kirjoittaa repliikit"
+    },
+    "budget": {
+      "title": "Pyyntöjä tunnissa",
+      "description": "Yläraja, jottei sovelluksen vika voi tyhjentää tiliäsi",
+      "value": "{{count}} tunnissa"
+    },
+    "spend": {
+      "title": "Tämä istunto",
+      "off": "Palveluntarjoajalta ei kysytä mitään, kun tekoäly on pois päältä.",
+      "reading": "Lasketaan…",
+      "nothingYet": "Palveluntarjoajalta ei ole vielä kysytty mitään. Lähetyksen kirjoittaa asema itse.",
+      "used": "{{requests}} pyyntöä tällä tunnilla, {{remaining}} jäljellä · {{tokens}} tokenia raportoitu tähän mennessä.",
+      "exhausted": "Tämän tunnin pyynnöt on käytetty · {{tokens}} tokenia raportoitu. Lähetys jatkuu aseman omalla kirjoituksella.",
+      "note": "Lasketaan vain tälle istunnolle, eikä koskaan muunneta rahaksi — tokenin hinnan kertoo palveluntarjoajasi."
+    }
+  },
   "packs": {
     "hint": "Ankkurit ja studiot",
     "webOnly": "Selainversio lukee vain siihen sisäänrakennetut paketit. Asenna työpöytäsovellus lisätäksesi omia ankkureita ja studioita.",
@@ -681,6 +754,7 @@
     "kind": {
       "coldOpen": "Aloitus",
       "headlines": "Otsikot",
+      "recap": "Kertaus",
       "signOff": "Lopetus",
       "break": "Aseman tunnus",
       "weather": "Sää",
@@ -689,7 +763,8 @@
     }
   },
   "transcript": {
-    "label": "Uutislähetys tekstinä"
+    "label": "Uutislähetys tekstinä",
+    "aiWritten": "Tämän jutun on kirjoittanut tekoäly julkaisijan raportin pohjalta."
   },
   "chrome": {
     "openMenu": "Avaa valikko"
@@ -779,12 +854,15 @@
     "errorSerde": "Jotakin ei voitu lukea siinä muodossa kuin sen pitäisi olla ({{detail}}).",
     "errorAiProvider": "{{provider}} kieltäytyi pyynnöstä tai se epäonnistui ({{detail}}); teksti kirjoitettiin valmiista malleista.",
     "errorIntegrity": "{{artefact}} ei vastaa sitä, mitä siitä on julkaistu, joten sitä ei otettu käyttöön. Jo ladattu versio on yhä käytössä.",
+    "errorSecretStore": "Laitteen avainsäilöä ei voitu lukea tai kirjoittaa ({{detail}}). Mitään ei tallennettu.",
     "errorSourceNotFound": "Lähdettä ”{{id}}” ei ole.",
     "errorPackNotFound": "Pakettia ”{{id}}” ei ole asennettu.",
     "errorRequestNotBuilt": "Pyyntöä osoitteeseen {{endpoint}} ei voitu muodostaa ({{detail}}).",
     "errorEngineUnavailable": "Simulaattorin moottori lakkasi vastaamasta. Käynnistä sovellus uudelleen.",
     "localeListNotFetched": "Kieliluetteloa ei ole vielä ladattu. Hae kielet ensin.",
     "localeNotOffered": "”{{tag}}” ei ole tarjolla olevien kielten joukossa.",
-    "localeReferenceKept": "Englantia ei voi poistaa. Se on sisäänrakennettu sovellukseen, ja siihen turvaudutaan kaikessa mitä käännös ei kata."
+    "localeReferenceKept": "Englantia ei voi poistaa. Se on sisäänrakennettu sovellukseen, ja siihen turvaudutaan kaikessa mitä käännös ei kata.",
+    "secretKeyNotAnIdentifier": "”{{id}}” ei kelpaa avaimen tunnisteeksi.",
+    "secretStoreUnavailable": "Tässä laitteessa ei ole turvallista paikkaa avaimelle ({{detail}}), joten tekoälyominaisuuksia ei voi ottaa täällä käyttöön."
   }
 }

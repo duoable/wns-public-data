@@ -292,7 +292,6 @@
     "hint": "Optional · your own account",
     "loading": "Loading AI settings…",
     "notice": "AI assistance is optional and never load-bearing. With it switched off, or with a provider that will not answer, the bulletin is written by the station's own templates exactly as it is now. The key you save is kept on this device — the operating system's credential store on the desktop, encrypted storage in a browser — and is sent to the provider you choose and to nobody else. What that provider charges is billed to your account.",
-    "notYetUsed": "Nothing in the bulletin asks a provider yet. What you configure here is saved and checked, and the writing will not change until the enrichment passes are built.",
     "enabled": {
       "title": "AI assistance",
       "description": "Off until you switch it on. Nothing leaves this device while it is off."
