@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": "2026-08-16T18:38:16Z",
-  "generatedAt": "2026-08-16T18:38:16Z",
+  "revision": "2026-08-17T19:33:57Z",
+  "generatedAt": "2026-08-17T19:33:57Z",
   "reference": {
     "path": "locales/en.json",
-    "sha256": "b6dbbd1ca712d824b5b6bdb2172cb708496e8df5e8337e9da4f35b14607e97d8",
-    "bytes": 35517,
-    "keyCount": 540
+    "sha256": "9426988e81ad0aefaab0e2be1e24645e4ebb309edd31de67e6ed3e06ce5b0c20",
+    "bytes": 39969,
+    "keyCount": 593
   },
   "languages": [
     {

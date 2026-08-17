@@ -1,8 +1,13 @@
 Creative Commons CC0 1.0 Universal
 
-Applies to the contents of `catalog/`. Code in `scripts/` and `schema/` is MIT —
-see LICENSE. Publisher logos in `assets/logos/` are third-party trademarks covered
-by neither licence — see README.md.
+Applies to the contents of `catalog/` and to README.md. Code in `scripts/` and
+`schema/` is MIT — see LICENSE. Translations in `locales/` are licensed per
+language, named in `locales/meta.json`. Publisher logos in `assets/logos/` are
+third-party trademarks covered by none of these — see README.md.
+
+`provenance.json` is the authoritative, machine-readable version of the sentence
+above: it records the origin and the terms of every path in this repository, and
+`scripts/validate.mjs` fails the build on a file that no entry there covers.
 
 CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
 SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT

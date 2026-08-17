@@ -288,6 +288,80 @@
       "absentFromBuild": "This build has no speech provider."
     }
   },
+  "ai": {
+    "hint": "Optional · your own account",
+    "loading": "Loading AI settings…",
+    "notice": "AI assistance is optional and never load-bearing. With it switched off, or with a provider that will not answer, the bulletin is written by the station's own templates exactly as it is now. The key you save is kept on this device — the operating system's credential store on the desktop, encrypted storage in a browser — and is sent to the provider you choose and to nobody else. What that provider charges is billed to your account.",
+    "notYetUsed": "Nothing in the bulletin asks a provider yet. What you configure here is saved and checked, and the writing will not change until the enrichment passes are built.",
+    "enabled": {
+      "title": "AI assistance",
+      "description": "Off until you switch it on. Nothing leaves this device while it is off."
+    },
+    "provider": {
+      "title": "Provider",
+      "description": "Whose model writes for the station",
+      "unknown": "This version does not carry “{{provider}}”, so nothing can be asked of it. Choose a provider from the list.",
+      "noneInBuild": "This version carries no AI provider."
+    },
+    "model": {
+      "title": "Model",
+      "description": "Which of {{provider}}'s models to ask. Leave it empty for {{model}}.",
+      "listDescription": "Which of {{provider}}'s models to ask",
+      "noDefault": "Which model {{provider}} should be asked for. Whichever one you have pulled."
+    },
+    "endpoint": {
+      "title": "Endpoint",
+      "description": "Only if you go through a gateway of your own. Empty means {{url}}."
+    },
+    "key": {
+      "title": "API key",
+      "checking": "Checking…",
+      "entryDescription": "Typed here and kept on this device. It is never written into a settings export.",
+      "stored": "Saved",
+      "storedDescription": "A key for {{provider}} is saved on this device.",
+      "save": "Save key",
+      "saving": "Saving…",
+      "replace": "Replace the saved key",
+      "replaceDescription": "Type a new one over it. The old key is replaced when you save.",
+      "cancelReplace": "Keep the saved key",
+      "remove": "Remove the saved key",
+      "removeConfirm": "Press again to remove"
+    },
+    "capability": {
+      "scriptWriting": {
+        "title": "Rewrite the anchor's copy",
+        "description": "The provider rewrites each item in a natural reading voice. A failed request reads the template instead."
+      },
+      "editorialRanking": {
+        "title": "Judge what leads",
+        "description": "The provider scores how significant each story is. Without it the running order is the station's own heuristics."
+      },
+      "webSearch": {
+        "title": "Search beyond the feeds",
+        "description": "The provider looks for developing stories the configured sources have not carried."
+      },
+      "unsupported": "{{provider}} cannot do this."
+    },
+    "translate": {
+      "title": "Translate foreign stories",
+      "description": "A story in another language is read in yours, with the publisher still credited",
+      "needsRewrite": "Only applies while the AI is writing the copy"
+    },
+    "budget": {
+      "title": "Requests per hour",
+      "description": "A ceiling, so a fault in the app cannot empty your account",
+      "value": "{{count}} per hour"
+    },
+    "spend": {
+      "title": "This session",
+      "off": "Nothing is being asked of a provider while AI is switched off.",
+      "reading": "Counting…",
+      "nothingYet": "No provider has been asked anything yet. The bulletin is being written by the station itself.",
+      "used": "{{requests}} requests this hour, {{remaining}} left · {{tokens}} tokens reported so far.",
+      "exhausted": "This hour's requests are used up · {{tokens}} tokens reported. The bulletin carries on with the station's own writing.",
+      "note": "Counted for this session only, and never converted to money — what a token costs is your provider's to tell you."
+    }
+  },
   "packs": {
     "hint": "Anchors and studios",
     "webOnly": "The web version reads only the packs built into it. Install the desktop app to add your own anchors and studios.",
@@ -681,6 +755,7 @@
     "kind": {
       "coldOpen": "Opening",
       "headlines": "Headlines",
+      "recap": "Recap",
       "signOff": "Sign-off",
       "break": "Station ident",
       "weather": "Weather",
@@ -689,7 +764,8 @@
     }
   },
   "transcript": {
-    "label": "News bulletin, as text"
+    "label": "News bulletin, as text",
+    "aiWritten": "This item was written by AI from the publisher's report."
   },
   "chrome": {
     "openMenu": "Open menu"
@@ -779,12 +855,15 @@
     "errorSerde": "Something could not be read as the shape it should be ({{detail}}).",
     "errorAiProvider": "{{provider}} refused or failed the request ({{detail}}); the copy was written from templates instead.",
     "errorIntegrity": "{{artefact}} does not match what was published for it, so it was not adopted. What is already here is still in use.",
+    "errorSecretStore": "This device’s key store could not be read or written ({{detail}}). Nothing was saved.",
     "errorSourceNotFound": "There is no source called “{{id}}”.",
     "errorPackNotFound": "No pack called “{{id}}” is installed.",
     "errorRequestNotBuilt": "A request to {{endpoint}} could not be built ({{detail}}).",
     "errorEngineUnavailable": "The simulation engine stopped responding. Restart the application.",
     "localeListNotFetched": "The list of languages has not been downloaded yet. Check for languages first.",
     "localeNotOffered": "“{{tag}}” is not one of the languages on offer.",
-    "localeReferenceKept": "English cannot be removed. It is built into the app, and it is what anything a translation has not covered falls back to."
+    "localeReferenceKept": "English cannot be removed. It is built into the app, and it is what anything a translation has not covered falls back to.",
+    "secretKeyNotAnIdentifier": "“{{id}}” cannot be used to file a key under.",
+    "secretStoreUnavailable": "This device offers nowhere safe to keep a key ({{detail}}), so AI features cannot be switched on here."
   }
 }

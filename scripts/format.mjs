@@ -26,6 +26,7 @@ import {
   localePath,
   localeTags,
 } from './lib/locales.mjs';
+import { PROVENANCE_PATH } from './lib/provenance.mjs';
 
 const INLINE_ARRAY_LIMIT = 72;
 
@@ -75,6 +76,7 @@ function main() {
     ...localeTags().map(localePath),
     LOCALES_META_PATH,
     LOCALES_INDEX_PATH,
+    PROVENANCE_PATH,
   ];
   const unformatted = [];
 

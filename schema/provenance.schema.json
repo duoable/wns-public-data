@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/duoable/wns-public-data/schema/provenance.schema.json",
+  "title": "Provenance",
+  "description": "Where every file in this repository came from and what it may be redistributed under. This repository is public and permanent, so committing to it is republishing; validate.mjs refuses a file that no entry here covers, which is what makes it impossible to publish somebody else's work without first writing down why we may.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "datasets"],
+  "properties": {
+    "$comment": {
+      "description": "Notes for whoever edits this file next. Ignored by every reader.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "schemaVersion": {
+      "description": "A document declaring a version newer than the tooling supports is refused, not guessed at.",
+      "type": "integer",
+      "const": 1
+    },
+    "datasets": {
+      "description": "Every path in the repository belongs to exactly one of these. There is deliberately no catch-all entry: an uncovered file is a failure, because the alternative is publishing something nobody has said we may.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/dataset" }
+    }
+  },
+  "$defs": {
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "what", "paths", "origin"],
+      "properties": {
+        "id": {
+          "description": "Names this dataset in error messages. Unique.",
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "what": {
+          "description": "One sentence saying what the files are, for somebody who has never seen the repository.",
+          "type": "string",
+          "minLength": 1
+        },
+        "paths": {
+          "description": "Repository-relative. A trailing slash means the directory and everything under it; anything else is one exact file. The most specific entry wins, so a file inside a covered directory may be given terms of its own — but two entries matching a file equally specifically is an error, because then nobody can say which terms apply.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9._-]+(/[A-Za-z0-9._-]+)*/?$"
+          }
+        },
+        "origin": {
+          "description": "Who wrote it. This decides what else must be recorded, and validate.mjs enforces that: `ours` needs a licence; `contributed` needs to say where each contributor's terms are written down; `thirdParty` needs the source, the attribution it must carry, and a statement of why redistributing it is permitted at all.",
+          "type": "string",
+          "enum": ["ours", "contributed", "thirdParty"]
+        },
+        "licence": {
+          "description": "What these files may be redistributed and used under, as published here. An SPDX identifier where one fits.",
+          "type": "string",
+          "minLength": 1
+        },
+        "licenceFile": {
+          "description": "The full text, in this repository. Must exist.",
+          "type": "string",
+          "minLength": 1
+        },
+        "termsRecordedIn": {
+          "description": "For `contributed`: the file holding the terms for each item, because one licence cannot describe them all. Must exist, and whatever generates the published manifest must refuse an item with no entry in it.",
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "description": "For `thirdParty`: where the data was obtained. A URL, so a reviewer can check the terms rather than take this file's word for them.",
+          "type": "string",
+          "pattern": "^https?://"
+        },
+        "sourceLicence": {
+          "description": "For `thirdParty`: the terms it was obtained under, which are not necessarily the terms it is published under here.",
+          "type": "string",
+          "minLength": 1
+        },
+        "attribution": {
+          "description": "For `thirdParty`: the credit that must travel with the data, worded as it is to be shown. A licence permitting redistribution almost always requires this, and a credit recorded only in a commit message is a credit nobody sees.",
+          "type": "string",
+          "minLength": 1
+        },
+        "redistribution": {
+          "description": "For `thirdParty`: why republishing this is permitted. A sentence, written by a person, naming the clause or the grant it rests on. This is the field the whole file exists for — the guard is not that a machine can verify the answer, it is that nobody can add somebody else's data without having to write the answer down.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

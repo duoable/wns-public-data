@@ -40,6 +40,8 @@ assets/
   logos/              Publisher logos, referenced by path + sha256.
 schema/               JSON Schema (draft 2020-12) for each file above.
 scripts/              Validation and link checking. Zero dependencies.
+provenance.json       Where every path above came from, and what it may be
+                      republished under. Nothing may be added without an entry.
 ```
 
 Sources are sharded by continental region rather than by country. Two hundred
@@ -233,8 +235,47 @@ open an issue and it will be.
 | ---- | ------- |
 | `catalog/`, and this README | [CC0 1.0](LICENSE-DATA) — public domain dedication |
 | `locales/` | Per language, named in `locales/meta.json`. MIT unless a translator says otherwise. |
-| `scripts/`, `schema/` | [MIT](LICENSE) |
+| `scripts/`, `schema/`, `.github/` | [MIT](LICENSE) |
 | `assets/logos/` | Third-party trademarks. Neither licence applies. See above. |
+
+### Nothing arrives here without its terms
+
+This repository is **public and permanent**. Committing to it is republishing,
+and a public repository cannot be un-published by deleting a file — so the table
+above is not the source of truth. [`provenance.json`](provenance.json) is: it
+records, for every path, what the files are, who wrote them, and what they may be
+redistributed under. `scripts/validate.mjs` reads it and **fails on any file no
+entry covers**, so CI refuses a pull request that adds data nobody has accounted
+for.
+
+There is deliberately **no catch-all entry**. Adding a directory means adding an
+entry, and that is the whole mechanism: the check cannot verify that a licence is
+being honoured, but it can guarantee that somebody had to write down which one
+applies before the data could be merged.
+
+An entry says how the data reached us, and that decides what else it must carry:
+
+| `origin` | Also required | For |
+| -------- | ------------- | --- |
+| `ours` | `licence` | The catalog, the tooling, the English reference. |
+| `contributed` | `termsRecordedIn` | Translations — one licence cannot describe them all, so the terms live per language in `locales/meta.json`. |
+| `thirdParty` | `source`, `sourceLicence`, `attribution`, `redistribution` | Anything taken from outside. |
+
+`redistribution` is the field that matters. It is a sentence, written by a
+person, saying **why republishing this is permitted** — naming the clause or the
+grant it rests on. Nothing checks that the sentence is true; what is enforced is
+that it cannot be skipped.
+
+Two things follow from this that are worth knowing before adding anything.
+**A licence that permits use does not necessarily permit redistribution**, which
+is the distinction this repository exists on the wrong side of by default —
+everything here is fetched and stored on a viewer's device. And **if the terms
+are unclear, ask before committing.** Reverting a commit does not unpublish it.
+
+`assets/logos/` is described above and has rules in `.gitattributes`, but nothing
+is committed there and it has no entry. That is on purpose: a publisher's mark is
+a trademark rather than a licensable work, and the first commit of one will fail
+validation until somebody writes down what it rests on.
 
 The catalog is a table of facts — names, URLs, countries. CC0 waives the EU
 *sui generis* database right along with everything else, so anyone can reuse the

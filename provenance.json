@@ -1,0 +1,78 @@
+{
+  "$comment": [
+    "Where every file here came from, and what it may be redistributed under.",
+    "",
+    "This repository is public and permanent. Committing to it is republishing,",
+    "and a public repository cannot be un-published by deleting a file — so the",
+    "rule is that nothing arrives without its terms arriving with it.",
+    "",
+    "scripts/validate.mjs refuses a tracked file that no entry below covers.",
+    "There is deliberately no catch-all: adding a directory means adding an",
+    "entry, and adding an entry for somebody else's data means answering the",
+    "`redistribution` question in a sentence. The guard is not that a machine",
+    "can check the answer. It is that the answer has to exist before the data",
+    "can be merged.",
+    "",
+    "assets/logos/ is deliberately absent. The README describes it and",
+    ".gitattributes has rules for it, but nothing is committed there yet — and",
+    "a publisher's mark is a trademark rather than a licensable work, which is",
+    "the hardest case in this repository. The first commit of one will fail",
+    "validation until somebody writes down what it rests on."
+  ],
+  "schemaVersion": 1,
+  "datasets": [
+    {
+      "id": "catalog",
+      "what": "The list of news sources the app can poll: addresses, languages, countries and subjects.",
+      "paths": ["catalog/"],
+      "origin": "ours",
+      "licence": "CC0-1.0",
+      "licenceFile": "LICENSE-DATA"
+    },
+    {
+      "id": "documentation",
+      "what": "How to add a source, add a translation, and read the layout.",
+      "paths": ["README.md"],
+      "origin": "ours",
+      "licence": "CC0-1.0",
+      "licenceFile": "LICENSE-DATA"
+    },
+    {
+      "id": "interface-translations",
+      "what": "The app's menus in languages other than English, each written by whoever contributed it.",
+      "paths": ["locales/"],
+      "origin": "contributed",
+      "termsRecordedIn": "locales/meta.json"
+    },
+    {
+      "id": "reference-catalogue",
+      "what": "The English messages every translation is validated against, and the manifests describing both.",
+      "paths": ["locales/en.json", "locales/index.json", "locales/meta.json"],
+      "origin": "ours",
+      "licence": "MIT",
+      "licenceFile": "LICENSE"
+    },
+    {
+      "id": "tooling",
+      "what": "The scripts that build, format and validate this repository, the schemas they check against, and the workflows that run them.",
+      "paths": [".github/", "schema/", "scripts/"],
+      "origin": "ours",
+      "licence": "MIT",
+      "licenceFile": "LICENSE"
+    },
+    {
+      "id": "repository",
+      "what": "The repository's licences, this declaration, and the git configuration that keeps hashes stable.",
+      "paths": [
+        ".gitattributes",
+        ".gitignore",
+        "LICENSE",
+        "LICENSE-DATA",
+        "provenance.json"
+      ],
+      "origin": "ours",
+      "licence": "MIT",
+      "licenceFile": "LICENSE"
+    }
+  ]
+}

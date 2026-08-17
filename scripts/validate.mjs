@@ -6,6 +6,12 @@
  * wrong here is between files — an id reused in another shard, a city that no
  * longer exists in the taxonomy, a manifest describing bytes that have since
  * changed. Those checks are the reason this script exists.
+ *
+ * One check asks a different question from the rest. This repository is public
+ * and permanent, so committing to it is republishing, and `checkProvenance`
+ * refuses a tracked file whose origin and licence nobody has written down. It
+ * is last in the file and first in importance: everything else here can be
+ * corrected in the next commit.
  */
 
 import { existsSync } from 'node:fs';
@@ -32,6 +38,7 @@ import {
   translationTags,
   withoutPluralSuffix,
 } from './lib/locales.mjs';
+import { checkProvenance, PROVENANCE_PATH } from './lib/provenance.mjs';
 import { validate } from './lib/json-schema.mjs';
 
 const errors = [];
@@ -387,6 +394,14 @@ function validateLocales() {
 
 validateLocales();
 
+// ------------------------------------------------------------- provenance
+
+// Last, because it is the check that answers a different question from all the
+// others. They ask whether the data is correct; this asks whether it is ours to
+// publish. A repository that is public and permanent cannot un-publish a file,
+// so an undeclared one fails the build rather than being reported as a warning.
+const coveredFiles = checkProvenance(fail, checkAgainstSchema);
+
 // ----------------------------------------------------------------- report
 
 const totalSources = byId.size;
@@ -416,5 +431,6 @@ const translationCount = translationTags().length;
 console.log(
   `Catalog is valid: ${totalSources} sources, ${shards.length} shards, ${countries.size} countries, ${languages.size} languages.` +
     ` Interface translations: ${translationCount}.` +
+    ` ${coveredFiles} published file(s) covered by ${PROVENANCE_PATH}.` +
     (warnings.length > 0 ? ` ${warnings.length} warning(s).` : ''),
 );

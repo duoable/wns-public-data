@@ -36,12 +36,18 @@ jobs:
       - name: Check the translations manifest is current
         run: node scripts/build-locales-index.mjs --check
 
-      # Covers the catalog and the translations in one pass. The translation
-      # half is the check the app cannot perform: it compiles English in and
-      # knows those keys at build time, but has never seen a translation until
-      # somebody downloads one — and a missing key is not a runtime error,
-      # i18next quietly falls back to English. Without this a half-finished
-      # translation ships looking finished.
+      # Covers the catalog, the translations and the provenance in one pass.
+      #
+      # The translation half is the check the app cannot perform: it compiles
+      # English in and knows those keys at build time, but has never seen a
+      # translation until somebody downloads one — and a missing key is not a
+      # runtime error, i18next quietly falls back to English. Without this a
+      # half-finished translation ships looking finished.
+      #
+      # The provenance half is the one that has to run *before* a merge rather
+      # than after. This repository is public and permanent, so a pull request
+      # adding a file nobody has recorded the origin and licence of is the one
+      # mistake here that cannot be fixed by a later commit.
       - name: Validate
         run: node scripts/validate.mjs
 
