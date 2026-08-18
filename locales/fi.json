@@ -764,8 +764,8 @@
   },
   "mode": {
     "live": {
-      "label": "Suora",
-      "about": "Suora lähetys: oikeita uutisia valitsemistasi lähteistä."
+      "label": "Oikeat uutiset",
+      "about": "Oikeat uutiset: valitsemiesi lähteiden raportoimia."
     },
     "simulation": {
       "label": "Simulaatio",
