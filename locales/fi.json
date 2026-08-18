@@ -61,6 +61,10 @@
       "label": "Järjestelmä",
       "description": "Palauta oletukset ja tyhjennä lähetyshistoria"
     },
+    "about": {
+      "label": "Tietoja",
+      "description": "Versio, mitä laitteelle tallennetaan ja mistä tämä on koottu"
+    },
     "missing": {
       "hint": "Ei vielä toteutettu",
       "body": "Tälle näytölle ei ole rekisteröity piirtäjää. Katso ROADMAP.md."
@@ -163,7 +167,23 @@
       "remembered_one": "{{count}} juttu",
       "remembered_other": "{{count}} juttua"
     },
-    "storageNotice": "Kaikki säilytetään tällä laitteella. Mitään ei lähetetä minnekään — eikä viety tiedosto sisällä hakutilaa tai välityspalvelimen osoitetta, joten sen voi jakaa turvallisesti."
+    "storageNotice": "Kaikki säilytetään tällä laitteella. Mitään ei lähetetä minnekään — eikä viety tiedosto sisällä hakutilaa tai välityspalvelimen osoitetta, joten sen voi jakaa turvallisesti.",
+    "crashReports": {
+      "title": "Säilytä kaatumisraportit",
+      "description": "Pois päältä. Mitään ei kirjata ylös, jos sovellus pysähtyy",
+      "nothingRecorded": "Päällä. Mikään ei ole mennyt vikaan sen jälkeen kun otit tämän käyttöön",
+      "kept_one": "{{count}} vika kirjattu tälle laitteelle",
+      "kept_other": "{{count}} vikaa kirjattu tälle laitteelle",
+      "seenOnce": "{{when}} ({{platform}}) — valitse, niin tallennat sen tiedostoksi",
+      "seenAgain": "{{when}} ({{platform}}), {{count}} kertaa — valitse, niin tallennat sen tiedostoksi",
+      "saved": "Tallennettu nimellä {{file}}",
+      "save": "Tallenna",
+      "clear": {
+        "title": "Poista kaatumisraportit",
+        "description": "Poistaa kaikki tälle laitteelle kirjatut viat",
+        "confirm": "Valitse uudelleen vahvistaaksesi — raportteja ei voi palauttaa"
+      }
+    }
   },
   "signalLog": {
     "hint": "Mikään täältä ei lähde laitteelta",
@@ -879,5 +899,57 @@
     "localeReferenceKept": "Englantia ei voi poistaa. Se on sisäänrakennettu sovellukseen, ja siihen turvaudutaan kaikessa mitä käännös ei kata.",
     "secretKeyNotAnIdentifier": "”{{id}}” ei kelpaa avaimen tunnisteeksi.",
     "secretStoreUnavailable": "Tässä laitteessa ei ole turvallista paikkaa avaimelle ({{detail}}), joten tekoälyominaisuuksia ei voi ottaa täällä käyttöön."
+  },
+  "about": {
+    "hint": "Versio, yksityisyys ja lisenssit",
+    "version": "Versio",
+    "licence": "Lisenssi",
+    "source": "Lähdekoodi",
+    "reading": "Luetaan lisenssiluetteloa…",
+    "unavailable": "Lisenssiluetteloa ei voitu lukea. Se luodaan tähän koontiversioon, joten kyse on vaurioituneesta asennuksesta eikä asetuksesta — uudelleenasennus palauttaa sen.",
+    "privacy": {
+      "title": "Mitä sovellus tallentaa",
+      "hint": "Sinusta ei kerätä mitään — ei tiliä, ei analytiikkaa, ei tunnistetta.",
+      "device": {
+        "title": "Tällä laitteella",
+        "description": "Asetuksesi, niiden välimuistit, tieto siitä mitkä jutut on jo luettu — ja kaatumisraportit, jos otit ne käyttöön."
+      },
+      "key": {
+        "title": "API-avaimesi",
+        "description": "Käyttöjärjestelmän avainnipussa. Se ei koskaan päädy asetusten vientitiedostoon eikä sitä koskaan lueta takaisin näytölle."
+      },
+      "leaves": {
+        "title": "Mitä laitteelta lähtee",
+        "description": "Vain ne pyynnöt, joita asetuksesi pyytävät: valitsemasi lähteet ja käyttöön ottamasi palvelut."
+      },
+      "more": {
+        "title": "Koko seloste",
+        "description": "docs/privacy.md projektin koodivarastossa"
+      }
+    },
+    "assets": {
+      "title": "Mitä mukana toimitetaan"
+    },
+    "licences": {
+      "title": "Lisenssit tässä koontiversiossa",
+      "count_one": "{{count}} paketti",
+      "count_other": "{{count}} pakettia"
+    },
+    "packages": {
+      "title": "Kaikki paketit",
+      "count": "{{packages}} pakettia, {{licences}} lisenssin alla"
+    },
+    "from": {
+      "cargo": "Rust",
+      "npm": "Selain"
+    },
+    "takenUnder": "Käytössä lisenssillä {{terms}}",
+    "declaredOnly": "Ilmoittaa lisenssin {{licence}}",
+    "noLicence": "Ei ilmoitettua lisenssiä"
+  },
+  "fault": {
+    "title": "Sovellus pysähtyi",
+    "body": "Jokin käyttöliittymässä hajosi, eikä lähetystä voitu jatkaa. Asetuksesi ja lähteesi ovat ennallaan.",
+    "restart": "Aloita alusta"
   }
 }

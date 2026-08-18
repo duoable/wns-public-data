@@ -61,6 +61,10 @@
       "label": "System",
       "description": "Restore defaults and clear what has been broadcast"
     },
+    "about": {
+      "label": "About",
+      "description": "The version, what is stored, and what this is built from"
+    },
     "missing": {
       "hint": "Not yet implemented",
       "body": "This screen has no renderer registered. See ROADMAP.md."
@@ -163,7 +167,23 @@
       "remembered_one": "{{count}} story",
       "remembered_other": "{{count}} stories"
     },
-    "storageNotice": "Everything is stored on this device. Nothing here is sent anywhere — and an exported file carries no polling state and no proxy address, so it is safe to share."
+    "storageNotice": "Everything is stored on this device. Nothing here is sent anywhere — and an exported file carries no polling state and no proxy address, so it is safe to share.",
+    "crashReports": {
+      "title": "Keep crash reports",
+      "description": "Off. Nothing is written down when the app stops",
+      "nothingRecorded": "On. Nothing has gone wrong since you switched this on",
+      "kept_one": "{{count}} fault recorded on this device",
+      "kept_other": "{{count}} faults recorded on this device",
+      "seenOnce": "{{when}} on {{platform}} — select to save it as a file",
+      "seenAgain": "{{when}} on {{platform}}, {{count}} times — select to save it as a file",
+      "saved": "Saved as {{file}}",
+      "save": "Save",
+      "clear": {
+        "title": "Delete crash reports",
+        "description": "Removes every fault recorded on this device",
+        "confirm": "Select again to confirm — the reports cannot be recovered"
+      }
+    }
   },
   "signalLog": {
     "hint": "Nothing here leaves this device",
@@ -879,5 +899,57 @@
     "localeReferenceKept": "English cannot be removed. It is built into the app, and it is what anything a translation has not covered falls back to.",
     "secretKeyNotAnIdentifier": "“{{id}}” cannot be used to file a key under.",
     "secretStoreUnavailable": "This device offers nowhere safe to keep a key ({{detail}}), so AI features cannot be switched on here."
+  },
+  "about": {
+    "hint": "Version, privacy and licences",
+    "version": "Version",
+    "licence": "Licence",
+    "source": "Source code",
+    "reading": "Reading the licence list…",
+    "unavailable": "The licence list could not be read. It is generated into this build, so this is a damaged installation rather than a setting — reinstalling restores it.",
+    "privacy": {
+      "title": "What this app stores",
+      "hint": "Nothing about you is collected — no account, no analytics, no identifier.",
+      "device": {
+        "title": "On this device",
+        "description": "Your settings, the caches behind them, which stories have already been read — and, if you switched them on, crash reports."
+      },
+      "key": {
+        "title": "Your API key",
+        "description": "In the operating system keychain, never in a settings export, and never read back to the screen."
+      },
+      "leaves": {
+        "title": "What leaves it",
+        "description": "Only the requests your settings ask for: the sources you ticked, and any service you switched on."
+      },
+      "more": {
+        "title": "The full statement",
+        "description": "docs/privacy.md, in the project repository"
+      }
+    },
+    "assets": {
+      "title": "What is bundled with it"
+    },
+    "licences": {
+      "title": "Licences in this build",
+      "count_one": "{{count}} package",
+      "count_other": "{{count}} packages"
+    },
+    "packages": {
+      "title": "Every package",
+      "count": "{{packages}} packages, under {{licences}} licences"
+    },
+    "from": {
+      "cargo": "Rust",
+      "npm": "Browser"
+    },
+    "takenUnder": "Used under {{terms}}",
+    "declaredOnly": "Declares {{licence}}",
+    "noLicence": "Declares no licence"
+  },
+  "fault": {
+    "title": "The app stopped",
+    "body": "Something in the interface failed and the broadcast could not carry on. Your settings and your sources are unaffected.",
+    "restart": "Start again"
   }
 }
