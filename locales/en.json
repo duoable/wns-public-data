@@ -151,6 +151,11 @@
       "adopted": "Settings adopted from the file",
       "action": "Open"
     },
+    "tour": {
+      "title": "Show me round again",
+      "description": "Where the news comes from, who reads it, and what it is watched on",
+      "action": "Start"
+    },
     "restore": {
       "title": "Restore default settings",
       "description": "Puts picture, audio, running order and the source list back as shipped",
@@ -946,6 +951,39 @@
     "takenUnder": "Used under {{terms}}",
     "declaredOnly": "Declares {{licence}}",
     "noLicence": "Declares no licence"
+  },
+  "tour": {
+    "label": "Getting started",
+    "progress": "Step {{step}} of {{total}}",
+    "next": "Next",
+    "back": "Back",
+    "skip": "Skip",
+    "open": "Take me there",
+    "welcome": {
+      "title": "Welcome to your news channel",
+      "body": "This is a television station that reads the day’s real news. It gathers stories from newsrooms you choose, decides which one leads, writes the bulletin and puts an anchor in front of a camera to read it. Three of those decisions are yours, and this is where they are."
+    },
+    "sources": {
+      "title": "The news comes from newsrooms you pick",
+      "body": "Nothing here writes the news. Every story is somebody else’s journalism, credited on screen and linked back to the newsroom that filed it. Open News Sources to tick a country, a language or a single publisher — or to add a feed of your own."
+    },
+    "relay": {
+      "title": "In a browser, you are watching a demonstration",
+      "body": "A web page is not allowed to read another site’s news feed, so this build cannot reach a real newsroom on its own. Until you point it at a relay under News Sources, the bulletin you are watching is an authored demonstration — the badge in the corner says so. The desktop app has no such limit."
+    },
+    "anchor": {
+      "title": "Somebody has to read it",
+      "body": "The anchor is a character with a voice, chosen on the Anchor screen. Voices range from the one your device already has to a downloadable one that sounds like a broadcaster. Anchors are content, not code: a folder dropped into your packs directory turns up on that list."
+    },
+    "era": {
+      "title": "And a television to watch it on",
+      "body": "An era is not a set or a graphics package — it is the television. Pick 1968 and the picture arrives in monochrome through a shadow mask; pick 1994 and it comes off a worn tape. The Picture screen holds the seven of them, and how hard the set is allowed to work."
+    },
+    "finish": {
+      "title": "That is the whole of it",
+      "body": "Everything else is on the menu, which opens with Escape, the Menu button on a remote or Start on a controller. You can read this again whenever you like — there is a row for it on the System screen.",
+      "action": "Start watching"
+    }
   },
   "fault": {
     "title": "The app stopped",

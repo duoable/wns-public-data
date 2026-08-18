@@ -151,6 +151,11 @@
       "adopted": "Asetukset otettu käyttöön tiedostosta",
       "action": "Avaa"
     },
+    "tour": {
+      "title": "Näytä opastus uudelleen",
+      "description": "Mistä uutiset tulevat, kuka ne lukee ja millä niitä katsotaan",
+      "action": "Aloita"
+    },
     "restore": {
       "title": "Palauta oletusasetukset",
       "description": "Palauttaa kuvan, äänen, juttujärjestyksen ja lähdelistan alkuperäisiksi",
@@ -946,6 +951,39 @@
     "takenUnder": "Käytössä lisenssillä {{terms}}",
     "declaredOnly": "Ilmoittaa lisenssin {{licence}}",
     "noLicence": "Ei ilmoitettua lisenssiä"
+  },
+  "tour": {
+    "label": "Aloitusopastus",
+    "progress": "Vaihe {{step}} / {{total}}",
+    "next": "Seuraava",
+    "back": "Takaisin",
+    "skip": "Ohita",
+    "open": "Vie sinne",
+    "welcome": {
+      "title": "Tervetuloa omalle uutiskanavallesi",
+      "body": "Tämä on televisiokanava, joka lukee päivän todelliset uutiset. Se kerää jutut valitsemistasi toimituksista, päättää mikä niistä on pääuutinen, kirjoittaa lähetyksen ja asettaa uutisankkurin kameran eteen lukemaan sen. Kolme näistä valinnoista on sinun, ja tässä ne ovat."
+    },
+    "sources": {
+      "title": "Uutiset tulevat valitsemistasi toimituksista",
+      "body": "Mikään täällä ei kirjoita uutisia itse. Jokainen juttu on jonkun toisen journalismia, joka näytetään lähdemerkinnällä ja linkillä takaisin sen kirjoittaneeseen toimitukseen. Avaa Uutislähteet ja valitse maa, kieli tai yksittäinen julkaisija — tai lisää oma syötteesi."
+    },
+    "relay": {
+      "title": "Selaimessa katsot esittelylähetystä",
+      "body": "Verkkosivu ei saa lukea toisen sivuston uutissyötettä, joten tämä versio ei tavoita oikeaa toimitusta omin avuin. Ennen kuin osoitat sen välityspalvelimeen Uutislähteet-näytöllä, katsomasi lähetys on käsin kirjoitettu esittely — kulman merkki kertoo sen. Työpöytäsovelluksessa tätä rajoitusta ei ole."
+    },
+    "anchor": {
+      "title": "Jonkun on luettava se",
+      "body": "Uutisankkuri on hahmo ja ääni, jotka valitaan Uutisankkuri-näytöltä. Ääni voi olla laitteesi oma tai ladattava ääni, joka kuulostaa ammattilukijalta. Ankkurit ovat sisältöä eivätkä koodia: pakettikansioon pudotettu kansio ilmestyy listalle."
+    },
+    "era": {
+      "title": "Ja televisio, jolta sitä katsotaan",
+      "body": "Aikakausi ei ole lavastus eikä grafiikkapaketti — se on televisio. Valitse 1968, ja kuva saapuu mustavalkoisena varjomaskin läpi; valitse 1994, ja se tulee kuluneelta nauhalta. Kuva-näytöltä löytyvät kaikki seitsemän sekä se, kuinka kovaa laitteen annetaan tehdä työtä."
+    },
+    "finish": {
+      "title": "Siinä kaikki",
+      "body": "Kaikki muu on valikossa, joka avautuu Esc-näppäimellä, kaukosäätimen valikkopainikkeella tai ohjaimen Start-painikkeella. Voit lukea tämän uudelleen milloin tahansa — Järjestelmä-näytöllä on sitä varten oma rivinsä.",
+      "action": "Aloita katselu"
+    }
   },
   "fault": {
     "title": "Sovellus pysähtyi",
