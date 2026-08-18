@@ -762,9 +762,24 @@
       "adBreak": "Commercial break"
     }
   },
+  "mode": {
+    "live": {
+      "label": "Live",
+      "about": "Live: real news from the sources you chose."
+    },
+    "simulation": {
+      "label": "Simulation",
+      "about": "Simulation: these stories are invented and did not happen."
+    },
+    "demonstration": {
+      "label": "Demo",
+      "about": "Demonstration bulletin: these stories are invented and did not happen. This browser cannot read news feeds without a relay."
+    }
+  },
   "transcript": {
     "label": "News bulletin, as text",
-    "aiWritten": "This item was written by AI from the publisher's report."
+    "aiDisclosure": "This broadcast is assembled with the help of artificial intelligence. Items marked below were written or found by an AI model.",
+    "aiWritten": "AI was used for this item: the words, the material behind them, or both."
   },
   "chrome": {
     "openMenu": "Open menu"

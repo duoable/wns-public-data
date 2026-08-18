@@ -762,9 +762,24 @@
       "adBreak": "Mainoskatko"
     }
   },
+  "mode": {
+    "live": {
+      "label": "Suora",
+      "about": "Suora lähetys: oikeita uutisia valitsemistasi lähteistä."
+    },
+    "simulation": {
+      "label": "Simulaatio",
+      "about": "Simulaatio: nämä uutiset ovat keksittyjä eivätkä ole tapahtuneet."
+    },
+    "demonstration": {
+      "label": "Esittely",
+      "about": "Esittelylähetys: nämä uutiset ovat keksittyjä eivätkä ole tapahtuneet. Tämä selain ei pysty lukemaan uutissyötteitä ilman välityspalvelinta."
+    }
+  },
   "transcript": {
     "label": "Uutislähetys tekstinä",
-    "aiWritten": "Tämän jutun on kirjoittanut tekoäly julkaisijan raportin pohjalta."
+    "aiDisclosure": "Tämä lähetys on koostettu tekoälyn avulla. Alla merkityt jutut on kirjoittanut tai löytänyt tekoälymalli.",
+    "aiWritten": "Tässä jutussa on käytetty tekoälyä: sanoissa, niiden takana olevassa aineistossa tai molemmissa."
   },
   "chrome": {
     "openMenu": "Avaa valikko"
