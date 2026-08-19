@@ -703,6 +703,10 @@
       "action": "Check",
       "running": "Checking…"
     },
+    "autoRefresh": {
+      "title": "Keep the lists up to date",
+      "description": "Once a day, look for new sources and corrected translations. Switched off, the app uses the list it came with and whatever you have already downloaded."
+    },
     "filter": {
       "any": "Any"
     },

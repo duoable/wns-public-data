@@ -703,6 +703,10 @@
       "action": "Tarkista",
       "running": "Tarkistetaan…"
     },
+    "autoRefresh": {
+      "title": "Pidä luettelot ajan tasalla",
+      "description": "Etsi kerran vuorokaudessa uusia lähteitä ja korjattuja käännöksiä. Pois päältä sovellus käyttää mukanaan tullutta luetteloa ja jo lataamiasi tiedostoja."
+    },
     "filter": {
       "any": "Mikä tahansa"
     },
