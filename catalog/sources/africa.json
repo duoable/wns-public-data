@@ -3,6 +3,51 @@
   "shard": "africa",
   "sources": [
     {
+      "id": "aps-sn",
+      "name": "Agence de Presse Sénégalaise",
+      "url": "https://aps.sn/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "SN",
+      "languages": ["fr"],
+      "topics": ["general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "APS",
+      "publisherLink": "https://aps.sn",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "capital-fm-ke",
+      "name": "Capital News",
+      "url": "https://capitalfm.africa/news/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "KE",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Capital FM",
+      "publisherLink": "https://www.capitalfm.co.ke/news",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "club-of-mozambique",
+      "name": "Club of Mozambique",
+      "url": "https://clubofmozambique.com/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "MZ",
+      "languages": ["en"],
+      "topics": ["general", "business"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "Club of Mozambique",
+      "publisherLink": "https://clubofmozambique.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "daily-maverick",
       "name": "Daily Maverick",
       "url": "https://www.dailymaverick.co.za/dmrss/",
@@ -16,6 +61,36 @@
       "publisher": "Daily Maverick",
       "publisherLink": "https://www.dailymaverick.co.za",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "daily-news-egypt",
+      "name": "Daily News Egypt",
+      "url": "https://www.dailynewsegypt.com/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "EG",
+      "languages": ["en"],
+      "topics": ["general", "business"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Daily News Egypt",
+      "publisherLink": "https://www.dailynewsegypt.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "daily-news-tz",
+      "name": "Daily News",
+      "url": "https://dailynews.co.tz/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "TZ",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Daily News",
+      "publisherLink": "https://dailynews.co.tz",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "egypt-independent",
@@ -33,6 +108,21 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "ethiopian-monitor",
+      "name": "Ethiopian Monitor",
+      "url": "https://ethiopianmonitor.com/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "ET",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "Ethiopian Monitor",
+      "publisherLink": "https://ethiopianmonitor.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "graphic-online",
       "name": "Graphic Online",
       "url": "https://www.graphic.com.gh/?format=feed&type=rss",
@@ -46,6 +136,21 @@
       "publisher": "Graphic Online",
       "publisherLink": "https://www.graphic.com.gh",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "groundup-za",
+      "name": "GroundUp",
+      "url": "https://groundup.org.za/sitenews/rss/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "ZA",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "GroundUp",
+      "publisherLink": "https://groundup.org.za",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "herald-zw",
@@ -78,6 +183,51 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "kt-press-rw",
+      "name": "KT Press",
+      "url": "https://www.ktpress.rw/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "RW",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "KT Press",
+      "publisherLink": "https://www.ktpress.rw",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "le-mauricien",
+      "name": "Le Mauricien",
+      "url": "https://www.lemauricien.com/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "MU",
+      "languages": ["fr"],
+      "topics": ["general"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "Le Mauricien",
+      "publisherLink": "https://www.lemauricien.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "lusaka-times",
+      "name": "Lusaka Times",
+      "url": "https://www.lusakatimes.com/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "ZM",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "Lusaka Times",
+      "publisherLink": "https://www.lusakatimes.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "myjoyonline",
       "name": "MyJoyOnline",
       "url": "https://www.myjoyonline.com/feed/",
@@ -91,6 +241,21 @@
       "publisher": "MyJoyOnline",
       "publisherLink": "https://www.myjoyonline.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "nyasa-times-mw",
+      "name": "Nyasa Times",
+      "url": "https://www.nyasatimes.com/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "MW",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "Nyasa Times",
+      "publisherLink": "https://www.nyasatimes.com",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "premium-times-ng",
@@ -136,6 +301,21 @@
       "publisher": "The Standard",
       "publisherLink": "https://www.standardmedia.co.ke",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "the-namibian",
+      "name": "The Namibian",
+      "url": "https://www.namibian.com.na/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "NA",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "The Namibian",
+      "publisherLink": "https://www.namibian.com.na",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "vanguard-ng",

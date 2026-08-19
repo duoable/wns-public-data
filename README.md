@@ -147,6 +147,22 @@ opened up, a pull request restoring it is very welcome.
 Reuters and the Associated Press are absent for a simpler reason: both
 discontinued their public RSS feeds.
 
+**A list of the ones already tried**, so the same afternoon is not spent twice.
+Checked on 2026-08-19 and refused with a `403`: The Guardian Nigeria, Ahram
+Online, Morocco World News, Addis Standard, Sudan Tribune, The Denver Post, El
+Deber, The Express Tribune, bdnews24, Manila Bulletin, News 1st, The Irrawaddy,
+Khmer Times, The Phnom Penh Post, MONTSAME, Borneo Bulletin, Denník N, STA, Times
+of Malta, IPN, Zerkalo, Armenpress, Suspilne, Il Post, Le Soir, Jornal de
+Notícias, Iceland Monitor, Greek Reporter, the IMF, L'Orient Today, Enab Baladi,
+Ma'an, Haaretz, Al Arabiya English, The Jordan Times and Solomon Star. Answering
+with a web page rather than a feed, which usually means the feed was retired
+without a redirect: Channels Television, Citi Newsroom, ChimpReports, The New
+Times, Montreal Gazette, Primicias, The Wire, The Nation Thailand, RTL Today, RTS
+Info, Polskie Radio 24, the World Bank, The Peninsula, Gulf Times, Arab Times,
+Muscat Daily, Shafaq News, news.com.au, The Fiji Times, Thai PBS World and
+MaltaToday. Each is worth another look in a year; none is worth another look next
+week.
+
 ---
 
 ## Adding a translation

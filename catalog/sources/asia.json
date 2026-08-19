@@ -3,6 +3,21 @@
   "shard": "asia",
   "sources": [
     {
+      "id": "24-kg",
+      "name": "24.kg",
+      "url": "https://24.kg/rss/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "KG",
+      "languages": ["ru"],
+      "topics": ["general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 900,
+      "publisher": "24.kg",
+      "publisherLink": "https://24.kg",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "antara-terkini",
       "name": "ANTARA — Terkini",
       "url": "https://www.antaranews.com/rss/terkini",
@@ -31,6 +46,21 @@
       "publisher": "朝日新聞",
       "publisherLink": "https://www.asahi.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "astana-times",
+      "name": "The Astana Times",
+      "url": "https://astanatimes.com/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "KZ",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "The Astana Times",
+      "publisherLink": "https://astanatimes.com",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "bangkok-post",
@@ -78,6 +108,21 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "daily-mirror-lk",
+      "name": "Daily Mirror",
+      "url": "https://www.dailymirror.lk/rss/breaking-news/108",
+      "kind": "feed",
+      "scope": "national",
+      "country": "LK",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Daily Mirror",
+      "publisherLink": "https://www.dailymirror.lk",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "daily-star-bd",
       "name": "The Daily Star — Front Page",
       "url": "https://www.thedailystar.net/frontpage/rss.xml",
@@ -108,6 +153,36 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "free-malaysia-today",
+      "name": "Free Malaysia Today",
+      "url": "https://www.freemalaysiatoday.com/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "MY",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Free Malaysia Today",
+      "publisherLink": "https://www.freemalaysiatoday.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "gazeta-uz",
+      "name": "Gazeta.uz",
+      "url": "https://www.gazeta.uz/uz/rss/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "UZ",
+      "languages": ["uz"],
+      "topics": ["general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 900,
+      "publisher": "Gazeta.uz",
+      "publisherLink": "https://www.gazeta.uz",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "geo-news-en",
       "name": "Geo News",
       "url": "https://www.geo.tv/rss/1/1",
@@ -121,6 +196,66 @@
       "publisher": "Geo News",
       "publisherLink": "https://www.geo.tv",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "global-times-cn",
+      "name": "Global Times",
+      "url": "https://www.globaltimes.cn/rss/outbrain.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "CN",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.5,
+      "pollIntervalSecs": 900,
+      "publisher": "Global Times",
+      "publisherLink": "https://www.globaltimes.cn",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "gma-news",
+      "name": "GMA News",
+      "url": "https://data.gmanetwork.com/gno/rss/news/feed.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "PH",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.65,
+      "pollIntervalSecs": 600,
+      "publisher": "GMA News",
+      "publisherLink": "https://www.gmanetwork.com/news",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "hankyoreh-en",
+      "name": "The Hankyoreh",
+      "url": "https://english.hani.co.kr/rss",
+      "kind": "feed",
+      "scope": "national",
+      "country": "KR",
+      "languages": ["en"],
+      "topics": ["politics", "general"],
+      "weight": 0.55,
+      "pollIntervalSecs": 1800,
+      "publisher": "The Hankyoreh",
+      "publisherLink": "https://english.hani.co.kr",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "hindustan-times",
+      "name": "Hindustan Times",
+      "url": "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "IN",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.7,
+      "pollIntervalSecs": 600,
+      "publisher": "Hindustan Times",
+      "publisherLink": "https://www.hindustantimes.com",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "hkfp",
@@ -213,6 +348,66 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "korea-times",
+      "name": "The Korea Times",
+      "url": "https://www.koreatimes.co.kr/www/rss/nation.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "KR",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.6,
+      "pollIntervalSecs": 900,
+      "publisher": "The Korea Times",
+      "publisherLink": "https://www.koreatimes.co.kr",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "livemint",
+      "name": "Mint",
+      "url": "https://www.livemint.com/rss/news",
+      "kind": "feed",
+      "scope": "national",
+      "country": "IN",
+      "languages": ["en"],
+      "topics": ["business"],
+      "weight": 0.65,
+      "pollIntervalSecs": 600,
+      "publisher": "Mint",
+      "publisherLink": "https://www.livemint.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "macau-daily-times",
+      "name": "Macau Daily Times",
+      "url": "https://macaudailytimes.com.mo/feed",
+      "kind": "feed",
+      "scope": "national",
+      "country": "MO",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "Macau Daily Times",
+      "publisherLink": "https://macaudailytimes.com.mo",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "mainichi-flash",
+      "name": "Mainichi Shimbun",
+      "url": "https://mainichi.jp/rss/etc/mainichi-flash.rss",
+      "kind": "feed",
+      "scope": "national",
+      "country": "JP",
+      "languages": ["ja"],
+      "topics": ["general"],
+      "weight": 0.7,
+      "pollIntervalSecs": 600,
+      "publisher": "Mainichi Shimbun",
+      "publisherLink": "https://mainichi.jp",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "malay-mail",
       "name": "Malay Mail",
       "url": "https://www.malaymail.com/feed/rss",
@@ -226,6 +421,21 @@
       "publisher": "Malay Mail",
       "publisherLink": "https://www.malaymail.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "myanmar-now",
+      "name": "Myanmar Now",
+      "url": "https://myanmar-now.org/en/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "MM",
+      "languages": ["en"],
+      "topics": ["politics", "general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Myanmar Now",
+      "publisherLink": "https://myanmar-now.org",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "ndtv-top",
@@ -271,6 +481,21 @@
       "publisher": "Rappler",
       "publisherLink": "https://www.rappler.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "rthk-english",
+      "name": "RTHK English News",
+      "url": "https://rthk9.rthk.hk/rthk/news/rss/e_expressnews_elocal.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "HK",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.6,
+      "pollIntervalSecs": 900,
+      "publisher": "RTHK",
+      "publisherLink": "https://news.rthk.hk",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "scmp-news",
@@ -333,6 +558,21 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "tempo-en",
+      "name": "Tempo English",
+      "url": "https://rss.tempo.co/en",
+      "kind": "feed",
+      "scope": "national",
+      "country": "ID",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Tempo",
+      "publisherLink": "https://en.tempo.co",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "the-hindu-national",
       "name": "The Hindu — National",
       "url": "https://www.thehindu.com/news/national/feeder/default.rss",
@@ -346,6 +586,21 @@
       "publisher": "The Hindu",
       "publisherLink": "https://www.thehindu.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "the-news-pk",
+      "name": "The News International",
+      "url": "https://www.thenews.com.pk/rss/1/1",
+      "kind": "feed",
+      "scope": "national",
+      "country": "PK",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.6,
+      "pollIntervalSecs": 900,
+      "publisher": "The News International",
+      "publisherLink": "https://www.thenews.com.pk",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "times-of-india",
@@ -395,6 +650,21 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "tolo-news",
+      "name": "TOLOnews",
+      "url": "https://tolonews.com/rss.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "AF",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "TOLOnews",
+      "publisherLink": "https://tolonews.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "tuoi-tre-news",
       "name": "Tuoi Tre News",
       "url": "https://news.tuoitre.vn/rss/home.rss",
@@ -408,6 +678,21 @@
       "publisher": "Tuoi Tre News",
       "publisherLink": "https://tuoitrenews.vn",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "uzdaily-en",
+      "name": "UzDaily",
+      "url": "https://www.uzdaily.uz/en/rss/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "UZ",
+      "languages": ["en"],
+      "topics": ["business", "general"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "UzDaily",
+      "publisherLink": "https://www.uzdaily.uz/en",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "vnexpress-en",

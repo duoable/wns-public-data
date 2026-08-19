@@ -143,6 +143,20 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "carbon-brief",
+      "name": "Carbon Brief",
+      "url": "https://www.carbonbrief.org/feed",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["environment", "science"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Carbon Brief",
+      "publisherLink": "https://www.carbonbrief.org",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "cnbc-world",
       "name": "CNBC — World Business",
       "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100727362",
@@ -157,6 +171,20 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "dw-top-stories",
+      "name": "DW — Top Stories",
+      "url": "https://rss.dw.com/rdf/rss-en-all",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["world", "politics"],
+      "weight": 0.7,
+      "pollIntervalSecs": 600,
+      "publisher": "Deutsche Welle",
+      "publisherLink": "https://www.dw.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "dw-world",
       "name": "Deutsche Welle — World",
       "url": "https://rss.dw.com/rdf/rss-en-world",
@@ -169,6 +197,20 @@
       "publisher": "Deutsche Welle",
       "publisherLink": "https://www.dw.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "engadget",
+      "name": "Engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["technology"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Engadget",
+      "publisherLink": "https://www.engadget.com",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "espn-top",
@@ -199,6 +241,20 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "european-commission",
+      "name": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/api/rss?language=en",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["politics"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "European Commission",
+      "publisherLink": "https://ec.europa.eu",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "france24-en",
       "name": "France 24 — World",
       "url": "https://www.france24.com/en/rss",
@@ -211,6 +267,34 @@
       "publisher": "France 24",
       "publisherLink": "https://www.france24.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "global-voices",
+      "name": "Global Voices",
+      "url": "https://globalvoices.org/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["world", "culture"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Global Voices",
+      "publisherLink": "https://globalvoices.org",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "grist",
+      "name": "Grist",
+      "url": "https://grist.org/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["environment"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Grist",
+      "publisherLink": "https://grist.org",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "guardian-business",
@@ -239,6 +323,20 @@
       "publisher": "The Guardian",
       "publisherLink": "https://www.theguardian.com/environment",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "guardian-football",
+      "name": "The Guardian — Football",
+      "url": "https://www.theguardian.com/football/rss",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["sport"],
+      "weight": 0.6,
+      "pollIntervalSecs": 600,
+      "publisher": "The Guardian",
+      "publisherLink": "https://www.theguardian.com/football",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "guardian-science",
@@ -283,6 +381,20 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "ips-news",
+      "name": "Inter Press Service",
+      "url": "https://www.ipsnews.net/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["world", "environment"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Inter Press Service",
+      "publisherLink": "https://www.ipsnews.net",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "marketwatch-top",
       "name": "MarketWatch — Top Stories",
       "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
@@ -295,6 +407,76 @@
       "publisher": "MarketWatch",
       "publisherLink": "https://www.marketwatch.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "mit-technology-review",
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["technology", "science"],
+      "weight": 0.6,
+      "pollIntervalSecs": 1800,
+      "publisher": "MIT Technology Review",
+      "publisherLink": "https://www.technologyreview.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "mongabay",
+      "name": "Mongabay",
+      "url": "https://news.mongabay.com/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["environment", "science"],
+      "weight": 0.55,
+      "pollIntervalSecs": 1800,
+      "publisher": "Mongabay",
+      "publisherLink": "https://news.mongabay.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "nasa-breaking",
+      "name": "NASA",
+      "url": "https://www.nasa.gov/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["science"],
+      "weight": 0.6,
+      "pollIntervalSecs": 1800,
+      "publisher": "NASA",
+      "publisherLink": "https://www.nasa.gov",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "nature-news",
+      "name": "Nature",
+      "url": "https://www.nature.com/nature.rss",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["science"],
+      "weight": 0.65,
+      "pollIntervalSecs": 1800,
+      "publisher": "Nature",
+      "publisherLink": "https://www.nature.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "new-scientist",
+      "name": "New Scientist",
+      "url": "https://www.newscientist.com/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["science"],
+      "weight": 0.6,
+      "pollIntervalSecs": 1800,
+      "publisher": "New Scientist",
+      "publisherLink": "https://www.newscientist.com",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "npr-world",
@@ -325,6 +507,20 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "politico-europe",
+      "name": "POLITICO Europe",
+      "url": "https://www.politico.eu/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["politics"],
+      "weight": 0.65,
+      "pollIntervalSecs": 600,
+      "publisher": "POLITICO Europe",
+      "publisherLink": "https://www.politico.eu",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "rfi-en",
       "name": "RFI English",
       "url": "https://www.rfi.fr/en/rss",
@@ -353,6 +549,34 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "scientific-american",
+      "name": "Scientific American",
+      "url": "https://www.scientificamerican.com/platform/syndication/rss/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["science"],
+      "weight": 0.6,
+      "pollIntervalSecs": 1800,
+      "publisher": "Scientific American",
+      "publisherLink": "https://www.scientificamerican.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "sky-sports",
+      "name": "Sky Sports",
+      "url": "https://www.skysports.com/rss/12040",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["sport"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Sky Sports",
+      "publisherLink": "https://www.skysports.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "sky-world",
       "name": "Sky News — World",
       "url": "https://feeds.skynews.com/feeds/rss/world.xml",
@@ -365,6 +589,20 @@
       "publisher": "Sky News",
       "publisherLink": "https://news.sky.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "space-com",
+      "name": "Space.com",
+      "url": "https://www.space.com/feeds.xml",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["science"],
+      "weight": 0.55,
+      "pollIntervalSecs": 1800,
+      "publisher": "Space.com",
+      "publisherLink": "https://www.space.com",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "techcrunch",
@@ -381,6 +619,20 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "the-diplomat",
+      "name": "The Diplomat",
+      "url": "https://thediplomat.com/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["politics", "world"],
+      "weight": 0.55,
+      "pollIntervalSecs": 1800,
+      "publisher": "The Diplomat",
+      "publisherLink": "https://thediplomat.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "the-verge",
       "name": "The Verge",
       "url": "https://www.theverge.com/rss/index.xml",
@@ -395,6 +647,20 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "time-magazine",
+      "name": "TIME",
+      "url": "https://time.com/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["world", "politics"],
+      "weight": 0.6,
+      "pollIntervalSecs": 900,
+      "publisher": "TIME",
+      "publisherLink": "https://time.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "un-news",
       "name": "UN News",
       "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
@@ -407,6 +673,20 @@
       "publisher": "United Nations",
       "publisherLink": "https://news.un.org",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "variety",
+      "name": "Variety",
+      "url": "https://variety.com/feed/",
+      "kind": "feed",
+      "scope": "global",
+      "languages": ["en"],
+      "topics": ["culture"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Variety",
+      "publisherLink": "https://variety.com",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "who-news",

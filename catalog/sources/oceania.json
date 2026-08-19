@@ -18,6 +18,36 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "abc-news-au-world",
+      "name": "ABC News — World",
+      "url": "https://www.abc.net.au/news/feed/45910/rss.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "AU",
+      "languages": ["en"],
+      "topics": ["world"],
+      "weight": 0.8,
+      "pollIntervalSecs": 360,
+      "publisher": "ABC News",
+      "publisherLink": "https://www.abc.net.au/news/world",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "brisbane-times",
+      "name": "Brisbane Times",
+      "url": "https://www.brisbanetimes.com.au/rss/feed.xml",
+      "kind": "feed",
+      "scope": "local",
+      "country": "AU",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Brisbane Times",
+      "publisherLink": "https://www.brisbanetimes.com.au",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "fbc-news-fj",
       "name": "FBC News",
       "url": "https://www.fbcnews.com.fj/feed/",
@@ -48,6 +78,36 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "matangi-tonga",
+      "name": "Matangi Tonga",
+      "url": "https://matangitonga.to/rss.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "TO",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.45,
+      "pollIntervalSecs": 1800,
+      "publisher": "Matangi Tonga",
+      "publisherLink": "https://matangitonga.to",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "newsroom-nz",
+      "name": "Newsroom",
+      "url": "https://newsroom.co.nz/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "NZ",
+      "languages": ["en"],
+      "topics": ["politics", "general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Newsroom",
+      "publisherLink": "https://newsroom.co.nz",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "nz-herald",
       "name": "The New Zealand Herald",
       "url": "https://www.nzherald.co.nz/arc/outboundfeeds/rss/section/nz/?outputType=xml",
@@ -61,6 +121,21 @@
       "publisher": "The New Zealand Herald",
       "publisherLink": "https://www.nzherald.co.nz",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "otago-daily-times",
+      "name": "Otago Daily Times",
+      "url": "https://www.odt.co.nz/sitemaps/odt/rss",
+      "kind": "feed",
+      "scope": "local",
+      "country": "NZ",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Otago Daily Times",
+      "publisherLink": "https://www.odt.co.nz",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "post-courier-pg",
@@ -91,6 +166,21 @@
       "publisher": "RNZ",
       "publisherLink": "https://www.rnz.co.nz",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "rnz-world",
+      "name": "RNZ — World",
+      "url": "https://www.rnz.co.nz/rss/world.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "NZ",
+      "languages": ["en"],
+      "topics": ["world"],
+      "weight": 0.65,
+      "pollIntervalSecs": 600,
+      "publisher": "RNZ",
+      "publisherLink": "https://www.rnz.co.nz",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "sbs-news-au",
@@ -124,6 +214,21 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "stuff-nz",
+      "name": "Stuff",
+      "url": "https://www.stuff.co.nz/rss",
+      "kind": "feed",
+      "scope": "national",
+      "country": "NZ",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.65,
+      "pollIntervalSecs": 600,
+      "publisher": "Stuff",
+      "publisherLink": "https://www.stuff.co.nz",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "the-age-melbourne",
       "name": "The Age",
       "url": "https://www.theage.com.au/rss/feed.xml",
@@ -138,6 +243,36 @@
       "publisher": "The Age",
       "publisherLink": "https://www.theage.com.au",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "the-conversation-au",
+      "name": "The Conversation — Australia",
+      "url": "https://theconversation.com/au/articles.atom",
+      "kind": "feed",
+      "scope": "national",
+      "country": "AU",
+      "languages": ["en"],
+      "topics": ["science", "politics"],
+      "weight": 0.55,
+      "pollIntervalSecs": 1800,
+      "publisher": "The Conversation",
+      "publisherLink": "https://theconversation.com/au",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "watoday",
+      "name": "WAtoday",
+      "url": "https://www.watoday.com.au/rss/feed.xml",
+      "kind": "feed",
+      "scope": "local",
+      "country": "AU",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "WAtoday",
+      "publisherLink": "https://www.watoday.com.au",
+      "verifiedAt": "2026-08-19"
     }
   ]
 }

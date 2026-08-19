@@ -33,6 +33,36 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "daily-sabah",
+      "name": "Daily Sabah",
+      "url": "https://www.dailysabah.com/rssfeed/homepage",
+      "kind": "feed",
+      "scope": "national",
+      "country": "TR",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Daily Sabah",
+      "publisherLink": "https://www.dailysabah.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "doha-news",
+      "name": "Doha News",
+      "url": "https://dohanews.co/feed/",
+      "kind": "feed",
+      "scope": "national",
+      "country": "QA",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Doha News",
+      "publisherLink": "https://dohanews.co",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "hurriyet-daily-news",
       "name": "Hürriyet Daily News",
       "url": "https://www.hurriyetdailynews.com/rss",
@@ -48,6 +78,21 @@
       "verifiedAt": "2026-08-12"
     },
     {
+      "id": "irna-en",
+      "name": "IRNA",
+      "url": "https://en.irna.ir/rss",
+      "kind": "feed",
+      "scope": "national",
+      "country": "IR",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.5,
+      "pollIntervalSecs": 900,
+      "publisher": "IRNA",
+      "publisherLink": "https://en.irna.ir",
+      "verifiedAt": "2026-08-19"
+    },
+    {
       "id": "jerusalem-post",
       "name": "The Jerusalem Post",
       "url": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx",
@@ -61,6 +106,36 @@
       "publisher": "The Jerusalem Post",
       "publisherLink": "https://www.jpost.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "khaleej-times",
+      "name": "Khaleej Times",
+      "url": "https://www.khaleejtimes.com/api/v1/collections/top-section.rss",
+      "kind": "feed",
+      "scope": "national",
+      "country": "AE",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.6,
+      "pollIntervalSecs": 600,
+      "publisher": "Khaleej Times",
+      "publisherLink": "https://www.khaleejtimes.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "naharnet",
+      "name": "Naharnet",
+      "url": "https://www.naharnet.com/tags/lebanon/en/feed.atom",
+      "kind": "feed",
+      "scope": "national",
+      "country": "LB",
+      "languages": ["en"],
+      "topics": ["general", "politics"],
+      "weight": 0.55,
+      "pollIntervalSecs": 900,
+      "publisher": "Naharnet",
+      "publisherLink": "https://www.naharnet.com",
+      "verifiedAt": "2026-08-19"
     },
     {
       "id": "roya-news-jo",
@@ -136,6 +211,36 @@
       "publisher": "The Times of Israel",
       "publisherLink": "https://www.timesofisrael.com",
       "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "times-of-oman",
+      "name": "Times of Oman",
+      "url": "https://timesofoman.com/feed",
+      "kind": "feed",
+      "scope": "national",
+      "country": "OM",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.5,
+      "pollIntervalSecs": 1800,
+      "publisher": "Times of Oman",
+      "publisherLink": "https://timesofoman.com",
+      "verifiedAt": "2026-08-19"
+    },
+    {
+      "id": "ynetnews",
+      "name": "Ynetnews",
+      "url": "https://www.ynetnews.com/Integration/StoryRss3082.xml",
+      "kind": "feed",
+      "scope": "national",
+      "country": "IL",
+      "languages": ["en"],
+      "topics": ["general"],
+      "weight": 0.6,
+      "pollIntervalSecs": 600,
+      "publisher": "Ynetnews",
+      "publisherLink": "https://www.ynetnews.com",
+      "verifiedAt": "2026-08-19"
     }
   ]
 }

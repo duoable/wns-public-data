@@ -138,17 +138,17 @@
         {
           "code": "PL",
           "label": "Poland",
-          "languages": ["pl"]
+          "languages": ["pl", "en"]
         },
         {
           "code": "CZ",
           "label": "Czechia",
-          "languages": ["cs"]
+          "languages": ["cs", "en"]
         },
         {
           "code": "HU",
           "label": "Hungary",
-          "languages": ["hu"]
+          "languages": ["hu", "en"]
         },
         {
           "code": "RO",
@@ -179,6 +179,71 @@
           "code": "RU",
           "label": "Russia",
           "languages": ["ru"]
+        },
+        {
+          "code": "SK",
+          "label": "Slovakia",
+          "languages": ["sk", "en"]
+        },
+        {
+          "code": "SI",
+          "label": "Slovenia",
+          "languages": ["sl", "en"]
+        },
+        {
+          "code": "HR",
+          "label": "Croatia",
+          "languages": ["hr", "en"]
+        },
+        {
+          "code": "BG",
+          "label": "Bulgaria",
+          "languages": ["bg", "en"]
+        },
+        {
+          "code": "LT",
+          "label": "Lithuania",
+          "languages": ["lt", "en"]
+        },
+        {
+          "code": "LV",
+          "label": "Latvia",
+          "languages": ["lv", "en", "ru"]
+        },
+        {
+          "code": "LU",
+          "label": "Luxembourg",
+          "languages": ["lb", "fr", "de", "en"]
+        },
+        {
+          "code": "CY",
+          "label": "Cyprus",
+          "languages": ["el", "en"]
+        },
+        {
+          "code": "BA",
+          "label": "Bosnia and Herzegovina",
+          "languages": ["bs", "hr", "sr", "en"]
+        },
+        {
+          "code": "ME",
+          "label": "Montenegro",
+          "languages": ["sr", "en"]
+        },
+        {
+          "code": "MK",
+          "label": "North Macedonia",
+          "languages": ["mk", "en"]
+        },
+        {
+          "code": "GE",
+          "label": "Georgia",
+          "languages": ["ka", "en"]
+        },
+        {
+          "code": "AZ",
+          "label": "Azerbaijan",
+          "languages": ["az", "en", "ru"]
         }
       ]
     },
@@ -275,6 +340,61 @@
           "code": "UY",
           "label": "Uruguay",
           "languages": ["es"]
+        },
+        {
+          "code": "CR",
+          "label": "Costa Rica",
+          "languages": ["es", "en"]
+        },
+        {
+          "code": "CU",
+          "label": "Cuba",
+          "languages": ["es"]
+        },
+        {
+          "code": "DO",
+          "label": "Dominican Republic",
+          "languages": ["es"]
+        },
+        {
+          "code": "EC",
+          "label": "Ecuador",
+          "languages": ["es"]
+        },
+        {
+          "code": "GT",
+          "label": "Guatemala",
+          "languages": ["es"]
+        },
+        {
+          "code": "HT",
+          "label": "Haiti",
+          "languages": ["fr", "ht"]
+        },
+        {
+          "code": "JM",
+          "label": "Jamaica",
+          "languages": ["en"]
+        },
+        {
+          "code": "NI",
+          "label": "Nicaragua",
+          "languages": ["es"]
+        },
+        {
+          "code": "PA",
+          "label": "Panama",
+          "languages": ["es"]
+        },
+        {
+          "code": "TT",
+          "label": "Trinidad and Tobago",
+          "languages": ["en"]
+        },
+        {
+          "code": "VE",
+          "label": "Venezuela",
+          "languages": ["es"]
         }
       ]
     },
@@ -367,6 +487,41 @@
           "code": "PH",
           "label": "Philippines",
           "languages": ["en", "tl"]
+        },
+        {
+          "code": "AF",
+          "label": "Afghanistan",
+          "languages": ["fa", "ps", "en"]
+        },
+        {
+          "code": "KG",
+          "label": "Kyrgyzstan",
+          "languages": ["ky", "ru"]
+        },
+        {
+          "code": "KZ",
+          "label": "Kazakhstan",
+          "languages": ["kk", "ru", "en"]
+        },
+        {
+          "code": "LK",
+          "label": "Sri Lanka",
+          "languages": ["si", "ta", "en"]
+        },
+        {
+          "code": "MM",
+          "label": "Myanmar",
+          "languages": ["my", "en"]
+        },
+        {
+          "code": "MO",
+          "label": "Macau",
+          "languages": ["zh", "pt", "en"]
+        },
+        {
+          "code": "UZ",
+          "label": "Uzbekistan",
+          "languages": ["uz", "ru", "en"]
         }
       ]
     },
@@ -404,6 +559,21 @@
           "code": "TR",
           "label": "Türkiye",
           "languages": ["tr", "en"]
+        },
+        {
+          "code": "QA",
+          "label": "Qatar",
+          "languages": ["ar", "en"]
+        },
+        {
+          "code": "OM",
+          "label": "Oman",
+          "languages": ["ar", "en"]
+        },
+        {
+          "code": "LB",
+          "label": "Lebanon",
+          "languages": ["ar", "en", "fr"]
         }
       ]
     },
@@ -446,6 +616,51 @@
           "code": "ZW",
           "label": "Zimbabwe",
           "languages": ["en"]
+        },
+        {
+          "code": "ET",
+          "label": "Ethiopia",
+          "languages": ["am", "en"]
+        },
+        {
+          "code": "MU",
+          "label": "Mauritius",
+          "languages": ["fr", "en"]
+        },
+        {
+          "code": "MW",
+          "label": "Malawi",
+          "languages": ["en", "ny"]
+        },
+        {
+          "code": "MZ",
+          "label": "Mozambique",
+          "languages": ["pt", "en"]
+        },
+        {
+          "code": "NA",
+          "label": "Namibia",
+          "languages": ["en"]
+        },
+        {
+          "code": "RW",
+          "label": "Rwanda",
+          "languages": ["rw", "en", "fr"]
+        },
+        {
+          "code": "SN",
+          "label": "Senegal",
+          "languages": ["fr", "wo"]
+        },
+        {
+          "code": "TZ",
+          "label": "Tanzania",
+          "languages": ["sw", "en"]
+        },
+        {
+          "code": "ZM",
+          "label": "Zambia",
+          "languages": ["en"]
         }
       ]
     },
@@ -483,6 +698,11 @@
           "code": "PG",
           "label": "Papua New Guinea",
           "languages": ["en"]
+        },
+        {
+          "code": "TO",
+          "label": "Tonga",
+          "languages": ["to", "en"]
         }
       ]
     }
