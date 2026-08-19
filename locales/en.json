@@ -98,8 +98,7 @@
     "navigate": "Navigate",
     "select": "Select",
     "back": "Back / Close",
-    "jump": "Jump to a screen",
-    "menu": "Menu"
+    "jump": "Jump to a screen"
   },
   "common": {
     "confirm": "Confirm",

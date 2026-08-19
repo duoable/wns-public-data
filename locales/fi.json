@@ -98,8 +98,7 @@
     "navigate": "Siirry",
     "select": "Valitse",
     "back": "Takaisin / Sulje",
-    "jump": "Siirry näytölle",
-    "menu": "Valikko"
+    "jump": "Siirry näytölle"
   },
   "common": {
     "confirm": "Vahvista",
