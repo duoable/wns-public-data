@@ -917,14 +917,14 @@
     "unavailable": "The licence list could not be read. It is generated into this build, so this is a damaged installation rather than a setting — reinstalling restores it.",
     "privacy": {
       "title": "What this app stores",
-      "hint": "Nothing about you is collected — no account, no analytics, no identifier.",
+      "hint": "There is no account, no analytics and no server — nothing to upload to, so nothing is uploaded.",
       "device": {
-        "title": "On this device",
-        "description": "Your settings, the caches behind them, which stories have already been read — and, if you switched them on, crash reports."
+        "title": "All of it, on this device",
+        "description": "Your settings, the caches behind them, which stories have already been read — and, if you switched them on, crash reports. It stays here, and you can delete all of it whenever you like."
       },
       "key": {
         "title": "Your API key",
-        "description": "In the operating system keychain, never in a settings export, and never read back to the screen."
+        "description": "Encrypted — in the system keychain where there is one, otherwise under a passphrase only you know. Never in a settings export, and never read back to the screen."
       },
       "leaves": {
         "title": "What leaves it",

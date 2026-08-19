@@ -917,14 +917,14 @@
     "unavailable": "Lisenssiluetteloa ei voitu lukea. Se luodaan tähän koontiversioon, joten kyse on vaurioituneesta asennuksesta eikä asetuksesta — uudelleenasennus palauttaa sen.",
     "privacy": {
       "title": "Mitä sovellus tallentaa",
-      "hint": "Sinusta ei kerätä mitään — ei tiliä, ei analytiikkaa, ei tunnistetta.",
+      "hint": "Ei tiliä, ei analytiikkaa, ei palvelinta — ei siis mitään minne lähettää, joten mitään ei lähetetä.",
       "device": {
-        "title": "Tällä laitteella",
-        "description": "Asetuksesi, niiden välimuistit, tieto siitä mitkä jutut on jo luettu — ja kaatumisraportit, jos otit ne käyttöön."
+        "title": "Kaikki tällä laitteella",
+        "description": "Asetuksesi, niiden välimuistit, tieto siitä mitkä jutut on jo luettu — ja kaatumisraportit, jos otit ne käyttöön. Kaikki pysyy täällä, ja voit poistaa sen milloin haluat."
       },
       "key": {
         "title": "API-avaimesi",
-        "description": "Käyttöjärjestelmän avainnipussa. Se ei koskaan päädy asetusten vientitiedostoon eikä sitä koskaan lueta takaisin näytölle."
+        "description": "Salattuna — käyttöjärjestelmän avainnipussa jos sellainen on, muuten vain sinun tietämälläsi salalauseella. Ei koskaan asetusten vientitiedostoon eikä koskaan takaisin näytölle."
       },
       "leaves": {
         "title": "Mitä laitteelta lähtee",
