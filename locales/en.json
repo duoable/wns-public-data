@@ -3,7 +3,8 @@
     "pleaseWait": {
       "title": "Please Wait",
       "subtitle": "Tuning in and preparing the bulletin",
-      "meterLabel": "Preparing the bulletin"
+      "meterLabel": "Preparing the bulletin",
+      "skip": "Skip"
     },
     "progress": {
       "contacting": "Contacting news sources…",
@@ -154,6 +155,11 @@
       "title": "Show me round again",
       "description": "Where the news comes from, who reads it, and what it is watched on",
       "action": "Start"
+    },
+    "setup": {
+      "title": "Run first-time setup again",
+      "description": "Walks through language, newsrooms, sound, the anchor and the picture, the way it did on the first run.",
+      "action": "Run setup"
     },
     "restore": {
       "title": "Restore default settings",
@@ -982,9 +988,21 @@
       "title": "And a television to watch it on",
       "body": "An era is not a set or a graphics package — it is the television. Pick 1968 and the picture arrives in monochrome through a shadow mask; pick 1994 and it comes off a worn tape. The Picture screen holds the seven of them, and how hard the set is allowed to work."
     },
-    "finish": {
-      "title": "That is the whole of it",
-      "body": "Everything else is on the menu, which opens with Escape, the Menu button on a remote or Start on a controller. You can read this again whenever you like — there is a row for it on the System screen.",
+    "transport": {
+      "title": "The bulletin does not stop",
+      "body": "There is no end of programme. When the running order is read out the station goes back for whatever has come in since, so the news keeps arriving for as long as the set is on. These controls pause it, or skip to the next story and back to the last."
+    },
+    "mode": {
+      "title": "The corner always says what you are watching",
+      "body": "Live means every word came from a newsroom. Simulation means the stories were invented by this app and are about nobody. Demonstration means it is the authored bulletin that ships with the software. The badge is read off the running order rather than off a setting, so it cannot be switched off and cannot be wrong. Where a model wrote or found something, it says that too."
+    },
+    "credit": {
+      "title": "Every story says whose it is",
+      "body": "Nothing here writes the news. The strap under the picture names the newsroom that filed the story, and the same credit appears in the text version of the bulletin with a link straight back to the original. Reading somebody else’s journalism without saying so is the one thing this station will not do."
+    },
+    "menu": {
+      "title": "Everything else is behind this button",
+      "body": "The menu opens here, or with Escape, the Menu button on a remote, or Start on a controller. Sources, the anchor, the picture and the sound are all in it — and the System screen will run first-time setup again, or show you round again, whenever you want.",
       "action": "Start watching"
     }
   },
@@ -992,5 +1010,60 @@
     "title": "The app stopped",
     "body": "Something in the interface failed and the broadcast could not carry on. Your settings and your sources are unaffected.",
     "restart": "Start again"
+  },
+  "setup": {
+    "label": "Setting up",
+    "progress": "Step {{step}} of {{total}}",
+    "next": "Next",
+    "back": "Back",
+    "skip": "Skip setup",
+    "finishAction": "Start watching",
+    "welcome": {
+      "title": "Let’s set up your news channel",
+      "body": "This is a television station that reads the day’s real news. Five short questions and it will be on air: what language you read, whose news you want, how it should sound, who reads it and what sort of television you are watching it on. All of it can be changed later.",
+      "aboutSkip": "You can skip all of this. The set will run on invented stories about nobody, nothing will be fetched from the internet, and the badge in the corner will say so. Everything stays available in the menu when you want the real thing."
+    },
+    "language": {
+      "title": "What language do you read?",
+      "body": "This is the language of the menus and the captions. English is built in; everything else is a download of a few kilobytes. It has nothing to do with which languages the news itself arrives in — that follows from the newsrooms you pick next."
+    },
+    "sources": {
+      "title": "Whose news do you want?",
+      "body": "Pick the countries you want the bulletin assembled from. Choosing one takes every newsroom in it; the wire services at the top are the ones that belong to no country in particular.",
+      "advanced": "Choose individual newsrooms",
+      "advancedOff": "Back to the map",
+      "selected": "{{count}} of {{total}} newsrooms",
+      "countrySelected": "{{selected}} of {{count}}",
+      "none": "Nothing is selected, so nothing will be fetched. The set will run on invented stories until you tick something — which is a perfectly good way to use it.",
+      "wires": "Wire services",
+      "loading": "Reading the list of newsrooms…"
+    },
+    "sound": {
+      "title": "How should it sound?",
+      "body": "Set the level and check you can hear it. The test sound comes out of the speakers named below, so if you hear nothing, that is the row to change.",
+      "volume": "Volume",
+      "test": "Test sound",
+      "testAction": "Play",
+      "testDescription": "A short tone through the speakers selected below.",
+      "device": "Speakers",
+      "deviceDefault": "System default",
+      "deviceInUse": "In use",
+      "deviceUnavailable": "This build cannot choose the speakers itself — it plays through whatever your system is set to. Change it there instead.",
+      "deviceUnnamed": "Your system has not told us the names of the other outputs, so only the default is offered. We do not ask for microphone access, which is what unlocks those names.",
+      "systemVoiceNote": "This covers the studio’s own sound and the downloadable voices. The built-in voice is spoken by your operating system and always comes out wherever the system sends it."
+    },
+    "anchor": {
+      "title": "Who reads the news?",
+      "body": "An anchor is a character with a voice. Anchors are content rather than code: any pack you install later turns up on this list by itself, and on the Anchor screen in the menu."
+    },
+    "era": {
+      "title": "And what are you watching it on?",
+      "body": "An era is not a graphics package — it is the television you are watching on."
+    },
+    "finish": {
+      "title": "That is everything",
+      "body": "The set will warm up and start gathering the news. Everything you have just chosen — and a good deal more — is in the menu, which opens with the button in the corner, Escape, or Start on a controller.",
+      "again": "You can run this again whenever you like: there is a row for it on the System screen."
+    }
   }
 }

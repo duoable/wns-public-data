@@ -3,7 +3,8 @@
     "pleaseWait": {
       "title": "Odota hetki",
       "subtitle": "Viritetään ja valmistellaan lähetystä",
-      "meterLabel": "Valmistellaan lähetystä"
+      "meterLabel": "Valmistellaan lähetystä",
+      "skip": "Ohita"
     },
     "progress": {
       "contacting": "Otetaan yhteyttä uutislähteisiin…",
@@ -154,6 +155,11 @@
       "title": "Näytä opastus uudelleen",
       "description": "Mistä uutiset tulevat, kuka ne lukee ja millä niitä katsotaan",
       "action": "Aloita"
+    },
+    "setup": {
+      "title": "Aja alkuasetukset uudelleen",
+      "description": "Käy läpi kielen, toimitukset, äänen, uutisankkurin ja kuvan samalla tavalla kuin ensimmäisellä käynnistyksellä.",
+      "action": "Aja asetukset"
     },
     "restore": {
       "title": "Palauta oletusasetukset",
@@ -982,9 +988,21 @@
       "title": "Ja televisio, jolta sitä katsotaan",
       "body": "Aikakausi ei ole lavastus eikä grafiikkapaketti — se on televisio. Valitse 1968, ja kuva saapuu mustavalkoisena varjomaskin läpi; valitse 1994, ja se tulee kuluneelta nauhalta. Kuva-näytöltä löytyvät kaikki seitsemän sekä se, kuinka kovaa laitteen annetaan tehdä työtä."
     },
-    "finish": {
-      "title": "Siinä kaikki",
-      "body": "Kaikki muu on valikossa, joka avautuu Esc-näppäimellä, kaukosäätimen valikkopainikkeella tai ohjaimen Start-painikkeella. Voit lukea tämän uudelleen milloin tahansa — Järjestelmä-näytöllä on sitä varten oma rivinsä.",
+    "transport": {
+      "title": "Lähetys ei lopu",
+      "body": "Ohjelma ei pääty. Kun lähetyslista on luettu, asema palaa hakemaan sen jälkeen saapuneet jutut, joten uutisia riittää niin kauan kuin laite on päällä. Näistä painikkeista voit pysäyttää lähetyksen tai siirtyä seuraavaan juttuun ja takaisin edelliseen."
+    },
+    "mode": {
+      "title": "Kulman merkki kertoo aina, mitä katsot",
+      "body": "Suora tarkoittaa, että jokainen sana on peräisin toimituksesta. Simulaatio tarkoittaa, että tämä sovellus on keksinyt jutut eivätkä ne koske ketään. Esittely tarkoittaa ohjelmiston mukana tulevaa käsin kirjoitettua lähetystä. Merkki luetaan lähetyslistalta eikä asetuksista, joten sitä ei voi kytkeä pois eikä se voi olla väärässä. Jos malli on kirjoittanut tai löytänyt jotain, sekin kerrotaan."
+    },
+    "credit": {
+      "title": "Jokainen juttu kertoo kenen se on",
+      "body": "Mikään täällä ei kirjoita uutisia itse. Kuvan alareunan palkki nimeää toimituksen, joka jutun kirjoitti, ja sama lähdemerkintä on lähetyksen tekstiversiossa linkkinä suoraan alkuperäiseen. Toisen journalismin lukeminen sitä kertomatta on ainoa asia, jota tämä asema ei tee."
+    },
+    "menu": {
+      "title": "Kaikki muu on tämän painikkeen takana",
+      "body": "Valikko avautuu tästä, Esc-näppäimellä, kaukosäätimen valikkopainikkeella tai ohjaimen Start-painikkeella. Uutislähteet, uutisankkuri, kuva ja ääni ovat kaikki siellä — ja Järjestelmä-näytöltä voit ajaa alkuasetukset tai tämän opastuksen uudelleen milloin tahansa.",
       "action": "Aloita katselu"
     }
   },
@@ -992,5 +1010,60 @@
     "title": "Sovellus pysähtyi",
     "body": "Jokin käyttöliittymässä hajosi, eikä lähetystä voitu jatkaa. Asetuksesi ja lähteesi ovat ennallaan.",
     "restart": "Aloita alusta"
+  },
+  "setup": {
+    "label": "Alkuasetukset",
+    "progress": "Vaihe {{step}} / {{total}}",
+    "next": "Seuraava",
+    "back": "Takaisin",
+    "skip": "Ohita asetukset",
+    "finishAction": "Aloita katselu",
+    "welcome": {
+      "title": "Otetaan uutiskanavasi käyttöön",
+      "body": "Tämä on televisiokanava, joka lukee päivän todelliset uutiset. Viisi lyhyttä kysymystä, ja se on lähetysvalmis: millä kielellä luet, kenen uutisia haluat, miltä sen pitäisi kuulostaa, kuka sen lukee ja millaiselta televisiolta sitä katsot. Kaikkea voi muuttaa myöhemmin.",
+      "aboutSkip": "Voit ohittaa kaiken tämän. Laite näyttää silloin keksittyjä juttuja, jotka eivät koske ketään, mitään ei haeta verkosta, ja kulman merkki kertoo sen. Kaikki löytyy valikosta, kun haluat oikeat uutiset."
+    },
+    "language": {
+      "title": "Millä kielellä luet?",
+      "body": "Tämä on valikkojen ja tekstitysten kieli. Englanti on mukana valmiina; muut ovat muutaman kilotavun latauksia. Tällä ei ole tekemistä sen kanssa, millä kielillä uutiset saapuvat — se seuraa seuraavaksi valitsemistasi toimituksista."
+    },
+    "sources": {
+      "title": "Kenen uutisia haluat?",
+      "body": "Valitse maat, joista lähetys kootaan. Yhden valitseminen ottaa mukaan kaikki sen toimitukset; ylimpänä olevat uutistoimistot eivät kuulu millekään yksittäiselle maalle.",
+      "advanced": "Valitse yksittäisiä toimituksia",
+      "advancedOff": "Takaisin karttaan",
+      "selected": "{{count}} / {{total}} toimitusta",
+      "countrySelected": "{{selected}} / {{count}}",
+      "none": "Mitään ei ole valittu, joten mitään ei haeta. Laite näyttää keksittyjä juttuja, kunnes valitset jotain — sekin on aivan kelvollinen tapa käyttää sitä.",
+      "wires": "Uutistoimistot",
+      "loading": "Luetaan toimitusten listaa…"
+    },
+    "sound": {
+      "title": "Miltä sen pitäisi kuulostaa?",
+      "body": "Säädä äänenvoimakkuus ja tarkista, että kuulet sen. Testiääni tulee alla nimetyistä kaiuttimista, joten jos et kuule mitään, sitä riviä kannattaa muuttaa.",
+      "volume": "Äänenvoimakkuus",
+      "test": "Testiääni",
+      "testAction": "Toista",
+      "testDescription": "Lyhyt ääni alla valituista kaiuttimista.",
+      "device": "Kaiuttimet",
+      "deviceDefault": "Järjestelmän oletus",
+      "deviceInUse": "Käytössä",
+      "deviceUnavailable": "Tämä versio ei voi valita kaiuttimia itse — se soittaa sen kautta, mihin järjestelmäsi on asetettu. Muuta valinta sieltä.",
+      "deviceUnnamed": "Järjestelmäsi ei ole kertonut meille muiden ulostulojen nimiä, joten vain oletus on tarjolla. Emme pyydä mikrofonin käyttöoikeutta, ja juuri se avaisi nimet.",
+      "systemVoiceNote": "Tämä koskee studion omaa ääntä ja ladattavia puheääniä. Sisäänrakennetun äänen puhuu käyttöjärjestelmäsi, ja se tulee aina sieltä, minne järjestelmä sen ohjaa."
+    },
+    "anchor": {
+      "title": "Kuka lukee uutiset?",
+      "body": "Uutisankkuri on hahmo ja ääni. Ankkurit ovat sisältöä eivätkä koodia: myöhemmin asentamasi paketti ilmestyy tälle listalle itsestään, ja samoin valikon Uutisankkuri-näytölle."
+    },
+    "era": {
+      "title": "Ja millä sitä katsot?",
+      "body": "Aikakausi ei ole grafiikkapaketti — se on televisio, jolta katsot."
+    },
+    "finish": {
+      "title": "Siinä kaikki",
+      "body": "Laite lämpenee ja alkaa kerätä uutisia. Kaikki juuri valitsemasi — ja paljon muuta — on valikossa, joka avautuu kulman painikkeesta, Esc-näppäimellä tai ohjaimen Start-painikkeella.",
+      "again": "Voit ajaa tämän uudelleen milloin tahansa: Järjestelmä-näytöllä on sitä varten oma rivinsä."
+    }
   }
 }
