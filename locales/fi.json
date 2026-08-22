@@ -3,8 +3,7 @@
     "pleaseWait": {
       "title": "Odota hetki",
       "subtitle": "Viritetään ja valmistellaan lähetystä",
-      "meterLabel": "Valmistellaan lähetystä",
-      "skip": "Ohita"
+      "meterLabel": "Valmistellaan lähetystä"
     },
     "progress": {
       "contacting": "Otetaan yhteyttä uutislähteisiin…",
@@ -779,6 +778,13 @@
     },
     "fromPack": "Paketista {{pack}}."
   },
+  "studio": {
+    "placeholder": {
+      "label": "Lavastuksen paikanpitäjä",
+      "description": "Sisäänrakennettu sijainen. Aina saatavilla, eikä vaadi mallia."
+    },
+    "fromPack": "Paketista {{pack}}."
+  },
   "narration": {
     "breaking": "Uutisvälähdys.",
     "breakingBy": "Uutisvälähdys. Uutisoinut {{publishers}}.",
@@ -816,7 +822,14 @@
     "aiWritten": "Tässä jutussa on käytetty tekoälyä: sanoissa, niiden takana olevassa aineistossa tai molemmissa."
   },
   "chrome": {
-    "openMenu": "Avaa valikko"
+    "openMenu": "Avaa valikko",
+    "activity": {
+      "polling": "Luetaan lähteitä",
+      "pollingCounted": "Luetaan lähteitä {{done}}/{{total}}",
+      "preparing": "Valmistellaan lähetystä",
+      "writing": "Kirjoitetaan uutisia",
+      "waiting": "Odotetaan uutista"
+    }
   },
   "error": {
     "unreachable": "Sovellus ei saanut yhteyttä omaan moottoriinsa ({{detail}})."

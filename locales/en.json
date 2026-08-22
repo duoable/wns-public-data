@@ -3,8 +3,7 @@
     "pleaseWait": {
       "title": "Please Wait",
       "subtitle": "Tuning in and preparing the bulletin",
-      "meterLabel": "Preparing the bulletin",
-      "skip": "Skip"
+      "meterLabel": "Preparing the bulletin"
     },
     "progress": {
       "contacting": "Contacting news sources…",
@@ -779,6 +778,13 @@
     },
     "fromPack": "From {{pack}}."
   },
+  "studio": {
+    "placeholder": {
+      "label": "Set placeholder",
+      "description": "The built-in stand-in. Always available, and needs no model."
+    },
+    "fromPack": "From {{pack}}."
+  },
   "narration": {
     "breaking": "Breaking news.",
     "breakingBy": "Breaking news. Reported by {{publishers}}.",
@@ -816,7 +822,14 @@
     "aiWritten": "AI was used for this item: the words, the material behind them, or both."
   },
   "chrome": {
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "activity": {
+      "polling": "Reading sources",
+      "pollingCounted": "Reading sources {{done}}/{{total}}",
+      "preparing": "Preparing the bulletin",
+      "writing": "Writing the news",
+      "waiting": "Waiting for a story"
+    }
   },
   "error": {
     "unreachable": "The app could not reach its own engine ({{detail}})."
